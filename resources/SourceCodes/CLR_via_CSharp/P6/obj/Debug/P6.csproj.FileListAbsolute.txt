@@ -1,0 +1,6 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P6\bin\Debug\P6.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P6\bin\Debug\P6.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P6\obj\Debug\P6.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P6\obj\Debug\P6.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P6\obj\Debug\P6.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P6\obj\Debug\P6.pdb

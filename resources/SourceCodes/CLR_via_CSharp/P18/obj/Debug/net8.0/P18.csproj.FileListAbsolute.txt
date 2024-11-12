@@ -1,0 +1,15 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\bin\Debug\net8.0\P18.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\bin\Debug\net8.0\P18.deps.json
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\bin\Debug\net8.0\P18.runtimeconfig.json
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\bin\Debug\net8.0\P18.dll
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\bin\Debug\net8.0\P18.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\P18.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\P18.AssemblyInfoInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\P18.AssemblyInfo.cs
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\P18.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\P18.sourcelink.json
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\P18.dll
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\refint\P18.dll
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\P18.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\P18.genruntimeconfig.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\obj\Debug\net8.0\ref\P18.dll

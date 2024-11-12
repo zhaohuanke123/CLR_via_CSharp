@@ -1,0 +1,6 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P9\bin\Debug\P9.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P9\bin\Debug\P9.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P9\obj\Debug\P9.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P9\obj\Debug\P9.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P9\obj\Debug\P9.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P9\obj\Debug\P9.pdb

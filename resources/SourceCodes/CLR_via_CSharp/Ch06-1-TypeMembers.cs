@@ -8,6 +8,7 @@
 #pragma warning disable 414, 67
 #endif
 using System;
+using System.Runtime.InteropServices;
 
 public sealed class SomeType {                                 //  1
    // Nested class
@@ -15,15 +16,21 @@ public sealed class SomeType {                                 //  1
 
    // Constant, read-only, and static read/write field
    private const Int32 c_SomeConstant = 1;                     //  3
-   private readonly String m_SomeReadOnlyField = "2";          //  4
+   private readonly String m_SomeReadOnlyField;          //  4
    private static Int32 s_SomeReadWriteField = 3;              //  5
 
    // Type constructor
-   static SomeType() { }                                       //  6
+   static SomeType()
+   {
+   }                                       //  6
 
    // Instance constructors
    public SomeType() { }                                       //  7
-   public SomeType(Int32 x) { }                                //  8
+
+   public SomeType(Int32 x)
+   {
+	   m_SomeReadOnlyField = x.ToString();
+   }                                //  8
 
 
    // Static and instance methods

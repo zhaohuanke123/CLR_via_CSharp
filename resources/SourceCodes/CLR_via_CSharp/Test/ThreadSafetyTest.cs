@@ -1,4 +1,4 @@
-namespace Ch20_1_ExceptionHandling
+namespace Test
 {
     using System;
     using System.Threading;
@@ -50,21 +50,7 @@ namespace Ch20_1_ExceptionHandling
 
         private static void TransferTest(Account from, Account to)
         {
-            Random random = new Random();
-
-            while (isRunning)
-            {
-                decimal amount = random.Next(1, 10);
-                try
-                {
-                    Account.Transfer(from, to, amount);
-                }
-                catch (ThreadAbortException)
-                {
-                    Console.WriteLine("Thread aborted during transfer.");
-                    Thread.ResetAbort();
-                }
-            }
+            Account.Transfer(from, to, 100);
         }
     }
 }

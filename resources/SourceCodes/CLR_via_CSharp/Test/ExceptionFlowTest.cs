@@ -1,6 +1,6 @@
 using System;
 
-namespace Ch20_1_ExceptionHandling
+namespace Test
 {
     public class ExceptionFlowTest
     {

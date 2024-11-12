@@ -1,0 +1,8 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P5\bin\Release\P5.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P5\bin\Release\P5.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P5\bin\Release\Microsoft.CSharp.dll
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P5\obj\Release\P5.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P5\obj\Release\P5.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P5\obj\Release\P5.csproj.Up2Date
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P5\obj\Release\P5.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P5\obj\Release\P5.pdb

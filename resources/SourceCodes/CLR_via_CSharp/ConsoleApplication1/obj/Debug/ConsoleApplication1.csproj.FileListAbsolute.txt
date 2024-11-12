@@ -1,0 +1,6 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

@@ -1,7 +1,11 @@
+using System;
+using System.Reflection;
+
 namespace SomeLibrary
 {
-    public class TestMamber
+
+    internal partial class Test
     {
-        
+
     }
 }

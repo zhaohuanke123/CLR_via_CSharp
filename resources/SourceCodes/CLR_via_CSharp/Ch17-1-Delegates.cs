@@ -8,13 +8,13 @@ using System.Reflection;
 
 public sealed class Program {
    public static void Main() {
-      DelegateIntro.Go();
-      GetInvocationList.Go();
-      AnonymousMethods.Go();
+      // DelegateIntro.Go();
+      // GetInvocationList.Go();
+      // AnonymousMethods.Go();
       DelegateReflection.Go("TwoInt32s", "Add", "123", "321");
-      DelegateReflection.Go("TwoInt32s", "Subtract", "123", "321");
-      DelegateReflection.Go("OneString", "NumChars", "Hello there");
-      DelegateReflection.Go("OneString", "Reverse", "Hello there");
+      // DelegateReflection.Go("TwoInt32s", "Subtract", "123", "321");
+      // DelegateReflection.Go("OneString", "NumChars", "Hello there");
+      // DelegateReflection.Go("OneString", "Reverse", "Hello there");
    }
 }
 
@@ -25,10 +25,10 @@ internal sealed class DelegateIntro {
    internal delegate void Feedback(Int32 value);
 
    public static void Go() {
-      StaticDelegateDemo();
-      InstanceDelegateDemo();
+      // StaticDelegateDemo();
+      // InstanceDelegateDemo();
       ChainDelegateDemo1(new DelegateIntro());
-      ChainDelegateDemo2(new DelegateIntro());
+      // ChainDelegateDemo2(new DelegateIntro());
    }
 
    private static void StaticDelegateDemo() {
@@ -54,7 +54,7 @@ internal sealed class DelegateIntro {
       Feedback fb3 = new Feedback(di.FeedbackToFile);
 
       Feedback fbChain = null;
-      fbChain = (Feedback)Delegate.Combine(fbChain, fb1);
+      fbChain = (Feedback)Delegate.Combine(fb1, fbChain);
       fbChain = (Feedback)Delegate.Combine(fbChain, fb2);
       fbChain = (Feedback)Delegate.Combine(fbChain, fb3);
       Counter(1, 2, fbChain);
@@ -150,7 +150,7 @@ internal static class GetInvocationList {
    // Method that queries several components and returns a status report
    private static String GetComponentStatusReport(GetStatus status) {
 
-      // If the chain is empty, there’s is nothing to do.
+      // If the chain is empty, thereï¿½s is nothing to do.
       if (status == null) return null;
 
       // Use this to build the status report.

@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio\2022\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="17.0">
+ <Targets>
+  <Target Name="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch24-1-RuntimeSerialization.exe">
+   <Modules>
+    <Module Name="ch24-1-runtimeserialization.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">用强名称密钥对 'Ch24-1-RuntimeSerialization.exe' 进行签名。</Issue>
+      </Message>
+      <Message Id="Ch" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">更正程序集名称 'Ch24-1-RuntimeSerialization.exe' 中“Ch”的大小写，将其改为“CH”。</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">使用 CLSCompliant(true)来标记 'Ch24-1-RuntimeSerialization.exe'，因为它公开外部可见的类型。</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+       <Issue Name="NoAttribute" Certainty="95" Level="CriticalError">因为 'Ch24-1-RuntimeSerialization.exe' 公开外部可见的类型，请在程序集级别使用 ComVisible(false)来标记它，然后使用 ComVisible(true)来标记该程序集内应当向 COM 客户端公开的所有类型。</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="ISerializableVersioning" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Go()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="288">'ISerializableVersioning.Go()' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ISerializableVersioning+Derived" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="350">在外部可见方法 'ISerializableVersioning.Derived.GetObjectData(SerializationInfo, StreamingContext)' 中，请在使用参数“info”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="366">由于 'string.Format(string, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'ISerializableVersioning.Derived.ToString()' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OptionalField" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Go()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="f" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="278">'OptionalField.Go()' 声明类型为 'OptionalField.Foo' 的变量 'f'，但从未使用过该变量或只对它进行过赋值。请使用此变量或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="OptionalField+Foo" Kind="Class" Accessibility="Public" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">'OptionalField.Foo' 是显然没有实例化过的内部类。如果是这样，请从程序集内移除该代码。如果此内部类只用于包含静态方法，请考虑添加私有构造函数，以阻止编译器生成默认构造函数。</Issue>
+          </Message>
+          <Message TypeName="ProvideDeserializationMethodsForOptionalFields" Category="Microsoft.Usage" CheckId="CA2239" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+           <Issue Name="OnDeserialized" Certainty="50" Level="Warning">向类型 'OptionalField.Foo' 中添加“private void OnDeserialized(StreamingContext)”方法并使其具有 System.Runtime.Serialization.OnDeserializedAttribute 特性。</Issue>
+           <Issue Name="OnDeserializing" Certainty="50" Level="Warning">向类型 'OptionalField.Foo' 中添加“private void OnDeserializing(StreamingContext)”方法并使其具有 System.Runtime.Serialization.OnDeserializingAttribute 特性。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#name" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'OptionalField.Foo.name' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#name1" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'OptionalField.Foo.name1' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="QuickStart" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#DeepClone(System.Object)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="74">'QuickStart.DeepClone(object)' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeserializeFromMemory(System.IO.Stream)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="65">'QuickStart.DeserializeFromMemory(Stream)' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Go()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="31">'QuickStart.Go()' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+            <Message Id="clone" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="44">'QuickStart.Go()' 声明类型为 'object' 的变量 'clone'，但从未使用过该变量或只对它进行过赋值。请使用此变量或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MultipleGraphs()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="113">'QuickStart.MultipleGraphs()' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OptInSerialization()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="152">'QuickStart.OptInSerialization()' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RestoreApplicationState(System.IO.Stream)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="135">'QuickStart.RestoreApplicationState(Stream)' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SaveApplicationState(System.IO.Stream)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="124">'QuickStart.SaveApplicationState(Stream)' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SerializeToMemory(System.Object)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="50">'QuickStart.SerializeToMemory(object)' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="52">在方法 'QuickStart.SerializeToMemory(object)' 中，'stream' 对象未按所有异常路径释放。请在对 'stream' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="QuickStart+Customer" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">'QuickStart.Customer' 是显然没有实例化过的内部类。如果是这样，请从程序集内移除该代码。如果此内部类只用于包含静态方法，请考虑添加私有构造函数，以阻止编译器生成默认构造函数。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="QuickStart+Order" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">'QuickStart.Order' 是显然没有实例化过的内部类。如果是这样，请从程序集内移除该代码。如果此内部类只用于包含静态方法，请考虑添加私有构造函数，以阻止编译器生成默认构造函数。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="RuntieSerialization" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="DeclareTypesInNamespaces" Category="Microsoft.Design" CheckId="CA1050" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">'RuntieSerialization' 应在命名空间内声明。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="SerializationBinderDemo" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Go()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="509">'SerializationBinderDemo.Go()' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String,System.Object,System.Object)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="518">方法 'SerializationBinderDemo.Go()' 将一个文本字符串作为对 'Console.WriteLine(string, object, object)' 的调用的参数“format”传递。改为从资源表检索以下字符串: "Type deserialized={0}, ToString={{{1}}}"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SerializationBinderDemo+Ver1" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#x" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'SerializationBinderDemo.Ver1.x' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#y" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'SerializationBinderDemo.Ver1.y' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#z" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'SerializationBinderDemo.Ver1.z' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SerializationBinderDemo+Ver1ToVer2SerializationBinder" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#BindToType(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="574">由于 'string.Format(string, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'SerializationBinderDemo.Ver1ToVer2SerializationBinder.BindToType(string, string)' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SerializationBinderDemo+Ver2" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#ToString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="549">由于 'string.Format(string, object, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'SerializationBinderDemo.Ver2.ToString()' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SerializationSurrogates" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Go()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="441">'SerializationSurrogates.Go()' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String,System.Object)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="476">方法 'SerializationSurrogates.Go()' 将一个文本字符串作为对 'Console.WriteLine(string, object)' 的调用的参数“format”传递。改为从资源表检索以下字符串: "LocalTimeAfterDeserialize={0}"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="475">方法 'SerializationSurrogates.Go()' 将一个文本字符串作为对 'Console.WriteLine(string, object)' 的调用的参数“format”传递。改为从资源表检索以下字符串: "LocalTimeBeforeSerialize ={0}"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SerializationSurrogates+UniversalToLocalTimeSerializationSurrogate" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#GetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="484">由于 'DateTime.ToString(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'SerializationSurrogates.UniversalToLocalTimeSerializationSurrogate.GetObjectData(object, SerializationInfo, StreamingContext)' 中的此调用替换为对 'DateTime.ToString(string, IFormatProvider)' 的调用。如果要向用户显示 'DateTime.ToString(string, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="1" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="484">在外部可见方法 'SerializationSurrogates.UniversalToLocalTimeSerializationSurrogate.GetObjectData(object, SerializationInfo, StreamingContext)' 中，请在使用参数“info”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetObjectData(System.Object,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext,System.Runtime.Serialization.ISurrogateSelector)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="1" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="491">在外部可见方法 'SerializationSurrogates.UniversalToLocalTimeSerializationSurrogate.SetObjectData(object, SerializationInfo, StreamingContext, ISurrogateSelector)' 中，请在使用参数“info”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SerializingSingletons" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Go()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="374">'SerializingSingletons.Go()' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="389">方法 'SerializingSingletons.Go()' 将一个文本字符串作为对 'Console.WriteLine(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "Do all  array elements refer to the same object? "。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="377">方法 'SerializingSingletons.Go()' 将一个文本字符串作为对 'Console.WriteLine(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "Do both array elements refer to the same object? "。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="388">方法 'SerializingSingletons.Go()' 将一个文本字符串作为对 'Console.WriteLine(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "Do both array elements refer to the same object? "。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SerializingSingletons+Singleton" Kind="Class" Accessibility="Public" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Date" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'SerializingSingletons.Singleton.Date' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Name" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'SerializingSingletons.Singleton.Name' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="420">在外部可见方法 'SerializingSingletons.Singleton.ISerializable.GetObjectData(SerializationInfo, StreamingContext)' 中，请在使用参数“info”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UsingNonSerializedFields" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Go()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="242">'UsingNonSerializedFields.Go()' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UsingNonSerializedFields+Circle" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">'UsingNonSerializedFields.Circle' 是显然没有实例化过的内部类。如果是这样，请从程序集内移除该代码。如果此内部类只用于包含静态方法，请考虑添加私有构造函数，以阻止编译器生成默认构造函数。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#m_area" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'UsingNonSerializedFields.Circle.m_area' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UsingNonSerializedFields+Inner" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#OnDeserialized(System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="236">从未使用 'UsingNonSerializedFields.Inner.OnDeserialized(StreamingContext)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnDeserializing(System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="231">从未使用 'UsingNonSerializedFields.Inner.OnDeserializing(StreamingContext)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnSerialized(System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="226">从未使用 'UsingNonSerializedFields.Inner.OnSerialized(StreamingContext)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnSerializing(System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="221">从未使用 'UsingNonSerializedFields.Inner.OnSerializing(StreamingContext)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UsingNonSerializedFields+Outer" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#inner" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'UsingNonSerializedFields.Outer.inner' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnDeserialized(System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="212">从未使用 'UsingNonSerializedFields.Outer.OnDeserialized(StreamingContext)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnDeserializing(System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="207">从未使用 'UsingNonSerializedFields.Outer.OnDeserializing(StreamingContext)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnSerialized(System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="202">从未使用 'UsingNonSerializedFields.Outer.OnSerialized(StreamingContext)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnSerializing(System.Runtime.Serialization.StreamingContext)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2024-11-11 06:30:22Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp" File="Ch24-1-RuntimeSerialization.cs" Line="197">从未使用 'UsingNonSerializedFields.Outer.OnSerializing(StreamingContext)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>程序集应具有有效的强名称</Name>
+   <Description>程序集没有强名称，强名称无效，或者强名称只有经过计算机配置后才有效。不应部署处于这种状态的程序集。出现这种情况最常见原因有: 1) 对程序集进行签名后，修改了该程序集的内容；2) 签名过程失败；3) 延迟了程序集签名；4) 存在一个允许检查通过(原本不应通过)的注册表项。</Description>
+   <Resolution Name="NoStrongName">用强名称密钥对 {0} 进行签名。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>避免使用未调用的私有代码</Name>
+   <Description>存在对外部不可见的未调用代码，该代码不是已知的运行时入口点。如果错误地引发此冲突，请向 Visual Studio Code Analysis 团队发送问题报告。</Description>
+   <Resolution Name="Default">{0} 似乎没有上游 public 或 protected 调用方。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+   <Name>避免未实例化的内部类</Name>
+   <Description>检测到显然从未实例化过的内部类。此规则不会尝试检测后期绑定创建，并且，如果某一类型的实例都是以这种方法(例如，通过 Activator.CreateInstance 或将类型作为参数传递给 TypeConverter 构造函数)创建的，则将产生误报。</Description>
+   <Resolution Name="Default">{0} 是显然没有实例化过的内部类。如果是这样，请从程序集内移除该代码。如果此内部类只用于包含静态方法，请考虑添加私有构造函数，以阻止编译器生成默认构造函数。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182265.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+   <Name>避免未使用的私有字段</Name>
+   <Description>检测到程序集内有似乎未访问过的私有字段。如果错误地引发了此冲突，请向 Visual Studio Code Analysis 团队发送问题报告。</Description>
+   <Resolution Name="Default">似乎从未使用过字段 {0} 或只对它进行过赋值。请使用此字段或将它移除。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245042.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="DeclareTypesInNamespaces" Category="Microsoft.Design" CheckId="CA1050">
+   <Name>在命名空间中声明类型</Name>
+   <Description>应在命名空间内定义类型以避免重复。</Description>
+   <Resolution Name="Default">{0} 应在命名空间内声明。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182134.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>标识符的大小写应当正确</Name>
+   <Description>类型、命名空间和成员标识符应采用 Pascal 大小写格式。参数标识符应采用 Camel 大小写格式。这些标识符内由两个字母组成的首字母缩略词应全部大写，例如，应采用 System.IO，而不是 System.Io。由三个或更多个字母组成的首字母缩略词应采用 Pascal 大小写格式，例如，应采用 System.Xml，而不是 System.XML。Pascal 大小写格式约定每个单词的首字母大写，如 BackColor。Camel 大小写格式约定第一个单词的首字母小写，所有后续单词的首字母都大写，如 backgroundColor。尽管有些由两个字母组成的首字母缩略词习惯采用不完全大写形式，但不能因此而排斥此规则。例如，“DbConnection”很常见，但并不正确，应采用 DBConnection。为了与现有的非托管符号方案兼容，可能需要违反此规则。但一般来说，这些符号在使用它们的程序集之外不可见。</Description>
+   <Resolution Name="Assembly">更正程序集名称 {1} 中“{0}”的大小写，将其改为“{2}”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>用 CLSCompliantAttribute 标记程序集</Name>
+   <Description>程序集应使用 CLSCompliant 特性显式说明其 ClS 遵从性。没有此特性的程序集不符合 CLS。即使程序集、模块或类型的某些部分不符合 CLS，这些程序集、模块或类型本身也可以是符合 CLS 的。适用下列规则: 1) 如果元素标记为 CLSCompliant，则所有不符合 CLS 的成员都必须有参数设置为 false 的 CLSCompliant 特性。2) 对于每个不符合 CLS 的成员，都必须提供一个相应的符合 CLS 的备选成员。</Description>
+   <Resolution Name="Default">使用 CLSCompliant(true)来标记 {0}，因为它公开外部可见的类型。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithComVisible" Category="Microsoft.Design" CheckId="CA1017">
+   <Name>用 ComVisibleAttribute 标记程序集</Name>
+   <Description>System.Runtime.InteropServices.ComVisible 特性指示 COM 客户端能否使用库。良好的设计要求开发人员显式指示 COM 可见性。此特性的默认值为“true”。但最佳设计应是: 将程序集的 ComVisible 特性标记为 false，然后根据需要将类型、接口和单个成员的 ComVisible 特性标记为 true。</Description>
+   <Resolution Name="NoAttribute">因为 {0} 公开外部可见的类型，请在程序集级别使用 ComVisible(false)来标记它，然后使用 ComVisible(true)来标记该程序集内应当向 COM 客户端公开的所有类型。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182157.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError, Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>将成员标记为 static</Name>
+   <Description>不访问实例数据或调用实例方法的方法可标记为 Static (在 Visual Basic 中为 Shared)。这样，编译器会向这些成员发出非虚拟调用站点，以防止在运行时对每个调用进行旨在确保当前对象指针为非 null 的检查。这样可以使对性能比较敏感的代码获得显著的性能提升。在某些情况下，无法访问当前对象实例表明存在正确性问题。</Description>
+   <Resolution Name="Default">从未使用 {0} 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法主体或至少一个属性访问器中使用“this”/“Me”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="ProvideDeserializationMethodsForOptionalFields" Category="Microsoft.Usage" CheckId="CA2239">
+   <Name>为可选字段提供反序列化方法</Name>
+   <Description>如果类型包含特性化为 OptionalField 的字段，则该类型应实现相应的特殊反序列化方法。</Description>
+   <Resolution Name="OnDeserialized">向类型 {0} 中添加“private void OnDeserialized(StreamingContext)”方法并使其具有 System.Runtime.Serialization.OnDeserializedAttribute 特性。</Resolution>
+   <Resolution Name="OnDeserializing">向类型 {0} 中添加“private void OnDeserializing(StreamingContext)”方法并使其具有 System.Runtime.Serialization.OnDeserializingAttribute 特性。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182362.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>移除未使用的局部变量</Name>
+   <Description>移除方法实现中未使用过的或只赋过值的局部变量。</Description>
+   <Resolution Name="Default">{0} 声明类型为 {2} 的变量 {1}，但从未使用过该变量或只对它进行过赋值。请使用此变量或将它移除。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>指定 IFormatProvider</Name>
+   <Description>如果存在一个采用 IFormatProvider 参数的重载，则应始终调用该重载，而不调用未采用该参数的重载。运行时中的某些方法可以将值与字符串表示形式相互进行转换，并采用一个字符串参数。该参数中包含一个或多个称为格式说明符的字符，用于指示如何对值进行转换。如果格式说明符的含义因区域性而异，则格式设置对象提供在字符串表示形式中使用的实际字符。如果排序和比较行为不得因区域性而改变，请指定 CultureInfo.InvariantCulture，否则，请指定 CultureInfo.CurrentCulture。</Description>
+   <Resolution Name="IFormatProviderAlternateString">由于 {0} 的行为可能会因当前用户的区域设置不同而不同，请将 {1} 中的此调用替换为对 {2} 的调用。如果要向用户显示 {2} 的结果，请指定 {3} 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 {4}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>丢失范围之前释放对象</Name>
+   <Description>如果在对某个可释放对象的所有引用超出范围之前未显式释放该对象，则当垃圾回收器运行该对象的终结器时，会在某个不确定时间释放该对象。由于可能会发生阻止该对象的终结器运行的意外事件，因此应改为显式释放该对象。</Description>
+   <Resolution Name="ExceptionEdge">在方法 {0} 中，{1} 对象未按所有异常路径释放。请在对 {1} 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>请不要将文本作为本地化参数传递</Name>
+   <Description>嵌入源代码的文本字符串难以进行本地化。对于通常应使用本地化的文本字符串的情况，要避免将文本字符串作为参数来传递。</Description>
+   <Resolution Name="KnownValue">方法 {0} 将一个文本字符串作为对 {2} 的调用的参数“{1}”传递。改为从资源表检索以下字符串: {3}。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+  <Rule TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>验证公共方法的参数</Name>
+   <Description>应检查传递给外部可见方法的所有引用参数是否为 Null (在 VB 中为 Nothing)。如果适用，在参数为 null 时，引发 System.ArgumentNullException。</Description>
+   <Resolution Name="Default">在外部可见方法 {0} 中，请在使用参数“{1}”之前先对其进行验证。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="17.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">Code Analysis 报告</String>
+ </Localized>
+</FxCopReport>
