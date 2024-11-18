@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = P18
-build_property.ProjectDir = D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\
+build_property.ProjectDir = d:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P18\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
