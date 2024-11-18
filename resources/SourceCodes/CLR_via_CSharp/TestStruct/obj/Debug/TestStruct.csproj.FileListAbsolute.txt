@@ -1,0 +1,6 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestStruct\bin\Debug\TestStruct.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestStruct\bin\Debug\TestStruct.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestStruct\obj\Debug\TestStruct.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestStruct\obj\Debug\TestStruct.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestStruct\obj\Debug\TestStruct.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestStruct\obj\Debug\TestStruct.pdb
