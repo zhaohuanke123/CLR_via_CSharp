@@ -1,0 +1,247 @@
+{
+  "main": {
+    "id": "6ad1703db8e3f62e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a5c6c13e22aecfc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "816a0a578114ad97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "错题/CLR/值类型为什么不可变.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "值类型为什么不可变"
+            }
+          },
+          {
+            "id": "3afbc41dd7a9f651",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.6"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.6"
+            }
+          },
+          {
+            "id": "658b6168dd36fb19",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "CLRviaCSharp/Microsoft.Press.CLR.via.Csharp.4th.Edition.Oct.2012.pdf",
+                "page": 47,
+                "left": -234,
+                "top": 417,
+                "zoom": 1.25
+              },
+              "icon": "lucide-file-text",
+              "title": "Microsoft.Press.CLR.via.Csharp.4th.Edition.Oct.2012"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "25498790594db285",
+    "type": "split",
+    "children": [
+      {
+        "id": "a07e073895ccff04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "20f95b69dab50747",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d6da63600a4770e1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "76e067a4e9c71c7e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "3f08ae716aa74526",
+    "type": "split",
+    "children": [
+      {
+        "id": "80e764efde8ed4f9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7d93f10f0e553ae",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "毕设/项目模块.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "项目模块 的反向链接列表"
+            }
+          },
+          {
+            "id": "6647da38809e03b6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "毕设/项目模块.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "项目模块 的出链列表"
+            }
+          },
+          {
+            "id": "9396caa6139c6868",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "6233b96f21b06935",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "毕设/项目模块.md"
+              },
+              "icon": "lucide-list",
+              "title": "项目模块 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "media-extended:Open media": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
+    }
+  },
+  "active": "3afbc41dd7a9f651",
+  "lastOpenFiles": [
+    "错题/CLR/为什么不要在实例构造器中调用虚方法.md",
+    "错题/CLR/Temp.md",
+    "TODO.md",
+    "错题/CLR/值类型为什么不可变.md",
+    "错题/CLR",
+    "CLRviaCSharp/P4 Type Fundamentals.md",
+    "1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
+    "错题",
+    "CLRviaCSharp/P3.md",
+    "CLRviaCSharp/P2.md",
+    "CLRviaCSharp/P1.md",
+    "CLRviaCSharp/Microsoft.Press.CLR.via.Csharp.4th.Edition.Oct.2012.pdf",
+    "CLRviaCSharp/Microsoft.Press.CLR.via.Csharp.4th.Edition.Oct.2012-annotate.md",
+    "毕设/选题.md",
+    "毕设/Drawing 2024-10-19 10.18.40.excalidraw.md",
+    "毕设/项目模块.md",
+    "1729325343278-1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
+    "毕设/未命名.md",
+    "1729325372342-1729325370451-1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
+    "1729325370451-1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
+    "1729325366996-1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
+    "Excalidraw/Scripts/Downloaded/GPT-Draw-a-UI.svg",
+    "Excalidraw/Scripts/Downloaded/GPT-Draw-a-UI.md",
+    "Excalidraw/Scripts/Downloaded",
+    "Excalidraw/Scripts",
+    "Excalidraw",
+    "毕设",
+    "Unity/底层/资源 & ID.md",
+    "Unity/底层/Unity 序列化.md",
+    "Unity/底层/序列化",
+    "Unity/底层",
+    "怎么学习.md",
+    "CLRviaCSharp",
+    "租房.md",
+    "计算机基础/8-3. 进程与上下文.md",
+    "Unity/性能优化/资源/Model导入设置检查与优化.md",
+    "项目/业务逻辑.md",
+    "计算机基础/CSAPP/2-4.浮点数(下).md",
+    "计算机基础/CSAPP/The Memory Hierarchy.md",
+    "计算机基础/CSAPP/Program Optimization.md",
+    "计算机基础/CSAPP/CMU 15-213 CSAPP.md",
+    "计算机基础/CSAPP/3-10.缓冲区溢出.md",
+    "Pasted image 20240902175605.png",
+    "Pasted image 20240902175609.png",
+    "1718861878900.jpg",
+    "未命名.canvas"
+  ]
+}
