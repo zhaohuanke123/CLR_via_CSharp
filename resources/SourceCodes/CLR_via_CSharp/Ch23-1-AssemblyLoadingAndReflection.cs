@@ -60,16 +60,20 @@ internal static class TestRuntimeMethodHandle
         GC.KeepAlive(methodInfos); // 阻止缓存被过早垃圾回收
 
         methodInfos = null; // 现在允许缓存垃圾回收
+        GC.Collect(2, GCCollectionMode.Forced, true, true);
         Show("After freeing MethodInfo objects");
 
         methodInfos = methodHandles.ConvertAll<MethodBase>(
             rmh => MethodBase.GetMethodFromHandle(rmh));
+        
+        GC.Collect(2, GCCollectionMode.Forced, true, true);
         Show("Size of heap after re-creating MethodInfo objects");
         GC.KeepAlive(methodHandles); // 阻止缓存被过早垃圾回收
         GC.KeepAlive(methodInfos); // 阻止缓存被过早垃圾回收
 
         methodHandles = null; // 现在允许缓存垃圾回收
         methodInfos = null; // 现在允许缓存垃圾回收
+        GC.Collect(2, GCCollectionMode.Forced, true, true);
         Show("After freeing MethodInfos and RuntimeMethodHandles");
     }
 
