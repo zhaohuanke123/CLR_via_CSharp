@@ -3,16 +3,11 @@
   "WorkspaceRootPath": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4267690-862A-4805-8F85-85CF5DA6C529}|Test\\Test.csproj|d:\\study\\clr_via_csharp\\resources\\sourcecodes\\clr_via_csharp\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4267690-862A-4805-8F85-85CF5DA6C529}|Test\\Test.csproj|solutionrelative:test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82AC0174-E7CD-4D3A-9CCA-2890E51D1A27}|..\\TestNullable\\TestNullable.csproj|d:\\study\\clr_via_csharp\\resources\\sourcecodes\\testnullable\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4267690-862A-4805-8F85-85CF5DA6C529}|Test\\Test.csproj|d:\\study\\clr_via_csharp\\resources\\sourcecodes\\clr_via_csharp\\test\\testpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4267690-862A-4805-8F85-85CF5DA6C529}|Test\\Test.csproj|solutionrelative:test\\testpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4267690-862A-4805-8F85-85CF5DA6C529}|Test\\Test.csproj|d:\\study\\clr_via_csharp\\resources\\sourcecodes\\clr_via_csharp\\test\\testlistil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4267690-862A-4805-8F85-85CF5DA6C529}|Test\\Test.csproj|solutionrelative:test\\testlistil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8B65EF3-851D-4BE0-BBB5-5C0D586F7EA7}|Ch22-1-AppDomains.csproj|d:\\study\\clr_via_csharp\\resources\\sourcecodes\\clr_via_csharp\\ch22-1-appdomains.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8B65EF3-851D-4BE0-BBB5-5C0D586F7EA7}|Ch22-1-AppDomains.csproj|solutionrelative:ch22-1-appdomains.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +17,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\Test\\Program.cs",
-              "RelativeDocumentMoniker": "Test\\Program.cs",
-              "ToolTip": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\Test\\Program.cs",
-              "RelativeToolTip": "Test\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T02:06:37.766Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TestPool.cs",
-              "DocumentMoniker": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\Test\\TestPool.cs",
-              "RelativeDocumentMoniker": "Test\\TestPool.cs",
-              "ToolTip": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\Test\\TestPool.cs",
-              "RelativeToolTip": "Test\\TestPool.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAiAAAAAAAAAA==",
+              "Title": "Ch22-1-AppDomains.cs",
+              "DocumentMoniker": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\Ch22-1-AppDomains.cs",
+              "RelativeDocumentMoniker": "Ch22-1-AppDomains.cs",
+              "ToolTip": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\Ch22-1-AppDomains.cs",
+              "RelativeToolTip": "Ch22-1-AppDomains.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAAqwC8BAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T02:05:58.598Z",
+              "WhenOpened": "2024-11-15T10:37:17.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestListIL.cs",
-              "DocumentMoniker": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\Test\\TestListIL.cs",
-              "RelativeDocumentMoniker": "Test\\TestListIL.cs",
-              "ToolTip": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\CLR_via_CSharp\\Test\\TestListIL.cs",
-              "RelativeToolTip": "Test\\TestListIL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\TestNullable\\Program.cs",
+              "RelativeDocumentMoniker": "..\\TestNullable\\Program.cs",
+              "ToolTip": "D:\\Study\\CLR_via_CSharp\\resources\\SourceCodes\\TestNullable\\Program.cs",
+              "RelativeToolTip": "..\\TestNullable\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T02:05:56.168Z",
+              "WhenOpened": "2024-11-15T06:05:56.202Z",
               "EditorCaption": ""
             }
           ]

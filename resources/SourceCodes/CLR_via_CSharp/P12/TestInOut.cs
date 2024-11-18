@@ -5,6 +5,8 @@ namespace P12
 {
     delegate T2 TestDelegate<in T1, out T2>(T1 t1);
 
+    delegate T2 TestDelegate2<T1, T2>(T1 t1);
+
     public class TestInOut
     {
         static TestDelegate<List<int>, object> d;
@@ -12,7 +14,7 @@ namespace P12
         public static void Run()
         {
             TestDelegate<IList<int>, string> dd = Test;
-            d = Test;
+            d = dd;
 
             List<int> s = new List<int> { 1, 2, 3 };
             var o1 = d(s);

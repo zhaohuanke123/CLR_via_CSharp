@@ -93,9 +93,9 @@ public static class Program {
       Array.Copy(i1dim, o1dim, 0);
    }
 
-   private static void DynamicArray() {
+   public static void DynamicArray() {
       // We want a 2-dim array
-      Int32[] lowerBounds = { 1995, 1 };
+      Int32[] lowerBounds = { 1000, 2 };
       Int32[] lengths = { 10, 4 };
       Decimal[,] quarterlyRevenue = (Decimal[,])
          Array.CreateInstance(typeof(Decimal), lengths, lowerBounds);

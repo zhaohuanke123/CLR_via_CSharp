@@ -10,23 +10,26 @@ using Microsoft.Win32.SafeHandles;
 
 public sealed class Progam {
    public static void Main() {
-      Roots.Go();
-      DebuggingRoots.Go();
-      GCNotifications.Go();
-      SafeHandleInterop.Go();
-      GCBeepDemo.Go();
-      CircularDependency.Go();
-      FixedStatement.Go();
-      MemoryPressureAndHandleCollector.Go();
-      MemoryFailPointDemo.Go();
-      GCMethods.Go();
-      ConditionalWeakTableDemo.Go();
+       unsafe
+       {
+           //Roots.Go();
+           //DebuggingRoots.Go();
+           //GCNotifications.Go();
+           //SafeHandleInterop.Go();
+           //GCBeepDemo.Go();
+           //CircularDependency.Go();
+           //FixedStatement.Go();
+           //MemoryPressureAndHandleCollector.Go();
+           //MemoryFailPointDemo.Go();
+           //GCMethods.Go();
+           ConditionalWeakTableDemo.Go();
 
-      // Fun note: array of Doubles that have 1000+ elements are put in 
-      // the LOH because objects in the LOH are 8-byte aligned which 
-      // improves perf for accessing large arrays of Doubles
-      Console.WriteLine(GC.GetGeneration(new Double[999]));    // 0  
-      Console.WriteLine(GC.GetGeneration(new Double[1000]));   // 2
+           // Fun note: array of Doubles that have 1000+ elements are put in 
+           // the LOH because objects in the LOH are 8-byte aligned which 
+           // improves perf for accessing large arrays of Doubles
+           //Console.WriteLine(GC.GetGeneration(new Double[999]));    // 0  
+           //Console.WriteLine(GC.GetGeneration(new Double[1000]));   // 2
+       }
    }
 }
 

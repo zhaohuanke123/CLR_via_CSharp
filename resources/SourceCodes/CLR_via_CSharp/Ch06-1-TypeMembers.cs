@@ -79,7 +79,7 @@ internal static class DifferentCalls {
    }
 }
 
-#region Versioning Components With Virtual Methods
+
 public sealed class VersioningComponentsWithVirtualMethods {
    public static void Main() {
       CompanyB.BetterPhone phone = new CompanyB.BetterPhone();
@@ -205,4 +205,3 @@ namespace CompanyB {
 	}
 }
 #endif
-#endregion

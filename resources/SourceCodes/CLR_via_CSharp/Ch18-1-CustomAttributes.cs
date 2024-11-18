@@ -121,9 +121,9 @@ public static class CustomAttributes
 {
     public static void Main()
     {
-        // DetectingAttributes.Go();
-        MatchingAttributes.Go();
-        // ConditionalAttributeDemo.Go();
+        DetectingAttributes.Go();
+        //MatchingAttributes.Go();
+        //ConditionalAttributeDemo.Go();
     }
 
     [Serializable]

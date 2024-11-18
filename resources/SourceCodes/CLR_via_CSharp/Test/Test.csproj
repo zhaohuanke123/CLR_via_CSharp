@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -47,6 +47,7 @@
     <Compile Include="TestCast.cs" />
     <Compile Include="TestDict.cs" />
     <Compile Include="TestFailFast.cs" />
+    <Compile Include="TestInterface.cs" />
     <Compile Include="TestListIL.cs" />
     <Compile Include="TestPool.cs" />
     <Compile Include="TestSerializable.cs" />
