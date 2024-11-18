@@ -1,0 +1,2 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch07-4-AppUsingLibraryReadOnlyField.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch07-4-AppUsingLibraryReadOnlyField.csproj.CoreCompileInputs.cache

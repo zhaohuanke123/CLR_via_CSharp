@@ -1,0 +1,5 @@
+resources\SourceCodes\CLR_via_CSharp\bin
+*.exe
+*.pdb
+*.dll
+bin/

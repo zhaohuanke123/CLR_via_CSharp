@@ -1,0 +1,6 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch05-1-PrimitiveReferenceValueTypes.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch05-1-PrimitiveReferenceValueTypes.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch05-1-PrimitveReferenceValueTypes.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch05-1-PrimitveReferenceValueTypes.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch05-1-PrimitiveReferenceValueTypes.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch05-1-PrimitiveReferenceValueTypes.pdb

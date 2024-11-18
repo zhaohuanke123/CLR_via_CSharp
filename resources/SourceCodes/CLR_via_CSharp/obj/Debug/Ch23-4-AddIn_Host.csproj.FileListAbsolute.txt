@@ -1,0 +1,8 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch23-4-AddIn_Host.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch23-4-AddIn_Host.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch23-4-AddInHost.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch23-4-AddInHost.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch23-2-AddIn_SDKAssembly.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch23-4-A.01A21897.Up2Date
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch23-4-AddInHost.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch23-4-AddInHost.pdb

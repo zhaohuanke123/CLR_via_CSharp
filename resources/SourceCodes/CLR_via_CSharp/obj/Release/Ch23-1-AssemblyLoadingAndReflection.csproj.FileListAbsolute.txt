@@ -1,0 +1,8 @@
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch23-1-AssemblyLoadingAndReflection.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch23-1-AssemblyLoadingAndReflection.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch01-1-SomeLibrary.pdb
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-1-AssemblyLoadingAndReflection.csproj.AssemblyReference.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-1-AssemblyLoadingAndReflection.csproj.CoreCompileInputs.cache
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-1-A.0C8BCA47.Up2Date
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-1-AssemblyLoadingAndReflection.exe
+D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-1-AssemblyLoadingAndReflection.pdb
