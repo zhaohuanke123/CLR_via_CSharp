@@ -1,7 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch02-1-SimpleProgram.exe.config
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch02-1-SimpleProgram.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch02-1-SimpleProgram.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch02-1-SimpleProgram.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch02-1-SimpleProgram.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch02-1-SimpleProgram.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch02-1-SimpleProgram.pdb

@@ -8,7 +8,9 @@ namespace Test
         {
             string s = "he";
             string s2 = "hehe";
-            Console.WriteLine(s + s2);
+            var type = s.GetType();
+            string s2c = type.ToString();
+            Console.WriteLine(s2c);
         }
     }
 }

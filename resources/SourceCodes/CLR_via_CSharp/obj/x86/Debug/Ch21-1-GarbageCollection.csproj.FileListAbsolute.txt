@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch21-1-GarbageCollection.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch21-1-GarbageCollection.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch21-1-GarbageCollection.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch21-1-GarbageCollection.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch21-1-GarbageCollection.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch21-1-GarbageCollection.pdb

@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P4\bin\Debug\P4.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P4\bin\Debug\P4.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P4\obj\Debug\P4.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P4\obj\Debug\P4.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P4\obj\Debug\P4.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P4\obj\Debug\P4.pdb

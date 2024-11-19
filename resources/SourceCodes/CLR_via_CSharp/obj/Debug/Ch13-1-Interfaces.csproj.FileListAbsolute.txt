@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch13-1-Interfaces.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch13-1-Interfaces.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch13-1-Interfaces.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch13-1-Interfaces.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch13-1-Interfaces.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch13-1-Interfaces.pdb

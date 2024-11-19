@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch04-1-TypeFundamentals.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch04-1-TypeFundamentals.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch04-1-Type Fundamentals.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch04-1-Type Fundamentals.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch04-1-TypeFundamentals.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch04-1-TypeFundamentals.pdb

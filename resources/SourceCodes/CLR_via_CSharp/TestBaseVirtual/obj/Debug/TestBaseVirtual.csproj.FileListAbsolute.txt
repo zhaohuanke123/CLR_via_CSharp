@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestBaseVirtual\bin\Debug\TestBaseVirtual.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestBaseVirtual\bin\Debug\TestBaseVirtual.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestBaseVirtual\obj\Debug\TestBaseVirtual.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestBaseVirtual\obj\Debug\TestBaseVirtual.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestBaseVirtual\obj\Debug\TestBaseVirtual.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\TestBaseVirtual\obj\Debug\TestBaseVirtual.pdb

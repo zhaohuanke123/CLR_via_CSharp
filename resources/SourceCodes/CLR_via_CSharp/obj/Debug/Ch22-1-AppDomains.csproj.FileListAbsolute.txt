@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch22-1-AppDomains.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch22-1-AppDomains.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch22-1-AppDomains.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch22-1-AppDomains.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch22-1-AppDomains.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch22-1-AppDomains.pdb

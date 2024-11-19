@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch01-2-TypeMembersToIL.dll
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch01-2-TypeMembersToIL.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch01-2-TypeMembersToIL.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch01-2-TypeMembersToIL.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch01-2-TypeMembersToIL.dll
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch01-2-TypeMembersToIL.pdb

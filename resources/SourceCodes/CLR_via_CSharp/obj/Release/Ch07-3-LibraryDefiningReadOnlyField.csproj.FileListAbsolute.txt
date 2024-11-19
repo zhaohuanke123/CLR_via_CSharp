@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch07-3-LibraryDefiningReadOnlyField.dll
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch07-3-LibraryDefiningReadOnlyField.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch07-3-LibraryDefiningReadOnlyField.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch07-3-LibraryDefiningReadOnlyField.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch07-3-LibraryDefiningReadOnlyField.dll
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch07-3-LibraryDefiningReadOnlyField.pdb

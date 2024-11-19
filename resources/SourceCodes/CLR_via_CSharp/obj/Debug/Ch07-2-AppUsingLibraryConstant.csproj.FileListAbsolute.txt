@@ -1,2 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch07-2-AppUsingLibraryConstant.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Debug\Ch07-2-AppUsingLibraryConstant.csproj.CoreCompileInputs.cache

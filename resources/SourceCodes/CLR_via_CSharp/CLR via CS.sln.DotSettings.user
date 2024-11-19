@@ -138,4 +138,5 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=37271c44_002Dfeee_002D48c0_002D9fb7_002Dcf777d5062df_0023Ch25_002D2_002DConsumeWinRTComponents/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=66ff2b7a_002D4b2d_002D4879_002Da151_002D659610686371_0023Ch25_002D1_002DWinRTComponents/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

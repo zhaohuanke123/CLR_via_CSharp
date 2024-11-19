@@ -3,3 +3,7 @@ resources\SourceCodes\CLR_via_CSharp\bin
 *.pdb
 *.dll
 bin/
+obj/
+.vs/
+.vscode/
+.idea/

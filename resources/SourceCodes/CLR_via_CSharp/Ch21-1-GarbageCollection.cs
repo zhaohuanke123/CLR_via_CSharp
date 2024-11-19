@@ -17,23 +17,23 @@ public sealed class Progam
     {
         unsafe
         {
-            //Roots.Go();
-            //DebuggingRoots.Go();
-            //GCNotifications.Go();
-            //SafeHandleInterop.Go();
-            //GCBeepDemo.Go();
-            //CircularDependency.Go();
-            //FixedStatement.Go();
+            Roots.Go();
+            DebuggingRoots.Go();
+            GCNotifications.Go();
+            SafeHandleInterop.Go();
+            GCBeepDemo.Go();
+            CircularDependency.Go();
+            FixedStatement.Go();
             MemoryPressureAndHandleCollector.Go();
-            //MemoryFailPointDemo.Go();
-            //GCMethods.Go();
-            // ConditionalWeakTableDemo.Go();
+            MemoryFailPointDemo.Go();
+            GCMethods.Go();
+            ConditionalWeakTableDemo.Go();
 
             // Fun note: array of Doubles that have 1000+ elements are put in 
             // the LOH because objects in the LOH are 8-byte aligned which 
             // improves perf for accessing large arrays of Doubles
-            //Console.WriteLine(GC.GetGeneration(new Double[999]));    // 0  
-            //Console.WriteLine(GC.GetGeneration(new Double[1000]));   // 2
+            Console.WriteLine(GC.GetGeneration(new Double[999]));    // 0  
+            Console.WriteLine(GC.GetGeneration(new Double[1000]));   // 2
         }
     }
 }

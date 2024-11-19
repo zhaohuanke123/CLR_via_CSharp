@@ -1,8 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch23-3-AddIn_AddInType.dll
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch23-3-AddIn_AddInType.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Release\Ch23-2-AddIn_SDKAssembly.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-3-AddIn_AddInTypes.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-3-AddIn_AddInTypes.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-3-A.23086342.Up2Date
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-3-AddIn_AddInType.dll
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\Release\Ch23-3-AddIn_AddInType.pdb

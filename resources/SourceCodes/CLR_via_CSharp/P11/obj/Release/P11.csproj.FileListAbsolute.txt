@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P11\bin\Release\P11.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P11\bin\Release\P11.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P11\obj\Release\P11.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P11\obj\Release\P11.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P11\obj\Release\P11.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\P11\obj\Release\P11.pdb

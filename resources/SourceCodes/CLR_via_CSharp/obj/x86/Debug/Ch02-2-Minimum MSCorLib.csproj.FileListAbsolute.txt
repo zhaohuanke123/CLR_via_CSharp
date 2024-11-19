@@ -1,2 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch02-2-Minimum MSCorLib.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch02-2-Minimum MSCorLib.csproj.CoreCompileInputs.cache

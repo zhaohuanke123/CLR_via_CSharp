@@ -1,8 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch24-1-RuntimeSerialization.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch24-1-RuntimeSerialization.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch24-1-RuntimeSerialization.exe.CodeAnalysisLog.xml
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch24-1-RuntimeSerialization.exe.lastcodeanalysissucceeded
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch24-1-RuntimeSerialization.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch24-1-RuntimeSerialization.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch24-1-RuntimeSerialization.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\obj\x86\Debug\Ch24-1-RuntimeSerialization.pdb

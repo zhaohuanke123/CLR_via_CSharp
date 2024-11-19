@@ -1,6 +1,0 @@
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\p17\bin\Debug\p17.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\p17\bin\Debug\p17.pdb
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\p17\obj\Debug\p17.csproj.AssemblyReference.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\p17\obj\Debug\p17.csproj.CoreCompileInputs.cache
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\p17\obj\Debug\p17.exe
-D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\p17\obj\Debug\p17.pdb

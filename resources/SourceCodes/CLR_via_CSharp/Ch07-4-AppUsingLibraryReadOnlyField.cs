@@ -1,4 +1,5 @@
 ﻿using System;
+using LibraryDefiningReadOnlyField;
 
 public sealed class Program {
 	static void Main() {
