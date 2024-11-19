@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 
 namespace TestStruct
 {
@@ -8,8 +7,9 @@ namespace TestStruct
     {
         interface IIncrementable
         {
-           void Increment(); 
+            void Increment();
         }
+
         struct MyStruct : IIncrementable, IEquatable<MyStruct>
         {
             public int a;
@@ -18,7 +18,7 @@ namespace TestStruct
             {
                 a++;
             }
-            
+
             void IIncrementable.Increment()
             {
                 Increment();
@@ -43,6 +43,11 @@ namespace TestStruct
             {
                 return obj is MyStruct other && Equals(other);
             }
+
+            public static MyStruct operator +(MyStruct a, MyStruct b)
+            {
+                return new MyStruct(a.a + b.a);
+            }
         }
 
         public static void Test01()
@@ -56,7 +61,7 @@ namespace TestStruct
 
         public static void Test02()
         {
-            Dictionary<object,int> dict = new Dictionary<object, int>();
+            Dictionary<object, int> dict = new Dictionary<object, int>();
             object o = new MyStruct(10);
             dict.Add(o, 10);
 
@@ -64,18 +69,25 @@ namespace TestStruct
             {
                 ((IIncrementable)key).Increment();
             }
+
             foreach (var pair in dict)
             {
-               Console.WriteLine(((MyStruct)pair.Key).a + " " + pair.Value);
+                Console.WriteLine(((MyStruct)pair.Key).a + " " + pair.Value);
             }
+
             dict.TryGetValue(o, out int value);
             Console.WriteLine(value);
+        }
+
+        private static void Test03()
+        {
         }
 
         static void Main()
         {
             // Test01();
             // Test02();
+            Test03();
         }
     }
 }
