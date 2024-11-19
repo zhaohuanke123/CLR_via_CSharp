@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace TestStruct
 {
@@ -74,7 +75,7 @@ namespace TestStruct
         static void Main()
         {
             // Test01();
-            Test02();
+            // Test02();
         }
     }
 }
