@@ -122,8 +122,8 @@ public static class CustomAttributes
     public static void Main()
     {
         DetectingAttributes.Go();
-        //MatchingAttributes.Go();
-        //ConditionalAttributeDemo.Go();
+        // MatchingAttributes.Go();
+        // ConditionalAttributeDemo.Go();
     }
 
     [Serializable]
@@ -171,13 +171,14 @@ public static class CustomAttributes
         {
             var attributes = attributeTarget.GetCustomAttributes<Attribute>();
 
+            var attrs = attributes as Attribute[] ?? attributes.ToArray();
             Console.WriteLine("Attributes applied to {0}: {1}",
-                attributeTarget.Name, (attributes.Count() == 0 ? "None" : String.Empty));
+                attributeTarget.Name, !attrs.Any() ? "None" : String.Empty);
 
-            foreach (Attribute attribute in attributes)
+            foreach (Attribute attribute in attrs)
             {
                 // Display the type of each applied attribute
-                Console.WriteLine("  {0}", attribute.GetType().ToString());
+                Console.WriteLine("  {0}", attribute.GetType());
 
                 if (attribute is DefaultMemberAttribute)
                     Console.WriteLine("    MemberName={0}",
@@ -214,7 +215,7 @@ public static class CustomAttributes
             {
                 // Display the type of each applied attribute
                 Type t = attribute.Constructor.DeclaringType;
-                Console.WriteLine("  {0}", t.ToString());
+                Console.WriteLine("  {0}", t);
                 Console.WriteLine("    Constructor called={0}", attribute.Constructor);
 
                 IList<CustomAttributeTypedArgument> posArgs = attribute.ConstructorArguments;
@@ -312,7 +313,7 @@ internal sealed class MatchingAttributes
             // If the objects are of different types, they can�t match
             // NOTE: This line may be deleted if you trust 
             // the base type implemented Match correctly.
-            if (this.GetType() != obj.GetType()) return false;
+            if (GetType() != obj.GetType()) return false;
 
             // Cast obj to our type to access fields. NOTE: This cast
             // can't fail since we know objects are of the same type

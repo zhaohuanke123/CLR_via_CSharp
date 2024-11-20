@@ -576,7 +576,7 @@ internal static class ConditionalWeakTableDemo
 internal static class GCWatcher
 {
     // NOTE: Be careful with Strings due to interning and MarshalByRefObject proxy objects
-    private readonly static ConditionalWeakTable<Object, NotifyWhenGCd<String>> s_cwt =
+    private static readonly ConditionalWeakTable<Object, NotifyWhenGCd<String>> s_cwt =
         new ConditionalWeakTable<Object, NotifyWhenGCd<String>>();
 
     private sealed class NotifyWhenGCd<T>

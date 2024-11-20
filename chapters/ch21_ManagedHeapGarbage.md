@@ -1255,7 +1255,7 @@ public sealed class ConditionalWeakTable<TKey, TValue> where TKey :class where T
 
 任意数据要和一个或多个对象关联，首先要创建该类的实例。然后调用 `Add` 方法，为 `key` 参数传递对象引用，为 `value` 参数传递想和对象关联的数据。试图多次添加对同一个对象的引用，`Add` 方法会抛出 `ArgumentException`；要更改和对象关联的值，必须先删除 `key`，再用新值把它添加回来。注意这个类是线程安全的，多个线程能同时使用它(虽然这也意味着类的性能并不出众)；应测试好这个类的性能，验证它在是否适合你的实际环境。
 
-当然，表对象在内部存储了对作为 `key` 传递的对象的弱引用(一个 `WeakReference` 对象)；这样可保证不会因为表的存在而造成对象“被迫”存活。但是，`ConditionalWeakTable` 类最特别的地方在于，它保证了只要 `key` 所标识的对象在内存中，值就肯定在内存中。这使其超越了一个普通的`WeakReference`，因为如果是普通的 `WeakReference`，那么即使 `key` 对象保持存活，值就肯定在内存中。这使其超越了一个普通的 `WeakReference`，因为如果是普通的 `WeakReference`， 那么即使 `key` 对象保持存活，值也可能被垃圾回收。`ConditionalWeakTable` 类可用于实现 XAML 的依赖属性(dependency property)机制。动态语言也可在内部利用它将数据和对象动态关联。
+当然，表对象在内部存储了对作为 `key` 传递的对象的弱引用(一个 `WeakReference` 对象)；这样可保证不会因为表的存在而造成对象“被迫”存活。但是，`ConditionalWeakTable` 类最特别的地方在于，它保证了只要 `key` 所标识的对象在内存中，值就肯定在内存中。这使其超越了一个普通的`WeakReference`，因为如果是普通的 `WeakReference`， 那么即使 `key` 对象保持存活，值也可能被垃圾回收。`ConditionalWeakTable` 类可用于实现 XAML 的依赖属性(dependency property)机制。动态语言也可在内部利用它将数据和对象动态关联。
 
 以下代码演示了 `ConditionalWeakTable` 类的使用。它允许在任何对象上调用 `GCWatch` 扩展方法并传递一些 `String` 标签(在程序中作为通知消息显示)。然后，在特定对象被垃圾回收时，它通过控制台窗口发生通知：
 
