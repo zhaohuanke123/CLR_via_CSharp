@@ -10,10 +10,10 @@ public sealed class Program
 {
     public static void Main()
     {
-        Marshalling();
-        //FieldAccessTiming();
-        //AppDomainResourceMonitoring();
-        //UnloadTimeout.Go();
+        // Marshalling();
+        // FieldAccessTiming();
+        // AppDomainResourceMonitoring();
+        UnloadTimeout.Go();
     }
 
     private static void Marshalling()
@@ -124,10 +124,6 @@ public sealed class Program
         // We won't get here...
     }
 
-    private sealed class MBRO : MarshalByRefObject
-    {
-        public Int32 x;
-    }
 
     private sealed class NonMBRO : Object
     {
@@ -136,9 +132,21 @@ public sealed class Program
 
     private static void FieldAccessTiming()
     {
-        const Int32 count = 100000000;
+        const Int32 count = 10000;
         NonMBRO nonMbro = new NonMBRO();
-        MBRO mbro = new MBRO();
+        // MBRO mbro = new MBRO();
+
+
+        String exeAssembly = Assembly.GetEntryAssembly().FullName;
+        // Create new AppDomain (security & configuration match current AppDomain)
+        AppDomain ad2 = AppDomain.CreateDomain("AD #2", null, null);
+        MBRO mbro = null;
+
+        // Load our assembly into the new AppDomain, construct an object, marshal 
+        // it back to our AD (we really get a reference to a proxy)
+        mbro = (MBRO)
+            ad2.CreateInstanceAndUnwrap(exeAssembly, "MBRO");
+
 
         Stopwatch sw = Stopwatch.StartNew();
         for (Int32 c = 0; c < count; c++) nonMbro.x++;
@@ -147,7 +155,12 @@ public sealed class Program
         sw = Stopwatch.StartNew();
         for (Int32 c = 0; c < count; c++) mbro.x++;
         Console.WriteLine("{0}", sw.Elapsed);
+
+        sw = Stopwatch.StartNew();
+        for (Int32 c = 0; c < count; c++) mbro.Method();
+        Console.WriteLine("{0}", sw.Elapsed);
     }
+
 
     private sealed class AppDomainMonitorDelta : IDisposable
     {
@@ -260,6 +273,15 @@ public sealed class Program
     }
 }
 
+public sealed class MBRO : MarshalByRefObject
+{
+    public Int32 x;
+
+    public void Method()
+    {
+        x++;
+    }
+}
 
 // Instances can be marshaled-by-reference across AppDomain boundaries
 public sealed class MarshalByRefType : MarshalByRefObject
