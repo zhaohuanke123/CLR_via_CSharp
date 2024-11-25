@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ch14-1-CharsAndStrings.cs" />
+    <Compile Include="TestConvert.cs" />
     <Compile Include="UTF16NetworkStreamReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

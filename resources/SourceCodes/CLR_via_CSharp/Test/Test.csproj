@@ -44,7 +44,6 @@
     <Compile Include="ExceptionFlowTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestCast.cs" />
     <Compile Include="TestDict.cs" />
     <Compile Include="TestFailFast.cs" />
     <Compile Include="TestInterface.cs" />
