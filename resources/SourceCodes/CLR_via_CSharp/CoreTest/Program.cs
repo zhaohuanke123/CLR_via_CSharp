@@ -1,19 +1,12 @@
-﻿namespace CoreTest;
+﻿using System.Reflection;
+
+namespace CoreTest;
 
 class Program
 {
     struct MyStruct
     {
-        public int a;
-        //public int b;
-        //public int c;
-        //public int d;
-        //public int e;
-        //public int f;
-        //public int g;
-        //public int h;
-        //public int i;
-
+        public readonly int a;
 
         public MyStruct(int a)
         {
@@ -29,20 +22,37 @@ class Program
         }
     }
 
+    class TestClass
+    {
+        public readonly int ReadOnlyField = 1;
+    }
+
     static void Main(string[] args)
     {
-        MyStruct myStruct = new MyStruct();
+        // Create an instance of TestClass
+        TestClass testInstance = new TestClass();
 
-        Console.WriteLine(myStruct);
+        // Print the initial value of the readonly field
+        Console.WriteLine($"Before modification: ReadOnlyField = {testInstance.ReadOnlyField}");
 
-        MyStruct myStruct1 = new MyStruct(1);
-        Console.WriteLine(myStruct1);
+        // Get the type of the class
+        Type type = typeof(TestClass);
 
-        MyStruct ms = new MyStruct();
+        // Use reflection to get the FieldInfo for the readonly field
+        FieldInfo fieldInfo = type.GetField("ReadOnlyField",
+            BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
 
-        Console.WriteLine(ms);
-        MyStruct m1 = new MyStruct();
+        if (fieldInfo == null)
+        {
+            Console.WriteLine("Field not found.");
+            return;
+        }
 
-        Console.WriteLine(m1);
+        // Remove the readonly protection using FieldAttributes
+        // Note: This requires unsafe code and works in .NET Framework or .NET Core.
+        fieldInfo.SetValue(testInstance, 100);
+
+        // Print the modified value of the readonly field
+        Console.WriteLine($"After modification: ReadOnlyField = {testInstance.ReadOnlyField}");
     }
 }

@@ -17,16 +17,16 @@ public sealed class Progam
     {
         unsafe
         {
-            Roots.Go();
-            DebuggingRoots.Go();
-            GCNotifications.Go();
-            SafeHandleInterop.Go();
-            GCBeepDemo.Go();
-            CircularDependency.Go();
-            FixedStatement.Go();
-            MemoryPressureAndHandleCollector.Go();
-            MemoryFailPointDemo.Go();
-            GCMethods.Go();
+            // Roots.Go();
+            // DebuggingRoots.Go();
+            // GCNotifications.Go();
+            // SafeHandleInterop.Go();
+            // GCBeepDemo.Go();
+            // CircularDependency.Go();
+            // FixedStatement.Go();
+            // MemoryPressureAndHandleCollector.Go();
+            // MemoryFailPointDemo.Go();
+            // GCMethods.Go();
             ConditionalWeakTableDemo.Go();
 
             // Fun note: array of Doubles that have 1000+ elements are put in 
