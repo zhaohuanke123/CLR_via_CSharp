@@ -1,4 +1,6 @@
 ﻿using System.Reflection;
+using System.Security.Cryptography;
+using MToolKit;
 
 namespace CoreTest;
 
@@ -6,11 +8,13 @@ class Program
 {
     struct MyStruct
     {
-        public readonly int a;
+        public int a;
+        public int b;
 
         public MyStruct(int a)
         {
             this.a = a;
+            this.b = a;
             //this.b = a;
             //this.c = a;
             //this.d = a;
@@ -20,39 +24,90 @@ class Program
             //this.h = a;
             //this.i = a;
         }
-    }
 
-    class TestClass
-    {
-        public readonly int ReadOnlyField = 1;
+        public static MyStruct operator ++(MyStruct self)
+        {
+            self.a++;
+            return self;
+        }
     }
 
     static void Main(string[] args)
     {
-        // Create an instance of TestClass
-        TestClass testInstance = new TestClass();
+        MultiDimArrayPerformance.Go();
+    }
+}
 
-        // Print the initial value of the readonly field
-        Console.WriteLine($"Before modification: ReadOnlyField = {testInstance.ReadOnlyField}");
+internal static class MultiDimArrayPerformance
+{
+    private const Int32 CNumElements = 20000;
 
-        // Get the type of the class
-        Type type = typeof(TestClass);
+    public static void Go()
+    {
+        // Declare a 2-dimensional array
+        Int32[,] a2Dim = new Int32[CNumElements, CNumElements];
 
-        // Use reflection to get the FieldInfo for the readonly field
-        FieldInfo fieldInfo = type.GetField("ReadOnlyField",
-            BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+        // Declare a 2-dimensional array as a jagged array (a vector of vectors)
+        Int32[][] aJagged = new Int32[CNumElements][];
+        for (Int32 x = 0; x < CNumElements; x++)
+            aJagged[x] = new Int32[CNumElements];
 
-        if (fieldInfo == null)
+
+        using (new PerformanceTester("DimArr"))
         {
-            Console.WriteLine("Field not found.");
-            return;
+            // 1: Access all elements of the array using the usual, safe technique
+            Safe2DimArrayAccess(a2Dim);
         }
 
-        // Remove the readonly protection using FieldAttributes
-        // Note: This requires unsafe code and works in .NET Framework or .NET Core.
-        fieldInfo.SetValue(testInstance, 100);
+        using (new PerformanceTester("JaggedArr"))
+        {
+            // 2: Access all elements of the array using the jagged array technique
+            SafeJaggedArrayAccess(aJagged);
+        }
 
-        // Print the modified value of the readonly field
-        Console.WriteLine($"After modification: ReadOnlyField = {testInstance.ReadOnlyField}");
+        using (new PerformanceTester("UnsafeArr"))
+        {
+            // 3: Access all elements of the array using the unsafe technique
+            Unsafe2DimArrayAccess(a2Dim);
+        }
+    }
+
+    private static Int32 Safe2DimArrayAccess(Int32[,] a)
+    {
+        Int32 sum = 0;
+        for (Int32 x = 0; x < CNumElements; x++)
+        {
+            for (Int32 y = 0; y < CNumElements; y++)
+            {
+                sum += a[x, y];
+            }
+        }
+        return sum;
+    }
+
+    private static Int32 SafeJaggedArrayAccess(Int32[][] a)
+    {
+        Int32 sum = 0;
+        for (Int32 x = 0; x < CNumElements; x++)
+        {
+            for (Int32 y = 0; y < CNumElements; y++)
+            {
+                sum += a[x][y];
+            }
+        }
+        return sum;
+    }
+
+    private static unsafe Int32 Unsafe2DimArrayAccess(Int32[,] a)
+    {
+        Int32 sum = 0, numElements = CNumElements * CNumElements;
+        fixed (Int32* pi = a)
+        {
+            for (Int32 x = 0; x < numElements; x++)
+            {
+                sum += pi[x];
+            }
+        }
+        return sum;
     }
 }

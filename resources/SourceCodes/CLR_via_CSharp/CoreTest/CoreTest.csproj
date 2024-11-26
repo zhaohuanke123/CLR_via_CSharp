@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -7,6 +7,11 @@
         <RuntimeFrameworkVersion>6.0.6</RuntimeFrameworkVersion>
         <UseAppHost>false</UseAppHost>
         <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\MToolKit\MToolKit.csproj" />
+    </ItemGroup>
 
 </Project>

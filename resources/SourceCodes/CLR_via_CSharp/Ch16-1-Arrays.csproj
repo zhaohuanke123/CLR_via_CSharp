@@ -59,4 +59,10 @@
   <ItemGroup>
     <Compile Include="Ch16-1-Arrays.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MToolKit\MToolKit.csproj">
+      <Project>{E4602C1E-666B-4F59-8F9B-684000900275}</Project>
+      <Name>MToolKit</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
