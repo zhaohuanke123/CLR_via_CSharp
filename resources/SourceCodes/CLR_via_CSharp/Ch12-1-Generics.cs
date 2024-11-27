@@ -20,6 +20,16 @@ public static class Generics
         Constraints.Go();
     }
 
+    delegate TR Func<in T, out TR>(T t);
+
+    private static Func<Object, ArgumentException> f1;
+    private static Func<string, Exception> f2;
+
+    private static void TempTest()
+    {
+        f2 = f1;
+    }
+
     private static void GenericArray()
     {
         // Create & initialize a byte array
@@ -430,8 +440,8 @@ internal static class Constraints
         internal sealed class Derived : Base
         {
             public override void M<T3, T4>()
-                /*where T3 : struct
-                where T4 : class  */
+            /*where T3 : struct
+            where T4 : class  */
             {
             }
         }

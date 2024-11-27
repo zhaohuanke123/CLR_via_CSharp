@@ -21,12 +21,14 @@ using System.Collections.Generic;
 [module: MyAttr(2)] // Applied to module
 
 [type: MyAttr(3)] // Applied to type
+[type: MyAttr(1024)] // Applied to type
 internal sealed class SomeType
     <[typevar: MyAttr(4)] T>
 {
     // Applied to generic type variable
 
     [field: MyAttr(5)] // Applied to field
+    [field: MyAttr(1024)] // Applied to field
     public Int32 SomeField = 0;
 
     [return: MyAttr(6)] // Applied to return value
@@ -54,11 +56,13 @@ internal sealed class SomeType
 #pragma warning restore 67
 
 
-[AttributeUsage(AttributeTargets.All)]
+[AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
 public class MyAttr : Attribute
 {
+    private int x;
     public MyAttr(Int32 x)
     {
+        this.x = x;
     }
 }
 
@@ -122,8 +126,8 @@ public static class CustomAttributes
     public static void Main()
     {
         DetectingAttributes.Go();
-        // MatchingAttributes.Go();
-        // ConditionalAttributeDemo.Go();
+        MatchingAttributes.Go();
+        ConditionalAttributeDemo.Go();
     }
 
     [Serializable]
@@ -135,6 +139,8 @@ public static class CustomAttributes
         [Conditional("Release")]
         public void DoSomething()
         {
+            SomeType some = new SomeType();
+            Console.WriteLine(some);
         }
 
         public DetectingAttributes()

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6a5c6c13e22aecfc",
+        "id": "13ffb836e391dd28",
         "type": "tabs",
         "children": [
           {
-            "id": "0c41b1964fc6c860",
+            "id": "954b985dc31cec84",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "错题/CLR/1-4 note.md",
+                "file": "错题/CLR/同步块索引的作用.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1-4 note"
+              "title": "同步块索引的作用"
             }
           }
         ]
@@ -167,15 +167,27 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0c41b1964fc6c860",
+  "active": "954b985dc31cec84",
   "lastOpenFiles": [
+    "Res/Pasted image 20241127092335.png",
+    "Res/Pasted image 20241127092419.png",
+    "错题/CLR/同步块索引的作用.md",
+    "Res/Pasted image 20241127092701.png",
+    "Res/Pasted image 20241127092641.png",
+    "Pasted image 20241127092559.png",
+    "Pasted image 20241127092427.png",
+    "Res/Pasted image 20241127092047.png",
+    "Res/Pasted image 20241127092019.png",
+    "Res/Pasted image 20241127091105.png",
+    "Res",
+    "Res/Pasted image 20241127091002.png",
+    "错题/CLR/1-4 note.md",
     "错题/CLR/值类型为什么不可变.md",
     "错题/CLR/为什么不要在实例构造器中调用虚方法.md",
     "错题/CLR/Temp.md",
     "TODO.md",
     "错题/CLR",
     "CLRviaCSharp/P4 Type Fundamentals.md",
-    "1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
     "错题",
     "CLRviaCSharp/P3.md",
     "CLRviaCSharp/P2.md",
@@ -185,12 +197,7 @@
     "毕设/选题.md",
     "毕设/Drawing 2024-10-19 10.18.40.excalidraw.md",
     "毕设/项目模块.md",
-    "1729325343278-1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
     "毕设/未命名.md",
-    "1729325372342-1729325370451-1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
-    "1729325370451-1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
-    "1729325366996-1729325337106-2fbcfa2e-c34a-4dd2-a780-c524d80e6128_00.png",
-    "Excalidraw/Scripts/Downloaded/GPT-Draw-a-UI.svg",
     "Excalidraw/Scripts/Downloaded/GPT-Draw-a-UI.md",
     "Excalidraw/Scripts/Downloaded",
     "Excalidraw/Scripts",
@@ -201,19 +208,12 @@
     "Unity/底层/序列化",
     "Unity/底层",
     "怎么学习.md",
-    "CLRviaCSharp",
     "租房.md",
     "计算机基础/8-3. 进程与上下文.md",
     "Unity/性能优化/资源/Model导入设置检查与优化.md",
     "项目/业务逻辑.md",
     "计算机基础/CSAPP/2-4.浮点数(下).md",
     "计算机基础/CSAPP/The Memory Hierarchy.md",
-    "计算机基础/CSAPP/Program Optimization.md",
-    "计算机基础/CSAPP/CMU 15-213 CSAPP.md",
-    "计算机基础/CSAPP/3-10.缓冲区溢出.md",
-    "Pasted image 20240902175605.png",
-    "Pasted image 20240902175609.png",
-    "1718861878900.jpg",
     "未命名.canvas"
   ]
 }

@@ -12,7 +12,6 @@ namespace MToolKitCore
             //GC.Collect(2, GCCollectionMode.Forced);
             _testName = testName;
             _stopwatch = Stopwatch.StartNew();
-            Console.WriteLine($"[{_testName}] Started...");
         }
 
         public void Dispose()
