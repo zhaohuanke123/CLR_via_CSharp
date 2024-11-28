@@ -15,13 +15,13 @@ public static class RuntieSerialization
 {
     public static void Main()
     {
-        // QuickStart.Go();
-        // UsingNonSerializedFields.Go();
-        // OptionalField.Go();
-        // ISerializableVersioning.Go();
-        // SerializingSingletons.Go();
-        // SerializationSurrogates.Go();
-        SerializationBinderDemo.Go();
+        //QuickStart.Go();
+        //UsingNonSerializedFields.Go();
+        //OptionalField.Go();
+        //ISerializableVersioning.Go();
+        //SerializingSingletons.Go();
+        SerializationSurrogates.Go();
+        //SerializationBinderDemo.Go();
     }
 }
 
@@ -267,10 +267,10 @@ internal static class OptionalField
         var formatter = new SoapFormatter();
 
         // Serialize
-        // using (var stream = File.Create(filename))
-        // {
-        //     formatter.Serialize(stream, new Foo());
-        // }
+        //using (var stream = File.Create(filename))
+        //{
+        //    formatter.Serialize(stream, new Foo());
+        //}
 
         // Deserialize
         using (var stream = File.Open(filename, FileMode.Open))

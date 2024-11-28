@@ -8,11 +8,12 @@ namespace MToolKit
         private readonly Stopwatch _stopwatch;
         private readonly string _testName;
 
-        public PerformanceTester(string testName = "Code Block")
+        public PerformanceTester(string testName, Action action)
         {
-            GC.Collect(2, GCCollectionMode.Forced);
+            //GC.Collect(2, GCCollectionMode.Forced);
             _testName = testName;
             _stopwatch = Stopwatch.StartNew();
+                action.Invoke();
         }
 
         public void Dispose()

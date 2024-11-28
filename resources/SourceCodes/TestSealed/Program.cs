@@ -1,9 +1,9 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
-using MToolKitCore;
+using MToolKit;
 
-namespace TestCore8
+namespace TestSealed
 {
     public class SealedBenchmark
     {
@@ -50,8 +50,8 @@ namespace TestCore8
 
 public class BenchToString
 {
-    private readonly Point point = new();
-    private readonly PointSealed pointSealed = new();
+    private readonly Point point = new Point();
+    private readonly PointSealed pointSealed = new PointSealed();
     [Benchmark(Baseline = true)]
     public void NonSealed()
     {
@@ -70,7 +70,7 @@ public class BenchToString
     {
         public override string ToString()
         {
-            return "";
+            return null;
         }
     }
 
@@ -78,7 +78,7 @@ public class BenchToString
     {
         public override string ToString()
         {
-            return "";
+            return null;
         }
     }
 }

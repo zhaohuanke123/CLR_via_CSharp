@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "错题/CLR/同步块索引的作用.md",
+                "file": "错题/CLR/5-8 note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "同步块索引的作用"
+              "title": "5-8 note"
             }
           }
         ]
@@ -169,9 +169,12 @@
   },
   "active": "954b985dc31cec84",
   "lastOpenFiles": [
+    "63d44901528987e88677ca28fb2dd5ac.png",
+    "错题/CLR/5-8 note.md",
+    "错题/CLR/1-4 note.md",
+    "错题/CLR/同步块索引的作用.md",
     "Res/Pasted image 20241127092335.png",
     "Res/Pasted image 20241127092419.png",
-    "错题/CLR/同步块索引的作用.md",
     "Res/Pasted image 20241127092701.png",
     "Res/Pasted image 20241127092641.png",
     "Pasted image 20241127092559.png",
@@ -180,8 +183,6 @@
     "Res/Pasted image 20241127092019.png",
     "Res/Pasted image 20241127091105.png",
     "Res",
-    "Res/Pasted image 20241127091002.png",
-    "错题/CLR/1-4 note.md",
     "错题/CLR/值类型为什么不可变.md",
     "错题/CLR/为什么不要在实例构造器中调用虚方法.md",
     "错题/CLR/Temp.md",
@@ -213,7 +214,6 @@
     "Unity/性能优化/资源/Model导入设置检查与优化.md",
     "项目/业务逻辑.md",
     "计算机基础/CSAPP/2-4.浮点数(下).md",
-    "计算机基础/CSAPP/The Memory Hierarchy.md",
     "未命名.canvas"
   ]
 }
