@@ -35,7 +35,7 @@ namespace Example2
 
 namespace Example3
 {
-    internal sealed class SomeType
+    internal sealed class SomeType // 解决内联初始化造成的代码膨胀，但是会造成多写入一次，属于是用速度换内存了
     {
         // Do not explicitly initialize the fields here
         private Int32 m_x;
@@ -101,10 +101,10 @@ public sealed class Program
         a[0].m_x = 123;
         Console.WriteLine(a[0].m_x);	// Displays 123
 
-        new FieldInitializationInCtor("Test");
-        TypeConstructorPerformance.Go();
+        // new FieldInitializationInCtor("Test");
+        // TypeConstructorPerformance.Go();
         ConversionOperator.Go();
-        ExtensionMethods.Go();
+        // ExtensionMethods.Go();
     }
 }
 

@@ -5,6 +5,7 @@ using MToolKitCore;
 
 namespace TestCore8
 {
+
     public class SealedBenchmark
     {
         readonly NonSealedType nonSealedType = new NonSealedType();
@@ -30,28 +31,35 @@ namespace TestCore8
         {
             sealedType.Method();
         }
-
     }
 
     internal class BaseType
     {
-        public virtual void Method() { }
-    }
-    internal class NonSealedType : BaseType
-    {
-        public override void Method() { }
-    }
-    internal sealed class SealedType : BaseType
-    {
-        public override void Method() { }
+        public virtual void Method()
+        {
+        }
     }
 
+    internal class NonSealedType : BaseType
+    {
+        public override void Method()
+        {
+        }
+    }
+
+    internal sealed class SealedType : BaseType
+    {
+        public override void Method()
+        {
+        }
+    }
 }
 
 public class BenchToString
 {
     private readonly Point point = new();
     private readonly PointSealed pointSealed = new();
+
     [Benchmark(Baseline = true)]
     public void NonSealed()
     {

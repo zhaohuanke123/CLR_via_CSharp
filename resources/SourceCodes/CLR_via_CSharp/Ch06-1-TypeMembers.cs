@@ -1,4 +1,5 @@
 ﻿// Only one of the following 4 symbol be uncomment at any one time
+
 #define V1
 //#define V2a
 //#define V2b
@@ -10,81 +11,113 @@
 using System;
 using System.Runtime.InteropServices;
 
-public sealed class SomeType {                                 //  1
-   // Nested class
-   private class SomeNestedType { }                            //  2
+public sealed class SomeType
+{
+    //  1
+    // Nested class
+    private class SomeNestedType
+    {
+    } //  2
 
-   // Constant, read-only, and static read/write field
-   private const Int32 c_SomeConstant = 1;                     //  3
-   private readonly String m_SomeReadOnlyField;          //  4
-   private static Int32 s_SomeReadWriteField = 3;              //  5
+    // Constant, read-only, and static read/write field
+    private const Int32 c_SomeConstant = 1; //  3
+    private readonly String m_SomeReadOnlyField; //  4
+    private static Int32 s_SomeReadWriteField = 3; //  5
 
-   // Type constructor
-   static SomeType()
-   {
-   }                                       //  6
+    // Type constructor
+    static SomeType()
+    {
+    } //  6
 
-   // Instance constructors
-   public SomeType() { }                                       //  7
+    // Instance constructors
+    public SomeType()
+    {
+    } //  7
 
-   public SomeType(Int32 x)
-   {
-	   m_SomeReadOnlyField = x.ToString();
-   }                                //  8
+    public SomeType(Int32 x)
+    {
+        m_SomeReadOnlyField = x.ToString();
+    } //  8
 
 
-   // Static and instance methods
-   public static void Main() { }                               //  9
+    // Static and instance methods
+    public static void Main()
+    {
+    } //  9
 
-   public String InstanceMethod() { return null; }             // 10
+    public String InstanceMethod()
+    {
+        return null;
+    } // 10
 
-   // Instance property
-   public Int32 SomeProp {                                     // 11
-      get { return 0; }                                        // 12
-      set { }                                                  // 13
-   }
+    // Instance property
+    public Int32 SomeProp
+    {
+        // 11
+        get => 0; // 12
+        set { } // 13
+    }
 
-   // Instance parameterful property (indexer)
-   public Int32 this[String s] {                               // 14
-      get { return 0; }                                        // 15
-      set { }                                                  // 16
-   }
+    // Instance parameterful property (indexer)
+    public Int32 this[String s]
+    {
+        // 14
+        get => 0; // 15
+        set { } // 16
+    }
 
-   // Instance event
-   public event EventHandler SomeEvent;                        // 17
+    // Instance event
+    public event EventHandler SomeEvent; // 17
 }
 
-internal static class OverridingAccessibility {
-   class Base {
-      protected virtual void M() { }
-   }
+internal static class OverridingAccessibility
+{
+    class Base
+    {
+        protected virtual void M()
+        {
+        }
+    }
 
-   class Derived1 : Base {
-      protected override void M() { }
-   }
+    class Derived1 : Base
+    {
+        protected override void M()
+        {
+        }
+    }
 
-   class Derived2 : Base {
-      protected override void M() { }
-      public static void Main() { }
-   }
+    class Derived2 : Base
+    {
+        protected override void M()
+        {
+        }
+
+        public static void Main()
+        {
+        }
+    }
 }
 
-internal static class DifferentCalls {
-   public static void Go() {
-      Console.WriteLine();			// Call a static method
+internal static class DifferentCalls
+{
+    public static void Go()
+    {
+        Console.WriteLine(); // Call a static method
 
-      Object o = new Object();
-      o.GetHashCode();				// Call a virtual instance method
-      o.GetType();					// Call a nonvirtual instance method
-   }
+        Object o = new Object();
+        o.GetHashCode(); // Call a virtual instance method
+        o.GetType(); // Call a nonvirtual instance method
+    }
 }
 
 
-public sealed class VersioningComponentsWithVirtualMethods {
-   public static void Main() {
-      CompanyB.BetterPhone phone = new CompanyB.BetterPhone();
-      phone.Dial();
-   }
+public sealed class VersioningComponentsWithVirtualMethods
+{
+    public static void Main()
+    {
+        CompanyB.BetterPhone phone = new CompanyB.BetterPhone();
+        phone.Dial();
+    }
 }
 
 
@@ -92,31 +125,37 @@ public sealed class VersioningComponentsWithVirtualMethods {
 
 
 #if V1
-namespace CompanyA {
-   public class Phone {
-      public void Dial() {
-         Console.WriteLine("Phone.Dial");
-         // Do work to dial the phone here.
-      }
-   }
+namespace CompanyA
+{
+    public class Phone
+    {
+        public void Dial()
+        {
+            Console.WriteLine("Phone.Dial");
+            // Do work to dial the phone here.
+        }
+    }
 }
 
 
-namespace CompanyB {
-   public class BetterPhone : CompanyA.Phone {
+namespace CompanyB
+{
+    public class BetterPhone : CompanyA.Phone
+    {
+        // This Dial method has nothing to do with Phone's Dial method
+        new public void Dial()
+        {
+            Console.WriteLine("BetterPhone.Dial");
+            EstablishConnection();
+            base.Dial();
+        }
 
-      // This Dial method has nothing to do with Phone's Dial method
-      new public void Dial() {
-         Console.WriteLine("BetterPhone.Dial");
-         EstablishConnection();
-         base.Dial();
-      }
-
-      protected virtual void EstablishConnection() {
-         Console.WriteLine("BetterPhone.EstablishConnection");
-         // Do work to establish the connection.
-      }
-   }
+        protected virtual void EstablishConnection()
+        {
+            Console.WriteLine("BetterPhone.EstablishConnection");
+            // Do work to establish the connection.
+        }
+    }
 }
 #endif
 
