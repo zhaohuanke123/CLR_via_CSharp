@@ -1,29 +1,13 @@
-﻿using System;
-using System.Diagnostics;
 
-namespace TestBeforeFieldInit
-{
-    class TestCtor
+```cs
+  class TestCtor
     {
-        partial interface IF
-        {
-        }
-
-        partial interface IF
-        {
-        }
-
         public TestCtor()
         {
-            // Console.WriteLine($"TestCtor {name}");
-            // 获取当前调用堆栈的信息
             var stackTrace = new StackTrace();
-            var mb = stackTrace.GetFrame(1).GetMethod();
-            var type = mb.DeclaringType;
-            var method = mb.Name;
-            var typeName = type.Name;
+            var typeName = stackTrace.GetFrame(1).GetMethod().DeclaringType.Name;
 
-            Console.WriteLine("当前类: " + typeName + " " + method);
+            Console.WriteLine("当前类: " + typeName);
         }
     }
 
@@ -47,7 +31,7 @@ namespace TestBeforeFieldInit
         }
     }
 
-    internal partial class Program
+    internal class Program
     {
         public static void Main(string[] args)
         {
@@ -59,4 +43,27 @@ namespace TestBeforeFieldInit
             Console.WriteLine("------------");
         }
     }
-}
+```
+
+.Net Framework  下面输出
+```
+当前类: BeforeInit
+当前类: Class1
+当前类: NotBefore
+------------
+------------
+------------
+
+```
+
+.Net 6|8 下面输出
+
+```
+当前类: NotBefore
+------------
+当前类: BeforeInit
+------------
+当前类: Class1
+------------
+```
+

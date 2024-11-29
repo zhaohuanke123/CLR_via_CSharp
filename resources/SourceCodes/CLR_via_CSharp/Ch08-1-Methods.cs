@@ -103,8 +103,8 @@ public sealed class Program
 
         // new FieldInitializationInCtor("Test");
         // TypeConstructorPerformance.Go();
-        ConversionOperator.Go();
-        // ExtensionMethods.Go();
+        // ConversionOperator.Go();
+        ExtensionMethods.Go();
     }
 }
 
