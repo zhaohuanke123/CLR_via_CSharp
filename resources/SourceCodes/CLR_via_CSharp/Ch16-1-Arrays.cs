@@ -20,7 +20,6 @@ public static class Program
         //ArrayCasting();
         //DynamicArrays.Go();
         //ArrayTypes.Go();
-        MultiDimArrayPerformance.Go();
         //StackallocAndInlineArrays.Go();
         //TestMemoryPos.Go();
     }
@@ -136,7 +135,7 @@ public class TestMemoryPos
 {
     public static unsafe void Go()
     {
-        // ²âÊÔ½»´íÊý×é£¨Jagged Array£©
+        // ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¨Jagged Arrayï¿½ï¿½
         int[][] jaggedArray = new int[2][];
         jaggedArray[0] = new int[] { 1, 2, 3 };
         jaggedArray[1] = new int[] { 4, 5, 6 };
@@ -155,7 +154,7 @@ public class TestMemoryPos
             }
         }
 
-        // ²âÊÔ¶þÎ¬Êý×é£¨2D Array£©
+        // ï¿½ï¿½ï¿½Ô¶ï¿½Î¬ï¿½ï¿½ï¿½é£¨2D Arrayï¿½ï¿½
         int[,] twoDimArray = new int[2, 3] { { 1, 2, 3 }, { 4, 5, 6 } };
 
         Console.WriteLine("\nTesting memory addresses of 2D Array elements:");
@@ -234,80 +233,6 @@ internal static class ArrayTypes
         // Create a 2-dim, 1-based array, with no elements in it
         a = Array.CreateInstance(typeof(String), new Int32[] { 0, 0 }, new Int32[] { 1, 1 });
         Console.WriteLine(a.GetType()); // System.String[,]
-    }
-}
-
-internal static class MultiDimArrayPerformance
-{
-    private const Int32 CNumElements = 20000;
-
-    public static void Go()
-    {
-        // Declare a 2-dimensional array
-        Int32[,] a2Dim = new Int32[CNumElements, CNumElements];
-
-        // Declare a 2-dimensional array as a jagged array (a vector of vectors)
-        Int32[][] aJagged = new Int32[CNumElements][];
-        for (Int32 x = 0; x < CNumElements; x++)
-            aJagged[x] = new Int32[CNumElements];
-
-
-        using (new PerformanceTester("DimArr"))
-        {
-            // 1: Access all elements of the array using the usual, safe technique
-            Safe2DimArrayAccess(a2Dim);
-        }
-
-        using (new PerformanceTester("JaggedArr"))
-        {
-            // 2: Access all elements of the array using the jagged array technique
-            SafeJaggedArrayAccess(aJagged);
-        }
-
-        using (new PerformanceTester("UnsafeArr"))
-        {
-            // 3: Access all elements of the array using the unsafe technique
-            Unsafe2DimArrayAccess(a2Dim);
-        }
-    }
-
-    private static Int32 Safe2DimArrayAccess(Int32[,] a)
-    {
-        Int32 sum = 0;
-        for (Int32 x = 0; x < CNumElements; x++)
-        {
-            for (Int32 y = 0; y < CNumElements; y++)
-            {
-                sum += a[x, y];
-            }
-        }
-        return sum;
-    }
-
-    private static Int32 SafeJaggedArrayAccess(Int32[][] a)
-    {
-        Int32 sum = 0;
-        for (Int32 x = 0; x < CNumElements; x++)
-        {
-            for (Int32 y = 0; y < CNumElements; y++)
-            {
-                sum += a[x][y];
-            }
-        }
-        return sum;
-    }
-
-    private static unsafe Int32 Unsafe2DimArrayAccess(Int32[,] a)
-    {
-        Int32 sum = 0, numElements = CNumElements * CNumElements;
-        fixed (Int32* pi = a)
-        {
-            for (Int32 x = 0; x < numElements; x++)
-            {
-                sum += pi[x];
-            }
-        }
-        return sum;
     }
 }
 
