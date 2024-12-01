@@ -3,7 +3,6 @@ Module:  Arrays.cs
 Notices: Copyright (c) 2013 Jeffrey Richter
 ******************************************************************************/
 
-using MToolKit;
 using System;
 using System.Diagnostics;
 using System.IO;

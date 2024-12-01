@@ -20,10 +20,9 @@ internal sealed class AClass
     {
         Program p = new Program();
         int arg = 10;
-        Method((w =>
-        {
-            Console.WriteLine(w); 
-        }), arg);
+        Method( // This is the line that is causing the error
+            delegate(int i) { Console.WriteLine(i); },
+            arg);
     }
 }
 
