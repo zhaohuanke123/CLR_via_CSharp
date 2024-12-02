@@ -1,4 +1,7 @@
-﻿namespace TCAFFramework
+﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Running;
+
+namespace TCAFFramework
 {
     public class Program
     {
@@ -7,16 +10,16 @@
 
         public static void Main(string[] args)
         {
-            // BenchmarkDotNet.Running.BenchmarkRunner.Run<Program>();
+            _ = BenchmarkRunner.Run<Program>();
         }
 
-        // [Benchmark]
+        [Benchmark]
         public void TestFormat()
         {
             _ = ($"My name is {name}, I'm {age} years old.");
         }
 
-        // [Benchmark]
+        [Benchmark]
         public void TestConcat()
         {
             _ = ("My name is " + name + ", I'm " + age + " years old.");

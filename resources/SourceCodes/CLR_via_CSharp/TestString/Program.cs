@@ -39,6 +39,17 @@ namespace TestString
             Console.WriteLine($"My name is {name}, I'm {age} years old.");
 
             Console.WriteLine("My name is " + name + ", I'm " + age + " years old.");
+            Console.WriteLine("================");
+
+            string s = String.Intern(new string('a', 10));
+            string ss = new string('a', 10);
+            string sss = string.Intern(new string('a', 10));
+
+            Console.WriteLine(ReferenceEquals(s, ss));
+            Console.WriteLine(ReferenceEquals(s, sss));
+
+            Console.WriteLine(_ = s + "123" + ss + 123);
+            Console.WriteLine($"{s}123{ss}123{123.ToString()}");
         }
     }
 }

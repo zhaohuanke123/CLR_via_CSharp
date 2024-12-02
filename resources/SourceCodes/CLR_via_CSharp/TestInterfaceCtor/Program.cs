@@ -1,32 +1,41 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace TestInterfaceCtor
 {
-    internal interface IF
+    internal interface IF : ICloneable, ICollection, IDisposable
     {
     }
 
-    struct MyStruct : IF
-    {
-        public static bool operator ==(MyStruct ms, MyStruct ms2)
-        {
-            return true;
-        }
 
-        public static bool operator !=(MyStruct ms, MyStruct ms2)
-        {
-            return !(ms == ms2);
-        }
-    }
-
-    internal class Program
+    internal class Program : IF
     {
         public static void Main(string[] args)
         {
-            // 测试实例化 接口 IF
-            MyStruct f = new MyStruct();
-            MyStruct f2 = new MyStruct();
         }
+
+        public void Dispose()
+        {
+        }
+
+        public object Clone()
+        {
+            return null;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return null;
+        }
+
+        public void CopyTo(Array array, int index)
+        {
+        }
+
+        public int Count { get; }
+        public object SyncRoot { get; }
+        public bool IsSynchronized { get; }
     }
 }

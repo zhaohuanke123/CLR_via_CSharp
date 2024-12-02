@@ -1,7 +1,5 @@
-﻿using System.Runtime.CompilerServices;
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
-using MToolKitCore;
 
 namespace TestCore8
 {

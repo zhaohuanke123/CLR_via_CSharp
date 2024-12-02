@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "错题/CLR/测试 CreateInstance.md",
+                "file": "错题/CLR/5-8 note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "测试 CreateInstance"
+              "title": "5-8 note"
             }
           }
         ]
@@ -169,8 +169,10 @@
   },
   "active": "954b985dc31cec84",
   "lastOpenFiles": [
-    "错题/CLR/beforefieldinit 测试.md",
+    "错题/调研/IL 中.maxstack的含义.md",
     "错题/CLR/测试 CreateInstance.md",
+    "错题/调研",
+    "错题/CLR/beforefieldinit 测试.md",
     "错题/CLR/5-8 note.md",
     "63d44901528987e88677ca28fb2dd5ac.png",
     "错题/CLR/1-4 note.md",
@@ -209,12 +211,10 @@
     "Unity/底层/资源 & ID.md",
     "Unity/底层/Unity 序列化.md",
     "Unity/底层/序列化",
-    "Unity/底层",
     "怎么学习.md",
     "租房.md",
     "计算机基础/8-3. 进程与上下文.md",
     "Unity/性能优化/资源/Model导入设置检查与优化.md",
-    "项目/业务逻辑.md",
     "未命名.canvas"
   ]
 }

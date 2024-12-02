@@ -1,36 +1,52 @@
 ﻿using System;
+using System.Reflection;
 
-internal sealed class AClass
+namespace TestDelegate
 {
     public delegate void MyDelegate(int i);
 
-    public static string str = "Hello World";
-
-    public static void Method(MyDelegate myDelegate, int i)
+    internal sealed class AClass
     {
-        myDelegate(i);
+        private event MyDelegate me;
+
+
+        public static string str = "Hello World";
+
+        public static void Method(MyDelegate myDelegate, int i)
+        {
+            myDelegate(i);
+        }
+
+        public void CallbackWithoutNewingADelegateObject()
+        {
+            int arg = 10;
+            Method(
+                delegate(int i) { Console.WriteLine(i); },
+                arg);
+        }
     }
 
-    //public static void Callback(int i)
-    //{
-    //    Console.WriteLine(i);
-    //}
-
-    public void CallbackWithoutNewingADelegateObject()
+    public sealed class Program
     {
-        Program p = new Program();
-        int arg = 10;
-        Method( // This is the line that is causing the error
-            delegate(int i) { Console.WriteLine(i); },
-            arg);
-    }
-}
+        public static void Main(string[] args)
+        {
+            // AClass aClass = new AClass();
+            // aClass.CallbackWithoutNewingADelegateObject();
+            Program obj = new Program();
+            var type = obj.GetType();
+            var methodInfo = type.GetMethod("Test", BindingFlags.Instance | BindingFlags.Public);
+            // methodInfo.Invoke(obj, null);
 
-public sealed class Program
-{
-    public static void Main(string[] args)
-    {
-        AClass aClass = new AClass();
-        aClass.CallbackWithoutNewingADelegateObject();
+            var delegateTest = methodInfo.CreateDelegate(typeof(Action), obj) as Action;
+            if (delegateTest != null)
+            {
+                delegateTest.Invoke();
+            }
+        }
+
+        public void Test()
+        {
+            Console.WriteLine(this.GetType().Name);
+        }
     }
 }
