@@ -30,7 +30,9 @@
         static void Main()
         {
             // 创建一个 Person 对象
-            var person = new Person( "John Doe", 30);
+            var person = new Person();
+            person.Age = 123;
+            person.Name = "Tom";
 
             // XML 序列化与反序列化
             Console.WriteLine("XML 序列化：");
