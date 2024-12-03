@@ -7,6 +7,8 @@ namespace TestInterfaceCtor
 {
     internal interface IF : ICloneable, ICollection, IDisposable
     {
+        void Test();
+        void Test1();
     }
 
 
@@ -37,5 +39,13 @@ namespace TestInterfaceCtor
         public int Count { get; }
         public object SyncRoot { get; }
         public bool IsSynchronized { get; }
+        public void Test()
+        {
+            
+        }
+
+        public void Test1()
+        {
+        }
     }
 }
