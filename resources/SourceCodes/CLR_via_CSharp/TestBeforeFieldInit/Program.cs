@@ -1,18 +1,12 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Threading;
 
 namespace TestBeforeFieldInit
 {
     class TestCtor
     {
-        partial interface IF
-        {
-        }
-
-        partial interface IF
-        {
-        }
-
         public TestCtor()
         {
             // Console.WriteLine($"TestCtor {name}");
@@ -20,10 +14,11 @@ namespace TestBeforeFieldInit
             var stackTrace = new StackTrace();
             var mb = stackTrace.GetFrame(1).GetMethod();
             var type = mb.DeclaringType;
-            var method = mb.Name;
             var typeName = type.Name;
 
-            Console.WriteLine("当前类: " + typeName + " " + method);
+            // Console.WriteLine("当前类: " + typeName + "   当前线程ID : " + Thread.CurrentThread.ManagedThreadId);
+            var s = "当前类: " + typeName + "   当前线程ID : " + Thread.CurrentThread.ManagedThreadId;
+            Program.que.Enqueue(s);
         }
     }
 
@@ -49,14 +44,24 @@ namespace TestBeforeFieldInit
 
     internal partial class Program
     {
+        public static ConcurrentQueue<string> que = new ConcurrentQueue<string>();
+
         public static void Main(string[] args)
         {
             _ = NotBefore.testCtor;
-            Console.WriteLine("------------");
+            que.Enqueue("-----------------");
+            // Console.WriteLine("------------");
             _ = BeforeInit.testCtor;
-            Console.WriteLine("------------");
+            que.Enqueue("-----------------");
+            // Console.WriteLine("------------");
             _ = Class1.testCtor;
-            Console.WriteLine("------------");
+            que.Enqueue("-----------------");
+            // Console.WriteLine("------------");
+            
+            foreach (var item in que)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
