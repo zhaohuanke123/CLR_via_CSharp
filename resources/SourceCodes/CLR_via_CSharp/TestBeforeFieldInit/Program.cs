@@ -25,6 +25,11 @@ namespace TestBeforeFieldInit
     internal class BeforeInit
     {
         public static TestCtor testCtor = new TestCtor();
+
+        static BeforeInit()
+        {
+            
+        }
     }
 
     internal class Class1
@@ -48,6 +53,13 @@ namespace TestBeforeFieldInit
 
         public static void Main(string[] args)
         {
+            que.Enqueue("StartMain");
+            Do();
+        }
+
+        public static void Do()
+        {
+            que.Enqueue("Start");
             _ = NotBefore.testCtor;
             que.Enqueue("-----------------");
             // Console.WriteLine("------------");
@@ -57,7 +69,7 @@ namespace TestBeforeFieldInit
             _ = Class1.testCtor;
             que.Enqueue("-----------------");
             // Console.WriteLine("------------");
-            
+
             foreach (var item in que)
             {
                 Console.WriteLine(item);

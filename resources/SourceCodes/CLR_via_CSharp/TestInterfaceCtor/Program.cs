@@ -12,40 +12,11 @@ namespace TestInterfaceCtor
     }
 
 
-    internal class Program : IF
+    internal static class Program
     {
         public static void Main(string[] args)
         {
-        }
-
-        public void Dispose()
-        {
-        }
-
-        public object Clone()
-        {
-            return null;
-        }
-
-        public IEnumerator GetEnumerator()
-        {
-            return null;
-        }
-
-        public void CopyTo(Array array, int index)
-        {
-        }
-
-        public int Count { get; }
-        public object SyncRoot { get; }
-        public bool IsSynchronized { get; }
-        public void Test()
-        {
             
-        }
-
-        public void Test1()
-        {
         }
     }
 }

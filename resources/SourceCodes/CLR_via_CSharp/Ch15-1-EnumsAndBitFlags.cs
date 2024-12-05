@@ -61,10 +61,10 @@ internal static class Enums
         }
 
         // Creates an instance of the Color enum with a value of 1
-        Enum.TryParse<Color>("1", false, out c);
+        Enum.TryParse("1", false, out c);
 
         // Creates an instance of the Color enum with a value of 23
-        Enum.TryParse<Color>("23", false, out c);
+        Enum.TryParse("23", false, out c);
 
         // Displays "True" because Color defines Red as 1
         Console.WriteLine(Enum.IsDefined(typeof(Color), 1));
@@ -125,13 +125,13 @@ internal static class BitFlags
         Actions a = (Actions)Enum.Parse(typeof(Actions), "Query", true);
 
         // Because Query and Read are defined, 'a' is initialized to 9.
-        Enum.TryParse<Actions>("Query, Read", false, out a);
+        Enum.TryParse("Query, Read", false, out a);
 
         // Creates an instance of the Actions enum with a value of 28
         a = (Actions)Enum.Parse(typeof(Actions), "28", false);
         Console.WriteLine(a.ToString()); // "Delete, Query, Sync"
 
-        Enum.TryParse<Actions>("Delete, Sync", out a);
+        Enum.TryParse("Delete, Sync", out a);
         Console.WriteLine(a.ToString());
     }
 }

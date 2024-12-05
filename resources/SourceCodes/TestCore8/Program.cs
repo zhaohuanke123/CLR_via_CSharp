@@ -3,10 +3,6 @@ using BenchmarkDotNet.Running;
 
 namespace TestCore8
 {
-    interface IInterface
-    {
-    }
-
     public class SealedBenchmark
     {
         readonly NonSealedType nonSealedType = new NonSealedType();

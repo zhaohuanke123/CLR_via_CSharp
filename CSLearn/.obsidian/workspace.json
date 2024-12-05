@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "错题/CLR/1-4 note.md",
+                "file": "错题/CLR/8-12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1-4 note"
+              "title": "8-12"
             }
           }
         ]
@@ -170,13 +170,14 @@
   "active": "954b985dc31cec84",
   "lastOpenFiles": [
     "错题/CLR/5-8 note.md",
+    "错题/CLR/8-12.md",
+    "错题/CLR/1-4 note.md",
     "错题/CLR/改 ConcurrentQueue 测试 BeforefiledInit.md",
     "错题/调研/IL 中.maxstack的含义.md",
     "错题/CLR/测试 CreateInstance.md",
     "错题/调研",
     "错题/CLR/beforefieldinit 测试.md",
     "63d44901528987e88677ca28fb2dd5ac.png",
-    "错题/CLR/1-4 note.md",
     "错题/CLR/同步块索引的作用.md",
     "Res/Pasted image 20241127092335.png",
     "Res/Pasted image 20241127092419.png",
@@ -214,7 +215,6 @@
     "Unity/底层/序列化",
     "怎么学习.md",
     "租房.md",
-    "计算机基础/8-3. 进程与上下文.md",
     "未命名.canvas"
   ]
 }

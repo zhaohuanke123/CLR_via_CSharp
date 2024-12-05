@@ -17,10 +17,10 @@ public static class RuntieSerialization
     {
         //QuickStart.Go();
         //UsingNonSerializedFields.Go();
-        //OptionalField.Go();
+        OptionalField.Go();
         //ISerializableVersioning.Go();
         //SerializingSingletons.Go();
-        SerializationSurrogates.Go();
+        // SerializationSurrogates.Go();
         //SerializationBinderDemo.Go();
     }
 }
@@ -259,6 +259,11 @@ internal static class OptionalField
     {
         public String name = "jeff";
         [OptionalField] public String name1 = "jeff";
+        
+        public Foo()
+        {
+            Console.WriteLine("Foo ctor");
+        }
     }
 
     public static void Go()
@@ -266,11 +271,11 @@ internal static class OptionalField
         const String filename = @"temp.dat";
         var formatter = new SoapFormatter();
 
-        // Serialize
-        //using (var stream = File.Create(filename))
-        //{
-        //    formatter.Serialize(stream, new Foo());
-        //}
+         // Serialize
+        using (var stream = File.Create(filename))
+        {
+            formatter.Serialize(stream, new Foo());
+        }
 
         // Deserialize
         using (var stream = File.Open(filename, FileMode.Open))

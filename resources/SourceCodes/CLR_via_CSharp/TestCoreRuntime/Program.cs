@@ -1,11 +1,36 @@
-﻿namespace TestCoreRuntime
+﻿using System.Diagnostics;
+
+namespace TestCoreRuntime
 {
+    struct MyStruct
+    {
+        public MyStruct(int a)
+        {
+        }
+    }
+
+    class MyClass
+    {
+        public MyClass()
+        {
+        }
+
+        public override int GetHashCode()
+        {
+            return 123;
+        }
+    }
+
     public class Program
     {
         static void Main(string[] args)
         {
-            Object o = new Object();
-            _ = o.GetHashCode();
+            Console.WriteLine("Start");
+            Object o = new MyClass();
+
+            Console.WriteLine(o.ToString());
+            // Console.WriteLine(typeof(Object).Assembly.GetName());
+            Console.ReadLine();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace TestRefrection
 {
@@ -12,8 +13,12 @@ namespace TestRefrection
 
         public static void Main(string[] args)
         {
-            var instance = Activator.CreateInstance(typeof(Program));
-            var program = instance as Program;
+            Type t = typeof(Program);
+            t.GetCustomAttributesData();
+            t.IsDefined(t);
+            t.GetCustomAttributes();
+            t.GetCustomAttribute(t.GetTypeInfo());
+            CustomAttributeData.GetCustomAttributes(t.GetTypeInfo());
         }
     }
 }
