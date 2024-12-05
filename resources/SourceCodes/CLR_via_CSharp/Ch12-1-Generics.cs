@@ -12,8 +12,8 @@ public static class Generics
 {
     public static void Main()
     {
-        Performance.ValueTypePerfTest();
-        Performance.ReferenceTypePerfTest();
+        // Performance.ValueTypePerfTest();
+        // Performance.ReferenceTypePerfTest();
         GenericArray();
         OpenTypes.Go();
         GenericInheritance.Go();

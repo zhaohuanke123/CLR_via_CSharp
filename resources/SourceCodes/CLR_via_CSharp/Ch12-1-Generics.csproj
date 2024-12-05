@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Ch12-1-Generics.cs" />
+    <Compile Include="MTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
