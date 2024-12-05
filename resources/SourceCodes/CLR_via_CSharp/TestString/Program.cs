@@ -1,55 +1,61 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 
 namespace TestString
 {
-    internal class Program
-    {
-        public static void Main(string[] args)
-        {
-            string s1 = "123123";
-            string s2 = "1211231";
+	internal class Program
+	{
+		public static void Main(string[] args)
+		{
+			StringBuilder sb = new StringBuilder(4, 10);
+			sb.AppendLine("1234567");
+			Console.WriteLine(sb.Capacity);
+			Console.WriteLine(sb.MaxCapacity);
 
-            Console.WriteLine(String.Compare(s1, s2, StringComparison.Ordinal));
+			string s1 = "123123";
+			string s2 = "1211231";
 
-            var copy = string.Copy(s1);
-            Console.WriteLine(ReferenceEquals(copy, s1));
+			Console.WriteLine(String.Compare(s1, s2, StringComparison.Ordinal));
 
-            Console.WriteLine("================");
-            char[] chars = new char[100];
-            s1.CopyTo(2, chars, 3, 2);
-            for (int i = 0; i < chars.Length; i++)
-            {
-                char ch = chars[i];
-                if (ch != 0)
-                {
-                    Console.WriteLine(i + " " + ch);
-                }
-            }
+			var copy = string.Copy(s1);
+			Console.WriteLine(ReferenceEquals(copy, s1));
 
-            Console.WriteLine("================");
+			Console.WriteLine("================");
+			char[] chars = new char[100];
+			s1.CopyTo(2, chars, 3, 2);
+			for (int i = 0; i < chars.Length; i++)
+			{
+				char ch = chars[i];
+				if (ch != 0)
+				{
+					Console.WriteLine(i + " " + ch);
+				}
+			}
 
-            // 测试 join方法
-            string[] strings = { "1", "2", "3" };
-            Console.WriteLine(string.Join(",", strings).Split(','));
+			Console.WriteLine("================");
 
-            // 测试字符串内插 和 + 的区别
-            string name = "Tom";
-            int age = 18;
-            Console.WriteLine($"My name is {name}, I'm {age} years old.");
+			// 测试 join方法
+			string[] strings = { "1", "2", "3" };
+			Console.WriteLine(string.Join(",", strings).Split(','));
 
-            Console.WriteLine("My name is " + name + ", I'm " + age + " years old.");
-            Console.WriteLine("================");
+			// 测试字符串内插 和 + 的区别
+			string name = "Tom";
+			int age = 18;
+			Console.WriteLine($"My name is {name}, I'm {age} years old.");
 
-            string s = String.Intern(new string('a', 10));
-            string ss = new string('a', 10);
-            string sss = string.Intern(new string('a', 10));
+			Console.WriteLine("My name is " + name + ", I'm " + age + " years old.");
+			Console.WriteLine("================");
 
-            Console.WriteLine(ReferenceEquals(s, ss));
-            Console.WriteLine(ReferenceEquals(s, sss));
+			string s = String.Intern(new string('a', 10));
+			string ss = new string('a', 10);
+			string sss = string.Intern(new string('a', 10));
 
-            Console.WriteLine(_ = s + "123" + ss + 123);
-            Console.WriteLine($"{s}123{ss}123{123.ToString()}");
-        }
-    }
+			Console.WriteLine(ReferenceEquals(s, ss));
+			Console.WriteLine(ReferenceEquals(s, sss));
+
+			Console.WriteLine(_ = s + "123" + ss + 123);
+			Console.WriteLine($"{s}123{ss}123{123.ToString()}");
+		}
+	}
 }
