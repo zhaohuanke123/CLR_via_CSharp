@@ -1,11 +1,8 @@
-﻿using System.Runtime.CompilerServices;
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
-using MToolKitCore;
 
 namespace TestCore8
 {
-
     public class SealedBenchmark
     {
         readonly NonSealedType nonSealedType = new NonSealedType();
