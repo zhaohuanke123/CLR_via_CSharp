@@ -14,9 +14,12 @@ public static class Program
 {
     public static void Main()
     {
+        string[] s = { "123", "123" };
+        var objects = (object[])s;
+        Console.WriteLine(ReferenceEquals(objects, s));
         //ArrayIntro();
         //ArrayDemo();
-        //ArrayCasting();
+        // ArrayCasting();
         //DynamicArrays.Go();
         //ArrayTypes.Go();
         //StackallocAndInlineArrays.Go();
@@ -36,12 +39,13 @@ public static class Program
     private static void ArrayRankInfo(String name, Array a)
     {
         Console.WriteLine("Number of dimensions in \"{0}\" array (of type {1}): ",
-           name, a.GetType().ToString(), a.Rank);
+            name, a.GetType().ToString(), a.Rank);
         for (int r = 0; r < a.Rank; r++)
         {
             Console.WriteLine("Rank: {0}, LowerBound = {1},  UpperBound = {2}",
-               r, a.GetLowerBound(r), a.GetUpperBound(r));
+                r, a.GetLowerBound(r), a.GetUpperBound(r));
         }
+
         Console.WriteLine();
     }
 
@@ -61,7 +65,7 @@ public static class Program
         arrayOfObjects.SetValue(20, -1);
         arrayOfObjects.SetValue(30, +0);
         Console.WriteLine("Array elements: a[-2] = {0}, a[-1] = {1}, a[0] = {2}",
-           arrayOfObjects.GetValue(-2), arrayOfObjects.GetValue(-1), arrayOfObjects.GetValue(0));
+            arrayOfObjects.GetValue(-2), arrayOfObjects.GetValue(-1), arrayOfObjects.GetValue(0));
     }
 
     private static void ArrayCasting()
@@ -90,7 +94,10 @@ public static class Program
         }
 
         // Create a 1-dim Int32 array (value types)
-        Int32[] i1dim = new Int32[5];
+        Int32[] i1dim =
+        {
+            1, 2, 3, 4, 5
+        };
 
         // Can't cast from array of value types to anything else
         // Compiler error CS0030: Cannot convert type 'int[]' to 'object[]'
@@ -99,7 +106,15 @@ public static class Program
         // However, Array.Copy knows how to coerce an array 
         // of value types to an array of boxed references
         Object[] o1dim = new Object[i1dim.Length];
-        Array.Copy(i1dim, o1dim, 0);
+        Array.Copy(i1dim, o1dim, 5);
+        Buffer.BlockCopy(i1dim, 0, o1dim, 0, 5);
+
+        var l1dim = new double[5];
+        Array.Copy(i1dim, l1dim, 5);
+        foreach (var item in l1dim)
+        {
+            Console.WriteLine(item);
+        }
     }
 
     public static void DynamicArray()
@@ -108,7 +123,7 @@ public static class Program
         Int32[] lowerBounds = { 1000, 2 };
         Int32[] lengths = { 10, 4 };
         Decimal[,] quarterlyRevenue = (Decimal[,])
-           Array.CreateInstance(typeof(Decimal), lengths, lowerBounds);
+            Array.CreateInstance(typeof(Decimal), lengths, lowerBounds);
 
         Int32 firstYear = quarterlyRevenue.GetLowerBound(0);
         Int32 lastYear = quarterlyRevenue.GetUpperBound(0);
@@ -119,12 +134,15 @@ public static class Program
         {
             Console.Write(year + "  ");
 
-            for (Int32 quarter = quarterlyRevenue.GetLowerBound(1); quarter <= quarterlyRevenue.GetUpperBound(1); quarter++)
+            for (Int32 quarter = quarterlyRevenue.GetLowerBound(1);
+                 quarter <= quarterlyRevenue.GetUpperBound(1);
+                 quarter++)
             {
                 quarterlyRevenue[year, quarter] = r.Next(10000);
 
                 Console.Write("{0,9:C}  ", quarterlyRevenue[year, quarter]);
             }
+
             Console.WriteLine();
         }
     }
@@ -164,11 +182,11 @@ public class TestMemoryPos
                 for (int j = 0; j < twoDimArray.GetLength(1); j++)
                 {
                     int index = i * twoDimArray.GetLength(1) + j; // Flattened index
-                    Console.WriteLine($"Address of twoDimArray[{i}, {j}] ({twoDimArray[i, j]}): {(long)(pArray + index):X}");
+                    Console.WriteLine(
+                        $"Address of twoDimArray[{i}, {j}] ({twoDimArray[i, j]}): {(long)(pArray + index):X}");
                 }
             }
         }
-
     }
 }
 
@@ -180,10 +198,10 @@ internal static class DynamicArrays
         Int32[] lowerBounds = { 2005, 1 };
         Int32[] lengths = { 5, 4 };
         Decimal[,] quarterlyRevenue = (Decimal[,])
-        Array.CreateInstance(typeof(Decimal), lengths, lowerBounds);
+            Array.CreateInstance(typeof(Decimal), lengths, lowerBounds);
 
         Console.WriteLine("{0,4}  {1,9}  {2,9}  {3,9}  {4,9}",
-           "Year", "Q1", "Q2", "Q3", "Q4");
+            "Year", "Q1", "Q2", "Q3", "Q4");
         Int32 firstYear = quarterlyRevenue.GetLowerBound(0);
         Int32 lastYear = quarterlyRevenue.GetUpperBound(0);
         Int32 firstQuarter = quarterlyRevenue.GetLowerBound(1);
@@ -196,6 +214,7 @@ internal static class DynamicArrays
             {
                 Console.Write("{0,9:C}  ", quarterlyRevenue[year, quarter]);
             }
+
             Console.WriteLine();
         }
     }
@@ -248,16 +267,17 @@ internal static class StackallocAndInlineArrays
         unsafe
         {
             const Int32 width = 20;
-            Char* pc = stackalloc Char[width];  // Allocates array on stack
+            Char* pc = stackalloc Char[width]; // Allocates array on stack
 
-            String s = "Jeffrey Richter";   // 15 characters
+            String s = "Jeffrey Richter"; // 15 characters
 
             for (Int32 index = 0; index < width; index++)
             {
                 pc[width - index - 1] =
-                   (index < s.Length) ? s[index] : '.';
+                    (index < s.Length) ? s[index] : '.';
             }
-            Console.WriteLine(new String(pc, 0, width));    // ".....rethciR yerffeJ"
+
+            Console.WriteLine(new String(pc, 0, width)); // ".....rethciR yerffeJ"
         }
     }
 
@@ -265,17 +285,18 @@ internal static class StackallocAndInlineArrays
     {
         unsafe
         {
-            CharArray ca;   // Allocates array on stack
+            CharArray ca; // Allocates array on stack
             Int32 widthInBytes = sizeof(CharArray);
             Int32 width = widthInBytes / 2;
 
-            String s = "Jeffrey Richter";   // 15 characters
+            String s = "Jeffrey Richter"; // 15 characters
 
             for (Int32 index = 0; index < width; index++)
             {
                 ca.Characters[width - index - 1] =
-                   (index < s.Length) ? s[index] : '.';
+                    (index < s.Length) ? s[index] : '.';
             }
+
             Console.WriteLine(new String(ca.Characters, 0, width)); // ".....rethciR yerffeJ"
         }
     }

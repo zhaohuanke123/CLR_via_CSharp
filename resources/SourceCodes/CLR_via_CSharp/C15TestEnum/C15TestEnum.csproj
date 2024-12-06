@@ -9,7 +9,7 @@
         <OutputType>Exe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>TestEnum</RootNamespace>
-        <AssemblyName>TestEnum</AssemblyName>
+        <AssemblyName>C15TestEnum</AssemblyName>
         <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

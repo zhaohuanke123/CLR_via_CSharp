@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TestEnum")]
+[assembly: AssemblyTitle("TestFinalizer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TestEnum")]
+[assembly: AssemblyProduct("TestFinalizer")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2882C0D1-CCB8-4385-BDC6-A25280194674")]
+[assembly: Guid("B28B6FCD-ECEC-41E7-8C06-F9D79B05E21F")]
 
 // Version information for an assembly consists of the following four values:
 //
