@@ -28,6 +28,11 @@ namespace TestInterfaceDerive
         // }
     }
 
+    interface IF
+    {
+        int this[int a] { get; set; }
+    }
+
     internal class Program
     {
         public static void Main(string[] args)

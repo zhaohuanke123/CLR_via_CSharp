@@ -1,0 +1,1 @@
+﻿string s = new string("123123");
