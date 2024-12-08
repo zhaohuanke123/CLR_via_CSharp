@@ -18,10 +18,10 @@ public static class Program
         var objects = (object[])s;
         Console.WriteLine(ReferenceEquals(objects, s));
         //ArrayIntro();
-        //ArrayDemo();
+        ArrayDemo();
         // ArrayCasting();
         //DynamicArrays.Go();
-        //ArrayTypes.Go();
+        // ArrayTypes.Go();
         //StackallocAndInlineArrays.Go();
         //TestMemoryPos.Go();
     }

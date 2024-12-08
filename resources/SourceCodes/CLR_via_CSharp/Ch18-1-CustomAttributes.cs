@@ -28,7 +28,8 @@ internal sealed class SomeType
     // Applied to generic type variable
 
     [field: MyAttr(5)] // Applied to field
-    [field: MyAttr(1024)] // Applied to field
+    [field: MyAttr(1024)]
+    // Applied to field
     public Int32 SomeField = 0;
 
     [return: MyAttr(6)] // Applied to return value
@@ -60,6 +61,7 @@ internal sealed class SomeType
 public class MyAttr : Attribute
 {
     private int x;
+
     public MyAttr(Int32 x)
     {
         this.x = x;
@@ -126,8 +128,8 @@ public static class CustomAttributes
     public static void Main()
     {
         DetectingAttributes.Go();
-        MatchingAttributes.Go();
-        ConditionalAttributeDemo.Go();
+        // MatchingAttributes.Go();
+        // ConditionalAttributeDemo.Go();
     }
 
     [Serializable]
