@@ -30,9 +30,19 @@ namespace TestAttrbuites
     [AttributeUsage(AttributeTargets.All)]
     internal class MyAttribute : Attribute
     {
+        object[] a;
+
+        public MyAttribute()
+        {
+        }
+
+        public MyAttribute(object[] a)
+        {
+            this.a = a;
+        }
     }
 
-    [My]
+    [My(new object[] { "123", 2, 3, 4, typeof(Base) })]
     class Base
     {
     }

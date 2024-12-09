@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Test
 {
@@ -17,12 +18,8 @@ namespace Test
 
     internal class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            TestClass test = new TestClass();
-            IInterface test2 = test;
-            test.Test();
-            test2.Test();
         }
     }
 }

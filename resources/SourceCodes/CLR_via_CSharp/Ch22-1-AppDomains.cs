@@ -10,10 +10,10 @@ public sealed class Program
 {
     public static void Main()
     {
-        // Marshalling();
+        Marshalling();
         // FieldAccessTiming();
         // AppDomainResourceMonitoring();
-        UnloadTimeout.Go();
+        // UnloadTimeout.Go();
     }
 
     private static void Marshalling()
@@ -215,7 +215,7 @@ public sealed class Program
 
     private static class UnloadTimeout
     {
-        private static Int32 s_testCode = 0; // 0=InfiniteLoop, 1=ManagedSleep, 2=UnmanagedSleep
+        private static Int32 s_testCode = 2; // 0=InfiniteLoop, 1=ManagedSleep, 2=UnmanagedSleep
         private static AppDomain s_ad;
 
         public static void Go()
