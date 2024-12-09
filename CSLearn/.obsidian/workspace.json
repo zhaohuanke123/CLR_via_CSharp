@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "错题/CLR/13-17.md",
+                "file": "错题/CLR/Table/21 GC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13-17"
+              "title": "21 GC"
             }
           }
         ]
@@ -170,6 +170,8 @@
   "active": "4497f6da4cc3cc49",
   "lastOpenFiles": [
     "错题/CLR/13-17.md",
+    "错题/CLR/Table/21 GC.md",
+    "错题/CLR/Table",
     "错题/CLR/8-12.md",
     "错题/CLR/5-8 note.md",
     "错题/CLR/1-4 note.md",
@@ -213,8 +215,6 @@
     "毕设",
     "Unity/底层/资源 & ID.md",
     "Unity/底层/Unity 序列化.md",
-    "Unity/底层/序列化",
-    "怎么学习.md",
     "未命名.canvas"
   ]
 }
