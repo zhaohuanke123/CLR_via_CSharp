@@ -226,15 +226,15 @@ internal static class TaskDemo
 {
     public static void Go()
     {
-        UsingTaskInsteadOfQueueUserWorkItem();
-        WaitForResult();
-        Cancel();
-        ContinueWith();
-        MultipleContinueWith();
-        ParentChild();
-        TaskFactory();
+        // UsingTaskInsteadOfQueueUserWorkItem();
+        // WaitForResult();
+        // Cancel();
+        // ContinueWith();
+        // MultipleContinueWith();
+        // ParentChild();
+        // TaskFactory();
         UnobservedException();
-        SynchronizationContextTaskScheduler();
+        // SynchronizationContextTaskScheduler();
     }
 
     private static void UsingTaskInsteadOfQueueUserWorkItem()
