@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -57,12 +58,10 @@ namespace TestAttrbuites
         {
             var isDefined = typeof(Derive).IsDefined(typeof(MyAttribute), true);
             Console.WriteLine(isDefined);
-
             Console.WriteLine("================");
 
             var customAttribute = typeof(Derive).GetCustomAttribute(typeof(MyAttribute), true);
             Console.WriteLine(customAttribute);
-
             Console.WriteLine("================");
 
             var customAttributes = typeof(Derive).GetCustomAttributes();
@@ -73,7 +72,7 @@ namespace TestAttrbuites
 
             Console.WriteLine("================");
 
-            var customAttributeDatas = CustomAttributeData.GetCustomAttributes(typeof(Base));
+            var customAttributeDatas = CustomAttributeData.GetCustomAttributes(typeof(Derive));
             foreach (var customAttributeData in customAttributeDatas)
             {
                 Console.WriteLine(customAttributeData);

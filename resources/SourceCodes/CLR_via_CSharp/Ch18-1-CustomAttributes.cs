@@ -57,7 +57,7 @@ internal sealed class SomeType
 #pragma warning restore 67
 
 
-[AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
+[AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = false)]
 public class MyAttr : Attribute
 {
     private int x;

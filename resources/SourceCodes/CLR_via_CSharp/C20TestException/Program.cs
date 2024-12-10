@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -58,10 +60,11 @@ namespace C20TestException
     {
         public static void Main(string[] args)
         {
-            TestAppdomain.Go();
-            TestInTaskException.Go();
-            TestUnobservedTaskException.Go();
-            TestFinally.Go();
+            // TestAppdomain.Go();
+            // TestInTaskException.Go();
+            // TestUnobservedTaskException.Go();
+            // TestFinally.Go();
+            ThreadAbort.Go();
         }
     }
 
@@ -189,6 +192,21 @@ namespace C20TestException
     {
         public static void Go()
         {
+        }
+    }
+
+    class ThreadAbort
+    {
+        public static void Go()
+        {
+            try
+            {
+                Thread.CurrentThread.Abort();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }
