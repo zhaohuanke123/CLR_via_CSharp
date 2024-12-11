@@ -1,4 +1,5 @@
-﻿using BenchmarkDotNet.Attributes;
+﻿using System.Runtime.InteropServices;
+using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 
 namespace TestCore6
@@ -95,7 +96,19 @@ namespace TestCore6
     {
         static void Main(string[] args)
         {
-            _ = BenchmarkRunner.Run<ArrayPerformance>();
+            GCHandle gcHandle1;
+            GCHandle gcHandle2;
+            Test(out gcHandle1, out gcHandle2);
+            GC.Collect(2, GCCollectionMode.Forced);
+            Console.WriteLine(gcHandle1.Target == null);
+            Console.WriteLine(gcHandle2.Target == null);
+            // _ = BenchmarkRunner.Run<ArrayPerformance>();
+        }
+
+        static void Test(out GCHandle gcHandle1, out GCHandle gcHandle2)
+        {
+            gcHandle1 = GCHandle.Alloc(new object(), GCHandleType.Weak);
+            gcHandle2 = GCHandle.Alloc(typeof(int), GCHandleType.Weak);
         }
     }
 }

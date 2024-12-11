@@ -23,14 +23,11 @@ namespace TestCoreRuntime
 
     public class Program
     {
+        private static event Action callBack;
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Start");
-            Object o = new MyClass();
-
-            Console.WriteLine(o.ToString());
-            // Console.WriteLine(typeof(Object).Assembly.GetName());
-            Console.ReadLine();
+            callBack();
         }
     }
 }
