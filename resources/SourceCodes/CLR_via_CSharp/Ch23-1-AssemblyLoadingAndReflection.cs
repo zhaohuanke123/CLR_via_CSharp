@@ -12,16 +12,16 @@ public sealed class Program
 {
     public static void Main()
     {
-        // TestCreateInstance.Go();
-        // TestConstructorInfo.Go();
-        // TestObjectHandle.Go();
-        // DynamicLoadFromResource.Go();
-        // DiscoverTypes.Go();
-        // ConstructingGenericType.Go();
-        // MemberDiscover.Go();
-        // InterfaceDiscover.Go();
-        // Invoker.Go();
-        // ExceptionTree.Go();
+        TestCreateInstance.Go();
+        TestConstructorInfo.Go();
+        TestObjectHandle.Go();
+        DynamicLoadFromResource.Go();
+        DiscoverTypes.Go();
+        ConstructingGenericType.Go();
+        MemberDiscover.Go();
+        InterfaceDiscover.Go();
+        Invoker.Go();
+        ExceptionTree.Go();
         TestRuntimeMethodHandle.Go();
     }
 }

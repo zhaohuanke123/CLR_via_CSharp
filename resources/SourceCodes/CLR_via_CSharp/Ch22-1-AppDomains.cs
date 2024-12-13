@@ -11,9 +11,9 @@ public sealed class Program
     public static void Main()
     {
         Marshalling();
-        // FieldAccessTiming();
-        // AppDomainResourceMonitoring();
-        // UnloadTimeout.Go();
+        FieldAccessTiming();
+        AppDomainResourceMonitoring();
+        UnloadTimeout.Go();
     }
 
     private static void Marshalling()
