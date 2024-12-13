@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 
 namespace WhyFinally
@@ -50,7 +52,10 @@ namespace WhyFinally
         {
             // 创建新的 AppDomain
             AppDomain newDomain = AppDomain.CreateDomain("NewDomain");
-
+            newDomain.FirstChanceException += (sender, eventArgs) =>
+            {
+                Console.WriteLine($"FirstChanceException: {eventArgs.Exception}");
+            };
             // 在新 AppDomain 中执行代码
             try
             {
@@ -64,7 +69,7 @@ namespace WhyFinally
                     catch (Exception e)
                     {
                         // 捕捉并打印异常信息
-                        Console.WriteLine($"Caught exception in new AppDomain: {e.GetType().Name} - {e.Message}");
+                        Console.WriteLine($"Caught exception in new AppDomain: {e}");
                         throw;
                     }
                 });
@@ -72,7 +77,7 @@ namespace WhyFinally
             catch (Exception e)
             {
                 // 捕捉传递到原始 AppDomain 中的异常
-                Console.WriteLine($"Caught exception in original AppDomain: {e.GetType().Name} - {e.Message}");
+                Console.WriteLine($"Caught exception in original AppDomain: {e}");
             }
             finally
             {
