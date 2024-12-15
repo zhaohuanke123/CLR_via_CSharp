@@ -1,33 +1,18 @@
-﻿using System.Diagnostics;
+﻿using System.Runtime.InteropServices;
 
 namespace TestCoreRuntime
 {
-    struct MyStruct
-    {
-        public MyStruct(int a)
-        {
-        }
-    }
-
-    class MyClass
-    {
-        public MyClass()
-        {
-        }
-
-        public override int GetHashCode()
-        {
-            return 123;
-        }
-    }
-
     public class Program
     {
-        private static event Action callBack;
-
         static void Main(string[] args)
         {
-            callBack();
+            object o = new object();
+            object o1 = new object();
+            o = null;
+            GCHandle h = GCHandle.Alloc(o, GCHandleType.Weak);
+            GC.Collect(0);
+            Console.WriteLine(h.Target == null);
+            Console.WriteLine(o1);
         }
     }
 }
