@@ -17,11 +17,11 @@ public static class RuntieSerialization
     {
         //QuickStart.Go();
         //UsingNonSerializedFields.Go();
-        OptionalField.Go();
-        //ISerializableVersioning.Go();
-        //SerializingSingletons.Go();
+        // OptionalField.Go();
+        // ISerializableVersioning.Go();
+        // SerializingSingletons.Go();
         // SerializationSurrogates.Go();
-        //SerializationBinderDemo.Go();
+        SerializationBinderDemo.Go();
     }
 }
 
@@ -259,7 +259,7 @@ internal static class OptionalField
     {
         public String name = "jeff";
         [OptionalField] public String name1 = "jeff";
-        
+
         public Foo()
         {
             Console.WriteLine("Foo ctor");
@@ -271,7 +271,7 @@ internal static class OptionalField
         const String filename = @"temp.dat";
         var formatter = new SoapFormatter();
 
-         // Serialize
+        // Serialize
         using (var stream = File.Create(filename))
         {
             formatter.Serialize(stream, new Foo());
@@ -432,7 +432,7 @@ internal static class SerializingSingletons
             // Method called after this object (which has no fields) is deserialized
             public Object GetRealObject(StreamingContext context)
             {
-                return Singleton.GetSingleton();
+                return GetSingleton();
             }
         }
 
@@ -535,13 +535,13 @@ internal static class SerializationBinderDemo
     {
         Int32 a, b, c;
 
-        [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             /* Never called: do nothing */
         }
 
-        [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
         private Ver2(SerializationInfo info, StreamingContext context)
         {
             a = info.GetInt32("x");
@@ -551,7 +551,7 @@ internal static class SerializationBinderDemo
 
         public override string ToString()
         {
-            return String.Format("a={0}, b={1}, c={2}", a, b, c);
+            return $"a={a.ToString()}, b={b.ToString()}, c={c.ToString()}";
         }
     }
 

@@ -1,0 +1,5281 @@
+// Metadata version: v4.0.30319
+.assembly extern System.Runtime
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern Microsoft.Win32.Registry
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.Principal.Windows
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.Permissions
+{
+  .publickeytoken = (CC 7B 13 FF CD 2D DD 51 )                         // .{...-.Q
+  .ver 0:0:0:0
+}
+.assembly extern System.Collections
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Collections.NonGeneric
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Collections.Concurrent
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.ObjectModel
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Console
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Runtime.InteropServices
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Diagnostics.Contracts
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Diagnostics.StackTrace
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Diagnostics.Tracing
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.IO.FileSystem.DriveInfo
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.IO.IsolatedStorage
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.ComponentModel
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Threading.Thread
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Reflection.Emit
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Reflection.Emit.ILGeneration
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Reflection.Emit.Lightweight
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Reflection.Primitives
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Resources.Writer
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Runtime.CompilerServices.VisualC
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Runtime.InteropServices.RuntimeInformation
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Runtime.Serialization.Formatters
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.AccessControl
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.IO.FileSystem.AccessControl
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Threading.AccessControl
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.Claims
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.Cryptography.Algorithms
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.Cryptography.Primitives
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.Cryptography.Csp
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.Cryptography.Encoding
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Security.Cryptography.X509Certificates
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Text.Encoding.Extensions
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Threading
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Threading.Overlapped
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Threading.ThreadPool
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly extern System.Threading.Tasks.Parallel
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 0:0:0:0
+}
+.assembly mscorlib
+{
+  .custom instance void [System.Runtime]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 ) 
+  .custom instance void [System.Runtime]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+                                                                                                                   63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.
+
+  // --- 下列自定义特性会自动添加，不要取消注释 -------
+  //  .custom instance void [System.Runtime]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [System.Runtime]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 02 00 00 00 00 00 ) 
+
+  .custom instance void [System.Runtime]System.Runtime.Versioning.TargetFrameworkAttribute::.ctor(string) = ( 01 00 18 2E 4E 45 54 43 6F 72 65 41 70 70 2C 56   // ....NETCoreApp,V
+                                                                                                              65 72 73 69 6F 6E 3D 76 36 2E 30 01 00 54 0E 14   // ersion=v6.0..T..
+                                                                                                              46 72 61 6D 65 77 6F 72 6B 44 69 73 70 6C 61 79   // FrameworkDisplay
+                                                                                                              4E 61 6D 65 00 )                                  // Name.
+  .custom instance void [System.Runtime]System.CLSCompliantAttribute::.ctor(bool) = ( 01 00 01 00 00 ) 
+  .custom instance void [System.Runtime]System.Reflection.AssemblyDefaultAliasAttribute::.ctor(string) = ( 01 00 08 6D 73 63 6F 72 6C 69 62 00 00 )          // ...mscorlib..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyMetadataAttribute::.ctor(string,
+                                                                                           string) = ( 01 00 15 2E 4E 45 54 46 72 61 6D 65 77 6F 72 6B   // ....NETFramework
+                                                                                                       41 73 73 65 6D 62 6C 79 00 00 00 )                // Assembly...
+  .custom instance void [System.Runtime]System.Reflection.AssemblyMetadataAttribute::.ctor(string,
+                                                                                           string) = ( 01 00 0B 53 65 72 76 69 63 65 61 62 6C 65 04 54   // ...Serviceable.T
+                                                                                                       72 75 65 00 00 )                                  // rue..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyMetadataAttribute::.ctor(string,
+                                                                                           string) = ( 01 00 0B 50 72 65 66 65 72 49 6E 62 6F 78 04 54   // ...PreferInbox.T
+                                                                                                       72 75 65 00 00 )                                  // rue..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyMetadataAttribute::.ctor(string,
+                                                                                           string) = ( 01 00 0B 49 73 54 72 69 6D 6D 61 62 6C 65 04 54   // ...IsTrimmable.T
+                                                                                                       72 75 65 00 00 )                                  // rue..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyCompanyAttribute::.ctor(string) = ( 01 00 15 4D 69 63 72 6F 73 6F 66 74 20 43 6F 72   // ...Microsoft Cor
+                                                                                                      70 6F 72 61 74 69 6F 6E 00 00 )                   // poration..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyCopyrightAttribute::.ctor(string) = ( 01 00 2E C2 A9 20 4D 69 63 72 6F 73 6F 66 74 20   // ..... Microsoft 
+                                                                                                        43 6F 72 70 6F 72 61 74 69 6F 6E 2E 20 41 6C 6C   // Corporation. All
+                                                                                                        20 72 69 67 68 74 73 20 72 65 73 65 72 76 65 64   //  rights reserved
+                                                                                                        2E 00 00 )                                        // ...
+  .custom instance void [System.Runtime]System.Reflection.AssemblyDescriptionAttribute::.ctor(string) = ( 01 00 08 6D 73 63 6F 72 6C 69 62 00 00 )          // ...mscorlib..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyFileVersionAttribute::.ctor(string) = ( 01 00 0E 36 2E 30 2E 33 35 32 34 2E 34 35 39 31   // ...6.0.3524.4591
+                                                                                                          38 00 00 )                                        // 8..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyInformationalVersionAttribute::.ctor(string) = ( 01 00 2F 36 2E 30 2E 33 35 2B 62 33 35 37 66 38   // ../6.0.35+b357f8
+                                                                                                                   36 63 65 33 62 63 65 37 63 32 33 32 65 61 32 34   // 6ce3bce7c232ea24
+                                                                                                                   32 30 37 34 62 31 37 62 65 62 64 63 35 30 62 35   // 2074b17bebdc50b5
+                                                                                                                   34 33 00 00 )                                     // 43..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyProductAttribute::.ctor(string) = ( 01 00 10 4D 69 63 72 6F 73 6F 66 74 C2 AE 20 2E   // ...Microsoft.. .
+                                                                                                      4E 45 54 00 00 )                                  // NET..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyTitleAttribute::.ctor(string) = ( 01 00 08 6D 73 63 6F 72 6C 69 62 00 00 )          // ...mscorlib..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyMetadataAttribute::.ctor(string,
+                                                                                           string) = ( 01 00 0D 52 65 70 6F 73 69 74 6F 72 79 55 72 6C   // ...RepositoryUrl
+                                                                                                       21 68 74 74 70 73 3A 2F 2F 67 69 74 68 75 62 2E   // !https://github.
+                                                                                                       63 6F 6D 2F 64 6F 74 6E 65 74 2F 72 75 6E 74 69   // com/dotnet/runti
+                                                                                                       6D 65 00 00 )                                     // me..
+  .permissionset reqmin
+             = {[System.Runtime]System.Security.Permissions.SecurityPermissionAttribute = {property bool 'SkipVerification' = bool(true)}}
+  .publickey = (00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ) 
+  .hash algorithm 0x00008004
+  .ver 4:0:0:0
+}
+.class extern forwarder Microsoft.Win32.Registry
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.RegistryHive
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.RegistryKey
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.RegistryKeyPermissionCheck
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.RegistryOptions
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.RegistryValueKind
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.RegistryValueOptions
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.RegistryView
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder Microsoft.Win32.SafeHandles.SafeAccessTokenHandle
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder Microsoft.Win32.SafeHandles.SafeFileHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder Microsoft.Win32.SafeHandles.SafeRegistryHandle
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder Microsoft.Win32.SafeHandles.SafeWaitHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AccessViolationException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action`2
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action`3
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action`4
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action`5
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action`6
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action`7
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Action`8
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Activator
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AggregateException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AppContext
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AppDomain
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AppDomainSetup
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AppDomainUnloadedException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ApplicationException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ApplicationId
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ApplicationIdentity
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.ArgIterator
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ArgumentException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ArgumentNullException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ArgumentOutOfRangeException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ArithmeticException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Array
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ArraySegment`1
+{
+  .assembly extern System.Runtime
+}
+.class extern Enumerator
+{
+  .class extern System.ArraySegment`1
+}
+.class extern forwarder System.ArrayTypeMismatchException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AssemblyLoadEventArgs
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AssemblyLoadEventHandler
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AsyncCallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Attribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AttributeTargets
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.AttributeUsageAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.BadImageFormatException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Base64FormattingOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.BitConverter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Boolean
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Buffer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Byte
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.CannotUnloadAppDomainException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Char
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.CharEnumerator
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.CLSCompliantAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.ArrayList
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.BitArray
+{
+  .assembly extern System.Collections
+}
+.class extern forwarder System.Collections.CaseInsensitiveComparer
+{
+  .assembly extern System.Collections.NonGeneric
+}
+.class extern forwarder System.Collections.CaseInsensitiveHashCodeProvider
+{
+  .assembly extern System.Collections.NonGeneric
+}
+.class extern forwarder System.Collections.CollectionBase
+{
+  .assembly extern System.Collections.NonGeneric
+}
+.class extern forwarder System.Collections.Comparer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Concurrent.ConcurrentDictionary`2
+{
+  .assembly extern System.Collections.Concurrent
+}
+.class extern forwarder System.Collections.Concurrent.ConcurrentQueue`1
+{
+  .assembly extern System.Collections.Concurrent
+}
+.class extern forwarder System.Collections.Concurrent.ConcurrentStack`1
+{
+  .assembly extern System.Collections.Concurrent
+}
+.class extern forwarder System.Collections.Concurrent.EnumerablePartitionerOptions
+{
+  .assembly extern System.Collections.Concurrent
+}
+.class extern forwarder System.Collections.Concurrent.IProducerConsumerCollection`1
+{
+  .assembly extern System.Collections.Concurrent
+}
+.class extern forwarder System.Collections.Concurrent.OrderablePartitioner`1
+{
+  .assembly extern System.Collections.Concurrent
+}
+.class extern forwarder System.Collections.Concurrent.Partitioner
+{
+  .assembly extern System.Collections.Concurrent
+}
+.class extern forwarder System.Collections.Concurrent.Partitioner`1
+{
+  .assembly extern System.Collections.Concurrent
+}
+.class extern forwarder System.Collections.DictionaryBase
+{
+  .assembly extern System.Collections.NonGeneric
+}
+.class extern forwarder System.Collections.DictionaryEntry
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.Comparer`1
+{
+  .assembly extern System.Collections
+}
+.class extern forwarder System.Collections.Generic.Dictionary`2
+{
+  .assembly extern System.Collections
+}
+.class extern Enumerator
+{
+  .class extern System.Collections.Generic.Dictionary`2
+}
+.class extern KeyCollection
+{
+  .class extern System.Collections.Generic.Dictionary`2
+}
+.class extern Enumerator
+{
+  .class extern System.Collections.Generic.Dictionary`2/KeyCollection
+}
+.class extern ValueCollection
+{
+  .class extern System.Collections.Generic.Dictionary`2
+}
+.class extern Enumerator
+{
+  .class extern System.Collections.Generic.Dictionary`2/ValueCollection
+}
+.class extern forwarder System.Collections.Generic.EqualityComparer`1
+{
+  .assembly extern System.Collections
+}
+.class extern forwarder System.Collections.Generic.ICollection`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IComparer`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IDictionary`2
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IEnumerable`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IEnumerator`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IEqualityComparer`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IList`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IReadOnlyCollection`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IReadOnlyDictionary`2
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.IReadOnlyList`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.KeyNotFoundException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.KeyValuePair`2
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.Generic.List`1
+{
+  .assembly extern System.Collections
+}
+.class extern Enumerator
+{
+  .class extern System.Collections.Generic.List`1
+}
+.class extern forwarder System.Collections.Hashtable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.ICollection
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IComparer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IDictionary
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IDictionaryEnumerator
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IEnumerable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IEnumerator
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IEqualityComparer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IHashCodeProvider
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IList
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IStructuralComparable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.IStructuralEquatable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.ObjectModel.Collection`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.ObjectModel.KeyedCollection`2
+{
+  .assembly extern System.ObjectModel
+}
+.class extern forwarder System.Collections.ObjectModel.ReadOnlyCollection`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Collections.ObjectModel.ReadOnlyDictionary`2
+{
+  .assembly extern System.ObjectModel
+}
+.class extern KeyCollection
+{
+  .class extern System.Collections.ObjectModel.ReadOnlyDictionary`2
+}
+.class extern ValueCollection
+{
+  .class extern System.Collections.ObjectModel.ReadOnlyDictionary`2
+}
+.class extern forwarder System.Collections.Queue
+{
+  .assembly extern System.Collections.NonGeneric
+}
+.class extern forwarder System.Collections.ReadOnlyCollectionBase
+{
+  .assembly extern System.Collections.NonGeneric
+}
+.class extern forwarder System.Collections.SortedList
+{
+  .assembly extern System.Collections.NonGeneric
+}
+.class extern forwarder System.Collections.Stack
+{
+  .assembly extern System.Collections.NonGeneric
+}
+.class extern forwarder System.Collections.StructuralComparisons
+{
+  .assembly extern System.Collections
+}
+.class extern forwarder System.Comparison`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Configuration.Assemblies.AssemblyHashAlgorithm
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Configuration.Assemblies.AssemblyVersionCompatibility
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Console
+{
+  .assembly extern System.Console
+}
+.class extern forwarder System.ConsoleCancelEventArgs
+{
+  .assembly extern System.Console
+}
+.class extern forwarder System.ConsoleCancelEventHandler
+{
+  .assembly extern System.Console
+}
+.class extern forwarder System.ConsoleColor
+{
+  .assembly extern System.Console
+}
+.class extern forwarder System.ConsoleKey
+{
+  .assembly extern System.Console
+}
+.class extern forwarder System.ConsoleKeyInfo
+{
+  .assembly extern System.Console
+}
+.class extern forwarder System.ConsoleModifiers
+{
+  .assembly extern System.Console
+}
+.class extern forwarder System.ConsoleSpecialKey
+{
+  .assembly extern System.Console
+}
+.class extern forwarder System.ContextBoundObject
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ContextMarshalException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ContextStaticAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Convert
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Converter`2
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.DataMisalignedException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.DateTime
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.DateTimeKind
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.DateTimeOffset
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.DayOfWeek
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.DBNull
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Decimal
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Delegate
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.ConditionalAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.Contracts.Contract
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractAbbreviatorAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractArgumentValidatorAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractClassAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractClassForAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractFailedEventArgs
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractFailureKind
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractInvariantMethodAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractOptionAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractReferenceAssemblyAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractRuntimeIgnoredAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.ContractVerificationAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.Contracts.PureAttribute
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Diagnostics.DebuggableAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern DebuggingModes
+{
+  .class extern System.Diagnostics.DebuggableAttribute
+}
+.class extern forwarder System.Diagnostics.Debugger
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerBrowsableAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerBrowsableState
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerDisplayAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerHiddenAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerNonUserCodeAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerStepperBoundaryAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerStepThroughAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerTypeProxyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.DebuggerVisualizerAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Diagnostics.StackFrame
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.StackTrace
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolBinder
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolBinder1
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolDocument
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolDocumentWriter
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolMethod
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolNamespace
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolReader
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolScope
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolVariable
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.ISymbolWriter
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.SymAddressKind
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.SymbolToken
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.SymDocumentType
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.SymLanguageType
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.SymbolStore.SymLanguageVendor
+{
+  .assembly extern System.Diagnostics.StackTrace
+}
+.class extern forwarder System.Diagnostics.Tracing.EventActivityOptions
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventAttribute
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventChannel
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventCommand
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventCommandEventArgs
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventDataAttribute
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventFieldAttribute
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventFieldFormat
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventFieldTags
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventIgnoreAttribute
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventKeywords
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventLevel
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventListener
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventManifestOptions
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventOpcode
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventSource
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern EventData
+{
+  .class extern System.Diagnostics.Tracing.EventSource
+}
+.class extern forwarder System.Diagnostics.Tracing.EventSourceAttribute
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventSourceCreatedEventArgs
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventSourceException
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventSourceOptions
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventSourceSettings
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventTags
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventTask
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.EventWrittenEventArgs
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.Diagnostics.Tracing.NonEventAttribute
+{
+  .assembly extern System.Diagnostics.Tracing
+}
+.class extern forwarder System.DivideByZeroException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.DllNotFoundException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Double
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.DuplicateWaitObjectException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.EntryPointNotFoundException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Enum
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Environment
+{
+  .assembly extern System.Runtime
+}
+.class extern SpecialFolder
+{
+  .class extern System.Environment
+}
+.class extern SpecialFolderOption
+{
+  .class extern System.Environment
+}
+.class extern forwarder System.EnvironmentVariableTarget
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.EventArgs
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.EventHandler
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.EventHandler`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Exception
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ExecutionEngineException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.FieldAccessException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.FlagsAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.FormatException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.FormattableString
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`2
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`3
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`4
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`5
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`6
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`7
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`8
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Func`9
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.GC
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.GCCollectionMode
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.GCNotificationStatus
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.Calendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.CalendarAlgorithmType
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.CalendarWeekRule
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.CharUnicodeInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.ChineseLunisolarCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.CompareInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.CompareOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.CultureInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.CultureNotFoundException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.CultureTypes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.DateTimeFormatInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.DateTimeStyles
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.DaylightTime
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.DigitShapes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.EastAsianLunisolarCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.GlobalizationExtensions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.GregorianCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.GregorianCalendarTypes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.HebrewCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.HijriCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.IdnMapping
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.JapaneseCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.JapaneseLunisolarCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.JulianCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.KoreanCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.KoreanLunisolarCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.NumberFormatInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.NumberStyles
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.PersianCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.RegionInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.SortKey
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.SortVersion
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.StringInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.TaiwanCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.TaiwanLunisolarCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.TextElementEnumerator
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.TextInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.ThaiBuddhistCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.TimeSpanStyles
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.UmAlQuraCalendar
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Globalization.UnicodeCategory
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Guid
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IAsyncResult
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ICloneable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IComparable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IComparable`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IConvertible
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ICustomFormatter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IDisposable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IEquatable`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IFormatProvider
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IFormattable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IndexOutOfRangeException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.InsufficientExecutionStackException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.InsufficientMemoryException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Int16
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Int32
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Int64
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IntPtr
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.InvalidCastException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.InvalidOperationException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.InvalidProgramException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.InvalidTimeZoneException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.BinaryReader
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.BinaryWriter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.BufferedStream
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.Directory
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.DirectoryInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.DirectoryNotFoundException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.DriveInfo
+{
+  .assembly extern System.IO.FileSystem.DriveInfo
+}
+.class extern forwarder System.IO.DriveNotFoundException
+{
+  .assembly extern System.IO.FileSystem.DriveInfo
+}
+.class extern forwarder System.IO.DriveType
+{
+  .assembly extern System.IO.FileSystem.DriveInfo
+}
+.class extern forwarder System.IO.EndOfStreamException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.File
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileAccess
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileLoadException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileMode
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileNotFoundException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileShare
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileStream
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.FileSystemInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.IOException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.IsolatedStorage.INormalizeForIsolatedStorage
+{
+  .assembly extern System.IO.IsolatedStorage
+}
+.class extern forwarder System.IO.IsolatedStorage.IsolatedStorage
+{
+  .assembly extern System.IO.IsolatedStorage
+}
+.class extern forwarder System.IO.IsolatedStorage.IsolatedStorageException
+{
+  .assembly extern System.IO.IsolatedStorage
+}
+.class extern forwarder System.IO.IsolatedStorage.IsolatedStorageFile
+{
+  .assembly extern System.IO.IsolatedStorage
+}
+.class extern forwarder System.IO.IsolatedStorage.IsolatedStorageFileStream
+{
+  .assembly extern System.IO.IsolatedStorage
+}
+.class extern forwarder System.IO.IsolatedStorage.IsolatedStorageScope
+{
+  .assembly extern System.IO.IsolatedStorage
+}
+.class extern forwarder System.IO.MemoryStream
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.Path
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.PathTooLongException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.SearchOption
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.SeekOrigin
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.Stream
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.StreamReader
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.StreamWriter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.StringReader
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.StringWriter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.TextReader
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.TextWriter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IO.UnmanagedMemoryAccessor
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.IO.UnmanagedMemoryStream
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IObservable`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IObserver`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IProgress`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.IServiceProvider
+{
+  .assembly extern System.ComponentModel
+}
+.class extern forwarder System.Lazy`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.LoaderOptimization
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.LoaderOptimizationAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.LocalDataStoreSlot
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.MarshalByRefObject
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Math
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MemberAccessException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MethodAccessException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MidpointRounding
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MissingFieldException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MissingMemberException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MissingMethodException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ModuleHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MTAThreadAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MulticastDelegate
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.MulticastNotSupportedException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.NonSerializedAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.NotFiniteNumberException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.NotImplementedException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.NotSupportedException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Nullable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Nullable`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.NullReferenceException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Object
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ObjectDisposedException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ObsoleteAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.OperatingSystem
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.OperationCanceledException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.OutOfMemoryException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.OverflowException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ParamArrayAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.PlatformID
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.PlatformNotSupportedException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Predicate`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Progress`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Random
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.RankException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AmbiguousMatchException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.Assembly
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyAlgorithmIdAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyCompanyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyConfigurationAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyContentType
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyCopyrightAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyCultureAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyDefaultAliasAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyDelaySignAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyDescriptionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyFileVersionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyFlagsAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyInformationalVersionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyKeyFileAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyKeyNameAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyMetadataAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyName
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyNameFlags
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyNameProxy
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyProductAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblySignatureKeyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyTitleAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyTrademarkAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.AssemblyVersionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.Binder
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.BindingFlags
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.CallingConventions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ConstructorInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.CustomAttributeData
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.CustomAttributeExtensions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.CustomAttributeFormatException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.CustomAttributeNamedArgument
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.CustomAttributeTypedArgument
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.DefaultMemberAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.Emit.AssemblyBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.AssemblyBuilderAccess
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.ConstructorBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.CustomAttributeBuilder
+{
+  .assembly extern System.Reflection.Emit.ILGeneration
+}
+.class extern forwarder System.Reflection.Emit.DynamicILInfo
+{
+  .assembly extern System.Reflection.Emit.Lightweight
+}
+.class extern forwarder System.Reflection.Emit.DynamicMethod
+{
+  .assembly extern System.Reflection.Emit.Lightweight
+}
+.class extern forwarder System.Reflection.Emit.EnumBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.EventBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.FieldBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.FlowControl
+{
+  .assembly extern System.Reflection.Primitives
+}
+.class extern forwarder System.Reflection.Emit.GenericTypeParameterBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.ILGenerator
+{
+  .assembly extern System.Reflection.Emit.ILGeneration
+}
+.class extern forwarder System.Reflection.Emit.Label
+{
+  .assembly extern System.Reflection.Emit.ILGeneration
+}
+.class extern forwarder System.Reflection.Emit.LocalBuilder
+{
+  .assembly extern System.Reflection.Emit.ILGeneration
+}
+.class extern forwarder System.Reflection.Emit.MethodBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.ModuleBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.OpCode
+{
+  .assembly extern System.Reflection.Primitives
+}
+.class extern forwarder System.Reflection.Emit.OpCodes
+{
+  .assembly extern System.Reflection.Primitives
+}
+.class extern forwarder System.Reflection.Emit.OpCodeType
+{
+  .assembly extern System.Reflection.Primitives
+}
+.class extern forwarder System.Reflection.Emit.OperandType
+{
+  .assembly extern System.Reflection.Primitives
+}
+.class extern forwarder System.Reflection.Emit.PackingSize
+{
+  .assembly extern System.Reflection.Primitives
+}
+.class extern forwarder System.Reflection.Emit.ParameterBuilder
+{
+  .assembly extern System.Reflection.Emit.ILGeneration
+}
+.class extern forwarder System.Reflection.Emit.PropertyBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.Emit.SignatureHelper
+{
+  .assembly extern System.Reflection.Emit.ILGeneration
+}
+.class extern forwarder System.Reflection.Emit.StackBehaviour
+{
+  .assembly extern System.Reflection.Primitives
+}
+.class extern forwarder System.Reflection.Emit.TypeBuilder
+{
+  .assembly extern System.Reflection.Emit
+}
+.class extern forwarder System.Reflection.EventAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.EventInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ExceptionHandlingClause
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ExceptionHandlingClauseOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.FieldAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.FieldInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.GenericParameterAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ICustomAttributeProvider
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ImageFileMachine
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.InterfaceMapping
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.IntrospectionExtensions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.InvalidFilterCriteriaException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.IReflect
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.IReflectableType
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.LocalVariableInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ManifestResourceInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.MemberFilter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.MemberInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.MemberTypes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.MethodAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.MethodBase
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.MethodBody
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.MethodImplAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.MethodInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.Missing
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.Module
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ModuleResolveEventHandler
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ObfuscateAssemblyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ObfuscationAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ParameterAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ParameterInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ParameterModifier
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.Pointer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.PortableExecutableKinds
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ProcessorArchitecture
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.PropertyAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.PropertyInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ReflectionContext
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ReflectionTypeLoadException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ResourceAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.ResourceLocation
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.RuntimeReflectionExtensions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.StrongNameKeyPair
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.TargetException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.TargetInvocationException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.TargetParameterCountException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.TypeAttributes
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.TypeDelegator
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.TypeFilter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Reflection.TypeInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ResolveEventArgs
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ResolveEventHandler
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.IResourceReader
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.IResourceWriter
+{
+  .assembly extern System.Resources.Writer
+}
+.class extern forwarder System.Resources.MissingManifestResourceException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.MissingSatelliteAssemblyException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.NeutralResourcesLanguageAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.ResourceManager
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.ResourceReader
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.ResourceSet
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.ResourceWriter
+{
+  .assembly extern System.Resources.Writer
+}
+.class extern forwarder System.Resources.SatelliteContractVersionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Resources.UltimateResourceFallbackLocation
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.AssemblyTargetedPatchBandAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.AccessedThroughPropertyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.AssemblyAttributesGoHere
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.AssemblyAttributesGoHereM
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.AssemblyAttributesGoHereS
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.AssemblyAttributesGoHereSM
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.AsyncStateMachineAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.AsyncTaskMethodBuilder
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.AsyncVoidMethodBuilder
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CallConvCdecl
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CallConvFastcall
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CallConvStdcall
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CallConvThiscall
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CallerFilePathAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CallerLineNumberAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CallerMemberNameAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CompilationRelaxations
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CompilationRelaxationsAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CompilerGeneratedAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CompilerGlobalScopeAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.CompilerMarshalOverride
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.ConditionalWeakTable`2
+{
+  .assembly extern System.Runtime
+}
+.class extern CreateValueCallback
+{
+  .class extern System.Runtime.CompilerServices.ConditionalWeakTable`2
+}
+.class extern forwarder System.Runtime.CompilerServices.ConfiguredTaskAwaitable
+{
+  .assembly extern System.Runtime
+}
+.class extern ConfiguredTaskAwaiter
+{
+  .class extern System.Runtime.CompilerServices.ConfiguredTaskAwaitable
+}
+.class extern forwarder System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1
+{
+  .assembly extern System.Runtime
+}
+.class extern ConfiguredTaskAwaiter
+{
+  .class extern System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1
+}
+.class extern forwarder System.Runtime.CompilerServices.ContractHelper
+{
+  .assembly extern System.Diagnostics.Contracts
+}
+.class extern forwarder System.Runtime.CompilerServices.CustomConstantAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.DateTimeConstantAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.DecimalConstantAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.DefaultDependencyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.DependencyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.DisablePrivateReflectionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.DiscardableAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.ExtensionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.FixedAddressValueTypeAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.FixedBufferAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.FormattableStringFactory
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.HasCopySemanticsAttribute
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IAsyncStateMachine
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.ICriticalNotifyCompletion
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.IDispatchConstantAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.CompilerServices.IndexerNameAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.INotifyCompletion
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.InternalsVisibleToAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.IsBoxed
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsByRefLikeAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.IsByValue
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsConst
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.IsCopyConstructed
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsExplicitlyDereferenced
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsImplicitlyDereferenced
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsJitIntrinsic
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsLong
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsPinned
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsReadOnlyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.IsSignUnspecifiedByte
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsUdtReturn
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.IsVolatile
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.IteratorStateMachineAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.ITuple
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.IUnknownConstantAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.CompilerServices.LoadHint
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.MethodCodeType
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.MethodImplAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.MethodImplOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.NativeCppClassAttribute
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.ReferenceAssemblyAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.RequiredAttributeAttribute
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.RuntimeCompatibilityAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.RuntimeFeature
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.RuntimeHelpers
+{
+  .assembly extern System.Runtime
+}
+.class extern CleanupCode
+{
+  .class extern System.Runtime.CompilerServices.RuntimeHelpers
+}
+.class extern TryCode
+{
+  .class extern System.Runtime.CompilerServices.RuntimeHelpers
+}
+.class extern forwarder System.Runtime.CompilerServices.RuntimeWrappedException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.ScopelessEnumAttribute
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.SpecialNameAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.StateMachineAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.StringFreezingAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.SuppressIldasmAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.SuppressMergeCheckAttribute
+{
+  .assembly extern System.Runtime.CompilerServices.VisualC
+}
+.class extern forwarder System.Runtime.CompilerServices.TaskAwaiter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.TaskAwaiter`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.TupleElementNamesAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.TypeForwardedFromAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.TypeForwardedToAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.UnsafeValueTypeAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.CompilerServices.YieldAwaitable
+{
+  .assembly extern System.Runtime
+}
+.class extern YieldAwaiter
+{
+  .class extern System.Runtime.CompilerServices.YieldAwaitable
+}
+.class extern forwarder System.Runtime.ConstrainedExecution.Cer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.ConstrainedExecution.Consistency
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.ConstrainedExecution.CriticalFinalizerObject
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.ConstrainedExecution.PrePrepareMethodAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.ConstrainedExecution.ReliabilityContractAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.ExceptionServices.ExceptionDispatchInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.ExceptionServices.FirstChanceExceptionEventArgs
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.GCLargeObjectHeapCompactionMode
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.GCLatencyMode
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.GCSettings
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.AllowReversePInvokeCallsAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.Architecture
+{
+  .assembly extern System.Runtime.InteropServices.RuntimeInformation
+}
+.class extern forwarder System.Runtime.InteropServices.ArrayWithOffset
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.AutomationProxyAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.BestFitMappingAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.BStrWrapper
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.CallingConvention
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.CharSet
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.ClassInterfaceAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ClassInterfaceType
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.CoClassAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComAliasNameAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComCompatibleVersionAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComConversionLossAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComDefaultInterfaceAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComEventInterfaceAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComEventsHelper
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.COMException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComImportAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComInterfaceType
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComMemberType
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComRegisterFunctionAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComSourceInterfacesAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.BIND_OPTS
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.BINDPTR
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.CALLCONV
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.CONNECTDATA
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.DESCKIND
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.DISPPARAMS
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.ELEMDESC
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern DESCUNION
+{
+  .class extern System.Runtime.InteropServices.ComTypes.ELEMDESC
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.EXCEPINFO
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.FILETIME
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.FUNCDESC
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.FUNCFLAGS
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.FUNCKIND
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IBindCtx
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IConnectionPoint
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IConnectionPointContainer
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IDLDESC
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IDLFLAG
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IEnumConnections
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IEnumMoniker
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IEnumString
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IEnumVARIANT
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IMoniker
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.INVOKEKIND
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IPersistFile
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IRunningObjectTable
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.IStream
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.ITypeComp
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.ITypeInfo
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.ITypeInfo2
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.ITypeLib
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.ITypeLib2
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.LIBFLAGS
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.PARAMDESC
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.PARAMFLAG
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.STATSTG
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.SYSKIND
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.TYPEATTR
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.TYPEDESC
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.TYPEFLAGS
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.TYPEKIND
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.TYPELIBATTR
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.VARDESC
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern DESCUNION
+{
+  .class extern System.Runtime.InteropServices.ComTypes.VARDESC
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.VARFLAGS
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComTypes.VARKIND
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComUnregisterFunctionAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ComVisibleAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.CriticalHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.CurrencyWrapper
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.CustomQueryInterfaceMode
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.CustomQueryInterfaceResult
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.DefaultCharSetAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.DefaultDllImportSearchPathsAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.DispatchWrapper
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.DispIdAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.DllImportAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.DllImportSearchPath
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ErrorWrapper
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ExternalException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.FieldOffsetAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.GCHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.GCHandleType
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.GuidAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.HandleRef
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ICustomAdapter
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ICustomFactory
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ICustomMarshaler
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ICustomQueryInterface
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ImportedFromTypeLibAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.InAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.InterfaceTypeAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.InvalidComObjectException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.InvalidOleVariantTypeException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.LayoutKind
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.LCIDConversionAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ManagedToNativeComInteropStubAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.Marshal
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.MarshalAsAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.MarshalDirectiveException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.OptionalAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.OSPlatform
+{
+  .assembly extern System.Runtime.InteropServices.RuntimeInformation
+}
+.class extern forwarder System.Runtime.InteropServices.OutAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.PreserveSigAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.PrimaryInteropAssemblyAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.ProgIdAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.RuntimeEnvironment
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.RuntimeInformation
+{
+  .assembly extern System.Runtime.InteropServices.RuntimeInformation
+}
+.class extern forwarder System.Runtime.InteropServices.SafeArrayRankMismatchException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.SafeArrayTypeMismatchException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.SafeBuffer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.SafeHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.SEHException
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.StructLayoutAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.InteropServices.TypeIdentifierAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.TypeLibFuncAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.TypeLibFuncFlags
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.TypeLibImportClassAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.TypeLibTypeAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.TypeLibTypeFlags
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.TypeLibVarAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.TypeLibVarFlags
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.TypeLibVersionAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.UnknownWrapper
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.UnmanagedType
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.VarEnum
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.InteropServices.VariantWrapper
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Runtime.MemoryFailPoint
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.ProfileOptimization
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Remoting.ObjectHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.Formatter
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.FormatterConverter
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.Formatters.FormatterAssemblyStyle
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.Formatters.FormatterTypeStyle
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.Formatters.IFieldInfo
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.Formatters.TypeFilterLevel
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.FormatterServices
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.IDeserializationCallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.IFormatter
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.IFormatterConverter
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.IObjectReference
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.ISafeSerializationData
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.ISerializable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.ISerializationSurrogate
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.ISurrogateSelector
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.ObjectIDGenerator
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.ObjectManager
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.OnDeserializedAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.OnDeserializingAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.OnSerializedAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.OnSerializingAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.OptionalFieldAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.SafeSerializationEventArgs
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.SerializationBinder
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.SerializationEntry
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.SerializationException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.SerializationInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.SerializationInfoEnumerator
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.SerializationObjectManager
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.Serialization.StreamingContext
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.StreamingContextStates
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Serialization.SurrogateSelector
+{
+  .assembly extern System.Runtime.Serialization.Formatters
+}
+.class extern forwarder System.Runtime.TargetedPatchingOptOutAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Versioning.ComponentGuaranteesAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Versioning.ComponentGuaranteesOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Versioning.ResourceConsumptionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Versioning.ResourceExposureAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Versioning.ResourceScope
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Versioning.TargetFrameworkAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Runtime.Versioning.VersioningHelper
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.RuntimeArgumentHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.RuntimeFieldHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.RuntimeMethodHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.RuntimeTypeHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.SByte
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.AccessControl.AccessControlActions
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AccessControlModification
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AccessControlSections
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AccessControlType
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AccessRule
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AccessRule`1
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AceEnumerator
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AceFlags
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AceQualifier
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AceType
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AuditFlags
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AuditRule
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AuditRule`1
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AuthorizationRule
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.AuthorizationRuleCollection
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.CommonAce
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.CommonAcl
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.CommonObjectSecurity
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.CommonSecurityDescriptor
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.CompoundAce
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.CompoundAceType
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.ControlFlags
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.CustomAce
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.DirectoryObjectSecurity
+{
+  .assembly extern System.IO.FileSystem.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.DirectorySecurity
+{
+  .assembly extern System.IO.FileSystem.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.DiscretionaryAcl
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.EventWaitHandleAccessRule
+{
+  .assembly extern System.Threading.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.EventWaitHandleAuditRule
+{
+  .assembly extern System.Threading.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.EventWaitHandleRights
+{
+  .assembly extern System.Threading.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.EventWaitHandleSecurity
+{
+  .assembly extern System.Threading.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.FileSecurity
+{
+  .assembly extern System.IO.FileSystem.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.FileSystemAccessRule
+{
+  .assembly extern System.IO.FileSystem.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.FileSystemAuditRule
+{
+  .assembly extern System.IO.FileSystem.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.FileSystemRights
+{
+  .assembly extern System.IO.FileSystem.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.FileSystemSecurity
+{
+  .assembly extern System.IO.FileSystem.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.GenericAce
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.GenericAcl
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.GenericSecurityDescriptor
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.InheritanceFlags
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.KnownAce
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.MutexAccessRule
+{
+  .assembly extern System.Threading.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.MutexAuditRule
+{
+  .assembly extern System.Threading.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.MutexRights
+{
+  .assembly extern System.Threading.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.MutexSecurity
+{
+  .assembly extern System.Threading.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.NativeObjectSecurity
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern ExceptionFromErrorCode
+{
+  .class extern System.Security.AccessControl.NativeObjectSecurity
+}
+.class extern forwarder System.Security.AccessControl.ObjectAccessRule
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.ObjectAce
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.ObjectAceFlags
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.ObjectAuditRule
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.ObjectSecurity
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.ObjectSecurity`1
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.PrivilegeNotHeldException
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.PropagationFlags
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.QualifiedAce
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.RawAcl
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.RawSecurityDescriptor
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.RegistryAccessRule
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder System.Security.AccessControl.RegistryAuditRule
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder System.Security.AccessControl.RegistryRights
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder System.Security.AccessControl.RegistrySecurity
+{
+  .assembly extern Microsoft.Win32.Registry
+}
+.class extern forwarder System.Security.AccessControl.ResourceType
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.SecurityInfos
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AccessControl.SystemAcl
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.AllowPartiallyTrustedCallersAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Claims.Claim
+{
+  .assembly extern System.Security.Claims
+}
+.class extern forwarder System.Security.Claims.ClaimsIdentity
+{
+  .assembly extern System.Security.Claims
+}
+.class extern forwarder System.Security.Claims.ClaimsPrincipal
+{
+  .assembly extern System.Security.Claims
+}
+.class extern forwarder System.Security.Claims.ClaimTypes
+{
+  .assembly extern System.Security.Claims
+}
+.class extern forwarder System.Security.Claims.ClaimValueTypes
+{
+  .assembly extern System.Security.Claims
+}
+.class extern forwarder System.Security.CodeAccessPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Cryptography.Aes
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.AsymmetricAlgorithm
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.AsymmetricKeyExchangeDeformatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.AsymmetricKeyExchangeFormatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.AsymmetricSignatureDeformatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.AsymmetricSignatureFormatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.CipherMode
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.CryptoConfig
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.CryptographicException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Cryptography.CryptographicUnexpectedOperationException
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.CryptoStream
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.CryptoStreamMode
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.CspKeyContainerInfo
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.CspParameters
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.CspProviderFlags
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.DeriveBytes
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.DES
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.DESCryptoServiceProvider
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.DSA
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.DSACryptoServiceProvider
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.DSAParameters
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.DSASignatureDeformatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.DSASignatureFormatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.FromBase64Transform
+{
+  .assembly extern System.Security.Cryptography.Encoding
+}
+.class extern forwarder System.Security.Cryptography.FromBase64TransformMode
+{
+  .assembly extern System.Security.Cryptography.Encoding
+}
+.class extern forwarder System.Security.Cryptography.HashAlgorithm
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.HashAlgorithmName
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.HMAC
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.HMACMD5
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.HMACSHA1
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.HMACSHA256
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.HMACSHA384
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.HMACSHA512
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.ICryptoTransform
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.ICspAsymmetricAlgorithm
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.KeyedHashAlgorithm
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.KeyNumber
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.KeySizes
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.MaskGenerationMethod
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.MD5
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.MD5CryptoServiceProvider
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.PaddingMode
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.PasswordDeriveBytes
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.PKCS1MaskGenerationMethod
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RandomNumberGenerator
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RC2
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RC2CryptoServiceProvider
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.Rfc2898DeriveBytes
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.Rijndael
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RijndaelManaged
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RNGCryptoServiceProvider
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.RSA
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSACryptoServiceProvider
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.RSAEncryptionPadding
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSAEncryptionPaddingMode
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSAOAEPKeyExchangeDeformatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSAOAEPKeyExchangeFormatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSAParameters
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSAPKCS1KeyExchangeDeformatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSAPKCS1KeyExchangeFormatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSAPKCS1SignatureDeformatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSAPKCS1SignatureFormatter
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSASignaturePadding
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.RSASignaturePaddingMode
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SHA1
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SHA1CryptoServiceProvider
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.SHA1Managed
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SHA256
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SHA256Managed
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SHA384
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SHA384Managed
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SHA512
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SHA512Managed
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SignatureDescription
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.SymmetricAlgorithm
+{
+  .assembly extern System.Security.Cryptography.Primitives
+}
+.class extern forwarder System.Security.Cryptography.ToBase64Transform
+{
+  .assembly extern System.Security.Cryptography.Encoding
+}
+.class extern forwarder System.Security.Cryptography.TripleDES
+{
+  .assembly extern System.Security.Cryptography.Algorithms
+}
+.class extern forwarder System.Security.Cryptography.TripleDESCryptoServiceProvider
+{
+  .assembly extern System.Security.Cryptography.Csp
+}
+.class extern forwarder System.Security.Cryptography.X509Certificates.X509Certificate
+{
+  .assembly extern System.Security.Cryptography.X509Certificates
+}
+.class extern forwarder System.Security.Cryptography.X509Certificates.X509ContentType
+{
+  .assembly extern System.Security.Cryptography.X509Certificates
+}
+.class extern forwarder System.Security.Cryptography.X509Certificates.X509KeyStorageFlags
+{
+  .assembly extern System.Security.Cryptography.X509Certificates
+}
+.class extern forwarder System.Security.HostProtectionException
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.HostSecurityManager
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.HostSecurityManagerOptions
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.IEvidenceFactory
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.IPermission
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.ISecurityEncodable
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.ISecurityPolicyEncodable
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.IStackWalk
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.NamedPermissionSet
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.PartialTrustVisibilityLevel
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Permissions.CodeAccessSecurityAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Permissions.EnvironmentPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.EnvironmentPermissionAccess
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.EnvironmentPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.FileDialogPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.FileDialogPermissionAccess
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.FileDialogPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.FileIOPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.FileIOPermissionAccess
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.FileIOPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.GacIdentityPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.GacIdentityPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.HostProtectionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.HostProtectionResource
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.IsolatedStorageContainment
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.IsolatedStorageFilePermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.IsolatedStorageFilePermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.IsolatedStoragePermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.IsolatedStoragePermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.IUnrestrictedPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.KeyContainerPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.KeyContainerPermissionAccessEntry
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.KeyContainerPermissionAccessEntryCollection
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.KeyContainerPermissionAccessEntryEnumerator
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.KeyContainerPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.KeyContainerPermissionFlags
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.PermissionSetAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.PermissionState
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Permissions.PrincipalPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.PrincipalPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.PublisherIdentityPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.PublisherIdentityPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.ReflectionPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.ReflectionPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.ReflectionPermissionFlag
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.RegistryPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.RegistryPermissionAccess
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.RegistryPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.SecurityAction
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Permissions.SecurityAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Permissions.SecurityPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.SecurityPermissionAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Permissions.SecurityPermissionFlag
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Permissions.SiteIdentityPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.SiteIdentityPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.StrongNameIdentityPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.StrongNameIdentityPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.StrongNamePublicKeyBlob
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.UIPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.UIPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.UIPermissionClipboard
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.UIPermissionWindow
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.UrlIdentityPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.UrlIdentityPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.ZoneIdentityPermission
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Permissions.ZoneIdentityPermissionAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.PermissionSet
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Policy.AllMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.ApplicationDirectory
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.ApplicationDirectoryMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.ApplicationTrust
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.ApplicationTrustCollection
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.ApplicationTrustEnumerator
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.ApplicationVersionMatch
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.CodeConnectAccess
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.CodeGroup
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.Evidence
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.Policy.EvidenceBase
+{
+  .assembly extern System.Security.AccessControl
+}
+.class extern forwarder System.Security.Policy.FileCodeGroup
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.FirstMatchCodeGroup
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.GacInstalled
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.GacMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.Hash
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.HashMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.IIdentityPermissionFactory
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.IMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.NetCodeGroup
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.PermissionRequestEvidence
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.PolicyException
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.PolicyLevel
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.PolicyStatement
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.PolicyStatementAttribute
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.Publisher
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.PublisherMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.Site
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.SiteMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.StrongName
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.StrongNameMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.TrustManagerContext
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.TrustManagerUIContext
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.UnionCodeGroup
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.Url
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.UrlMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.Zone
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Policy.ZoneMembershipCondition
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.PolicyLevelType
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.Principal.GenericIdentity
+{
+  .assembly extern System.Security.Claims
+}
+.class extern forwarder System.Security.Principal.GenericPrincipal
+{
+  .assembly extern System.Security.Claims
+}
+.class extern forwarder System.Security.Principal.IdentityNotMappedException
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.IdentityReference
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.IdentityReferenceCollection
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.IIdentity
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Principal.IPrincipal
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Principal.NTAccount
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.PrincipalPolicy
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Principal.SecurityIdentifier
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.TokenAccessLevels
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.TokenImpersonationLevel
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.Principal.WellKnownSidType
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.WindowsAccountType
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.WindowsBuiltInRole
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.WindowsIdentity
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.Principal.WindowsPrincipal
+{
+  .assembly extern System.Security.Principal.Windows
+}
+.class extern forwarder System.Security.SecureString
+{
+  .assembly extern System.Runtime.InteropServices
+}
+.class extern forwarder System.Security.SecurityContext
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.SecurityContextSource
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.SecurityCriticalAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecurityCriticalScope
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecurityElement
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecurityException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecurityManager
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.SecurityRulesAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecurityRuleSet
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecuritySafeCriticalAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecurityState
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.SecurityTransparentAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecurityTreatAsSafeAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.SecurityZone
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.Security.SuppressUnmanagedCodeSecurityAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.UnverifiableCodeAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.VerificationException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Security.XmlSyntaxException
+{
+  .assembly extern System.Security.Permissions
+}
+.class extern forwarder System.SerializableAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Single
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.StackOverflowException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.STAThreadAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.String
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.StringComparer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.StringComparison
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.StringSplitOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.SystemException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.ASCIIEncoding
+{
+  .assembly extern System.Text.Encoding.Extensions
+}
+.class extern forwarder System.Text.Decoder
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.DecoderExceptionFallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.DecoderExceptionFallbackBuffer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.DecoderFallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.DecoderFallbackBuffer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.DecoderFallbackException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.DecoderReplacementFallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.DecoderReplacementFallbackBuffer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.Encoder
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncoderExceptionFallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncoderExceptionFallbackBuffer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncoderFallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncoderFallbackBuffer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncoderFallbackException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncoderReplacementFallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncoderReplacementFallbackBuffer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.Encoding
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncodingInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.EncodingProvider
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.NormalizationForm
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Text.StringBuilder
+{
+  .assembly extern System.Runtime
+}
+.class extern ChunkEnumerator
+{
+  .class extern System.Text.StringBuilder
+}
+.class extern AppendInterpolatedStringHandler
+{
+  .class extern System.Text.StringBuilder
+}
+.class extern forwarder System.Text.UnicodeEncoding
+{
+  .assembly extern System.Text.Encoding.Extensions
+}
+.class extern forwarder System.Text.UTF32Encoding
+{
+  .assembly extern System.Text.Encoding.Extensions
+}
+.class extern forwarder System.Text.UTF7Encoding
+{
+  .assembly extern System.Text.Encoding.Extensions
+}
+.class extern forwarder System.Text.UTF8Encoding
+{
+  .assembly extern System.Text.Encoding.Extensions
+}
+.class extern forwarder System.Threading.AbandonedMutexException
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.ApartmentState
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.AsyncFlowControl
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.AsyncLocal`1
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.AsyncLocalValueChangedArgs`1
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.AutoResetEvent
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.CancellationToken
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.CancellationTokenRegistration
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.CancellationTokenSource
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.CompressedStack
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.ContextCallback
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.CountdownEvent
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.EventResetMode
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.EventWaitHandle
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.ExecutionContext
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.HostExecutionContext
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.HostExecutionContextManager
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.Interlocked
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.IOCompletionCallback
+{
+  .assembly extern System.Threading.Overlapped
+}
+.class extern forwarder System.Threading.LazyInitializer
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.LazyThreadSafetyMode
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.LockCookie
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.LockRecursionException
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.ManualResetEvent
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.ManualResetEventSlim
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.Monitor
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.Mutex
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.NativeOverlapped
+{
+  .assembly extern System.Threading.Overlapped
+}
+.class extern forwarder System.Threading.Overlapped
+{
+  .assembly extern System.Threading.Overlapped
+}
+.class extern forwarder System.Threading.ParameterizedThreadStart
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.PreAllocatedOverlapped
+{
+  .assembly extern System.Threading.Overlapped
+}
+.class extern forwarder System.Threading.ReaderWriterLock
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.RegisteredWaitHandle
+{
+  .assembly extern System.Threading.ThreadPool
+}
+.class extern forwarder System.Threading.SemaphoreFullException
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.SemaphoreSlim
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.SendOrPostCallback
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.SpinLock
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.SpinWait
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.SynchronizationContext
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.SynchronizationLockException
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.Tasks.ConcurrentExclusiveSchedulerPair
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.Parallel
+{
+  .assembly extern System.Threading.Tasks.Parallel
+}
+.class extern forwarder System.Threading.Tasks.ParallelLoopResult
+{
+  .assembly extern System.Threading.Tasks.Parallel
+}
+.class extern forwarder System.Threading.Tasks.ParallelLoopState
+{
+  .assembly extern System.Threading.Tasks.Parallel
+}
+.class extern forwarder System.Threading.Tasks.ParallelOptions
+{
+  .assembly extern System.Threading.Tasks.Parallel
+}
+.class extern forwarder System.Threading.Tasks.Task
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.Task`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskCanceledException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskCompletionSource`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskContinuationOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskCreationOptions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskFactory
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskFactory`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskScheduler
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskSchedulerException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.TaskStatus
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Tasks.UnobservedTaskExceptionEventArgs
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Thread
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.ThreadAbortException
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.ThreadInterruptedException
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.ThreadLocal`1
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.ThreadPool
+{
+  .assembly extern System.Threading.ThreadPool
+}
+.class extern forwarder System.Threading.ThreadPoolBoundHandle
+{
+  .assembly extern System.Threading.Overlapped
+}
+.class extern forwarder System.Threading.ThreadPriority
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.ThreadStart
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.ThreadStartException
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.ThreadState
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.ThreadStateException
+{
+  .assembly extern System.Threading.Thread
+}
+.class extern forwarder System.Threading.Timeout
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Timer
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.TimerCallback
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.Volatile
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.WaitCallback
+{
+  .assembly extern System.Threading.ThreadPool
+}
+.class extern forwarder System.Threading.WaitHandle
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.WaitHandleCannotBeOpenedException
+{
+  .assembly extern System.Threading
+}
+.class extern forwarder System.Threading.WaitHandleExtensions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Threading.WaitOrTimerCallback
+{
+  .assembly extern System.Threading.ThreadPool
+}
+.class extern forwarder System.ThreadStaticAttribute
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TimeoutException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TimeSpan
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TimeZone
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TimeZoneInfo
+{
+  .assembly extern System.Runtime
+}
+.class extern AdjustmentRule
+{
+  .class extern System.TimeZoneInfo
+}
+.class extern TransitionTime
+{
+  .class extern System.TimeZoneInfo
+}
+.class extern forwarder System.TimeZoneNotFoundException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple`2
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple`3
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple`4
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple`5
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple`6
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple`7
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Tuple`8
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TupleExtensions
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Type
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TypeAccessException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TypeCode
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TypedReference
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TypeInitializationException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TypeLoadException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.TypeUnloadedException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.UInt16
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.UInt32
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.UInt64
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.UIntPtr
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.UnauthorizedAccessException
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.UnhandledExceptionEventArgs
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.UnhandledExceptionEventHandler
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple`1
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple`2
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple`3
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple`4
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple`5
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple`6
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple`7
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueTuple`8
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.ValueType
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Version
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.Void
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.WeakReference
+{
+  .assembly extern System.Runtime
+}
+.class extern forwarder System.WeakReference`1
+{
+  .assembly extern System.Runtime
+}
+.module mscorlib.dll
+// MVID: {4837EC93-4A98-4D6E-8028-7408E745848F}
+.custom instance void [System.Runtime]System.Security.UnverifiableCodeAttribute::.ctor() = ( 01 00 00 00 ) 
+.custom instance void [System.Runtime]System.Runtime.CompilerServices.SkipLocalsInitAttribute::.ctor() = ( 01 00 00 00 ) 
+.imagebase 0x10000000
+.file alignment 0x00000200
+.stackreserve 0x00100000
+.subsystem 0x0003       // WINDOWS_CUI
+.corflags 0x00000009    //  ILONLY
+// Image base: 0x0A180000
+
