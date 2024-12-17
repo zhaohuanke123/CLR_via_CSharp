@@ -14,8 +14,8 @@ namespace AssemblyLoadTest.cs
             // TestLoadWithInvalidAssembly();
             // TestLoadFromWithValidPath();
             // TestLoadFromWithInvalidPath();
-            TestReflectionOnlyLoadFrom();
-            TestEmbeddedResourceResolution();
+            // TestReflectionOnlyLoadFrom();
+            // TestEmbeddedResourceResolution();
         }
 
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "错题/CLR/21-23.md",
+                "file": "错题/CLR/21-23 note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "21-23"
+              "title": "21-23 note"
             }
           }
         ]
@@ -170,7 +170,7 @@
   "active": "4497f6da4cc3cc49",
   "lastOpenFiles": [
     "错题/CLR/17-21 note.md",
-    "错题/CLR/21-23.md",
+    "错题/CLR/21-23 note.md",
     "错题/CLR/Table/代码规范.md",
     "错题/CLR/5-8 note.md",
     "错题/CLR/1-4 note.md",

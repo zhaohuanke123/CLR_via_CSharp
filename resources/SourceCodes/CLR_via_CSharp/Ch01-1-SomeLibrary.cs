@@ -33,7 +33,7 @@ namespace SomeLibrary
         }
     }
 
-    internal partial class Test
+    public class Test
     {
         // 终结器 析构函数
         ~Test()
@@ -73,5 +73,13 @@ namespace SomeLibrary
 
         // 事件
         event EventHandler AnEvent;
+    }
+
+    public class Class1
+    {
+    }
+
+    public class Class2
+    {
     }
 }

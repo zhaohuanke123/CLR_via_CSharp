@@ -60,11 +60,34 @@ namespace C20TestException
     {
         public static void Main(string[] args)
         {
+            TestThrowFinally.Go();
             // TestAppdomain.Go();
             // TestInTaskException.Go();
             // TestUnobservedTaskException.Go();
             // TestFinally.Go();
-            ThreadAbort.Go();
+            // ThreadAbort.Go();
+        }
+    }
+
+    class TestThrowFinally
+    {
+        public static void Go()
+        {
+            try
+            {
+                try
+                {
+                    throw new Exception();
+                }
+                finally
+                {
+                    Console.WriteLine("Inner Finally");
+                }
+            }
+            finally
+            {
+                Console.WriteLine("Finally");
+            }
         }
     }
 
