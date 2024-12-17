@@ -5,11 +5,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{16B765CA-887B-4CE2-90EF-3C6FE7ED7E71}</ProjectGuid>
+        <ProjectGuid>{F2003364-986C-4538-ABA6-77DB13195D40}</ProjectGuid>
         <OutputType>Exe</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>TestSB</RootNamespace>
-        <AssemblyName>TestSB</AssemblyName>
+        <RootNamespace>TestDisposeAndFinal</RootNamespace>
+        <AssemblyName>TestDisposeAndFinal</AssemblyName>
         <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -22,9 +22,12 @@ namespace TestCoreRuntime
         {
             Thread.Sleep(1000);
             var list = new List<A>();
-            for (long x = 0; x < 1000000; ++x)
+            for (long x = 0; x < 1000; ++x)
             {
-                list.Add(new A());
+                list.Add(new A()
+                {
+                    padding = GC.AllocateArray<byte>(100, true),
+                });
             }
         }
 
