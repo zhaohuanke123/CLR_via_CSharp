@@ -10,4 +10,5 @@
 extern "C" {
     MYLIBRARY_API int __cdecl  add(int a, int b);
     MYLIBRARY_API const char* __cdecl getMessage1();
+    MYLIBRARY_API int* _cdecl testPtr(int*);
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using Microsoft.Win32.SafeHandles;
 
 class NativeMethods
 {
@@ -9,6 +10,9 @@ class NativeMethods
 
     [DllImport(@"Dll1", CallingConvention = CallingConvention.Cdecl)]
     public static extern IntPtr getMessage1();
+
+    [DllImport(@"Dll1", CallingConvention = CallingConvention.Cdecl)]
+    public static extern SafeWaitHandle testPtr(SafeHandle p);
 }
 
 class Program
@@ -16,12 +20,17 @@ class Program
     static void Main(string[] args)
     {
         // 调用 C++ 的 Add 函数
-        int result = NativeMethods.add(3, 5);
-        Console.WriteLine($"3 + 5 = {result}");
+        //int result = NativeMethods.add(3, 5);
+        //Console.WriteLine($"3 + 5 = {result}");
 
-        // 调用 C++ 的 GetMessage 函数
-        IntPtr messagePtr = NativeMethods.getMessage1();
-        string message = Marshal.PtrToStringAnsi(messagePtr);
-        Console.WriteLine($"Message from C++: {message}");
+        //// 调用 C++ 的 GetMessage 函数
+        //IntPtr messagePtr = NativeMethods.getMessage1();
+        //string message = Marshal.PtrToStringAnsi(messagePtr);
+        //Console.WriteLine($"Message from C++: {message}");
+
+        IntPtr p = new IntPtr(100);
+        SafeHandle handle = new SafeWaitHandle(p, true);
+        _ = NativeMethods.testPtr(handle);
+        Console.WriteLine(handle.ToString());
     }
 }
