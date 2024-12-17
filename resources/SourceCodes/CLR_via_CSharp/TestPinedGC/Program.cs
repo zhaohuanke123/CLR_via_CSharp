@@ -1,1 +1,1 @@
-﻿var allocateArray = GC.AllocateArray<int>(10, true);
+﻿
