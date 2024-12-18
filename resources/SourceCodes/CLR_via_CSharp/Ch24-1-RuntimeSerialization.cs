@@ -8,6 +8,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Security.Permissions;
+using System.Text;
 
 [assembly: AssemblyVersion("1.0.0.0")]
 
@@ -15,13 +16,14 @@ public static class RuntieSerialization
 {
     public static void Main()
     {
-        //QuickStart.Go();
-        //UsingNonSerializedFields.Go();
+        // QuickStart.Go()
+        CycleRef.Go();
+        // UsingNonSerializedFields.Go();
         // OptionalField.Go();
         // ISerializableVersioning.Go();
         // SerializingSingletons.Go();
         // SerializationSurrogates.Go();
-        SerializationBinderDemo.Go();
+        // SerializationBinderDemo.Go();
     }
 }
 
@@ -29,16 +31,15 @@ internal static class QuickStart
 {
     public static void Go()
     {
-        // Create a graph of objects to serialize them to the stream 
         var objectGraph = new List<String> { "Jeff", "Kristin", "Aidan", "Grant" };
         Stream stream = SerializeToMemory(objectGraph);
 
-        // Reset everything for this demo
         stream.Position = 0;
+        var tmp = objectGraph;
         objectGraph = null;
 
-        // Deserialize the objects and prove it worked
         objectGraph = (List<String>)DeserializeFromMemory(stream);
+
         foreach (var s in objectGraph) Console.WriteLine(s);
 
         var clone = DeepClone(objectGraph);
@@ -155,6 +156,41 @@ internal static class QuickStart
         {
             new BinaryFormatter().Serialize(stream, pt); // throws SerializationException
         }
+    }
+}
+
+internal static class CycleRef
+{
+    [Serializable]
+    class A1
+    {
+        public A2 a;
+    }
+
+    [Serializable]
+    class A2
+    {
+        public A1 b;
+    }
+
+    public static void Go()
+    {
+        A1 a = new A1();
+        A2 b = new A2();
+        a.a = b;
+        b.b = a;
+
+        var tmp = a;
+
+        using (var stream = new MemoryStream())
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(stream, a);
+            stream.Position = 0;
+            a = (A1)formatter.Deserialize(stream);
+        }
+
+        Console.WriteLine(ReferenceEquals(a.a.b, a));
     }
 }
 
