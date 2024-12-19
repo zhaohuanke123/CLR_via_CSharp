@@ -16,14 +16,14 @@ public static class RuntieSerialization
 {
     public static void Main()
     {
-        // QuickStart.Go()
-        CycleRef.Go();
+        // QuickStart.Go();
+        // CycleRef.Go();
         // UsingNonSerializedFields.Go();
         // OptionalField.Go();
         // ISerializableVersioning.Go();
         // SerializingSingletons.Go();
         // SerializationSurrogates.Go();
-        // SerializationBinderDemo.Go();
+        SerializationBinderDemo.Go();
     }
 }
 
@@ -365,7 +365,7 @@ internal static class ISerializableVersioning
 
         // If this constructor didn't exist, we'd get a SerializationException
         // This constructor should be protected if this class were not sealed
-        [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
         private Derived(SerializationInfo info, StreamingContext context)
         {
             // Get the set of serializable members for our class and base classes
@@ -384,7 +384,7 @@ internal static class ISerializableVersioning
             m_name = info.GetString("Name");
         }
 
-        [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
         public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             // Serialize the desired values for this class
@@ -423,12 +423,23 @@ internal static class SerializingSingletons
 
             // Serialize and then deserialize the array elements
             formatter.Serialize(stream, a1);
-            stream.Position = 0;
-            Singleton[] a2 = (Singleton[])formatter.Deserialize(stream);
 
+            stream.Position = 0;
+
+            // AppDomain appDomain = AppDomain.CreateDomain("NewDomain");
+            // appDomain.DoCallBack(() =>
+            // {
+            //     Singleton[] a2 = (Singleton[])formatter.Deserialize(stream);
+            //     Console.WriteLine("Do both array elements refer to the same object? " + (a2[0] == a2[1])); // "True"
+            //     Console.WriteLine("Do all  array elements refer to the same object? " + (a1[0] == a2[0])); // "True"
+            // });
+
+            Singleton[] a2 = (Singleton[])formatter.Deserialize(stream);
             Console.WriteLine("Do both array elements refer to the same object? " + (a2[0] == a2[1])); // "True"
             Console.WriteLine("Do all  array elements refer to the same object? " + (a1[0] == a2[0])); // "True"
         }
+
+        Console.ReadLine();
     }
 
     // There should be only one instance of this type per AppDomain
@@ -455,7 +466,7 @@ internal static class SerializingSingletons
 
         // Method called when serializing a Singleton
         // I recommend using an Explicit Interface Method Impl. here
-        [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
         void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.SetType(typeof(SingletonSerializationHelper));
@@ -469,6 +480,7 @@ internal static class SerializingSingletons
             public Object GetRealObject(StreamingContext context)
             {
                 return GetSingleton();
+                // return new Singleton();
             }
         }
 
@@ -555,7 +567,8 @@ internal static class SerializationBinderDemo
             formatter.Serialize(stream, new Ver1());
 
             stream.Position = 0;
-            Ver2 t = (Ver2)formatter.Deserialize(stream);
+            object t = formatter.Deserialize(stream);
+            // Ver2 t = (Ver2)formatter.Deserialize(stream);
             Console.WriteLine("Type deserialized={0}, ToString={{{1}}}", t.GetType(), t);
         }
     }
@@ -593,11 +606,11 @@ internal static class SerializationBinderDemo
 
     private sealed class Ver1ToVer2SerializationBinder : SerializationBinder
     {
-        public override void BindToName(Type serializedType, out string assemblyName, out string typeName)
-        {
-            assemblyName = Assembly.GetExecutingAssembly().FullName;
-            typeName = typeof(Ver2).FullName;
-        }
+        // public override void BindToName(Type serializedType, out string assemblyName, out string typeName)
+        // {
+        //     assemblyName = Assembly.GetExecutingAssembly().FullName;
+        //     typeName = typeof(Ver2).FullName;
+        // }
 
         public override Type BindToType(String assemblyName, String typeName)
         {

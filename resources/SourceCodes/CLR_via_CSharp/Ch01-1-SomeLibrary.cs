@@ -9,6 +9,7 @@ using System;
 namespace SomeLibrary
 {
     // Warnings appear because the class is public
+    [Serializable]
     public sealed class SomeLibraryType
     {
         // Warning: Return type of 'SomeLibrary.SomeLibraryType.Abc()' 

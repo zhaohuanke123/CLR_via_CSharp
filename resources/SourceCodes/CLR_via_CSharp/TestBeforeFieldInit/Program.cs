@@ -17,7 +17,7 @@ namespace TestBeforeFieldInit
             var typeName = type.Name;
 
             // Console.WriteLine("当前类: " + typeName + "   当前线程ID : " + Thread.CurrentThread.ManagedThreadId);
-            var s = "当前类: " + typeName + "   当前线程ID : " + Thread.CurrentThread.ManagedThreadId;
+            var s = typeName + " " + mb.Name;
             Program.que.Enqueue(s);
         }
     }
@@ -28,7 +28,6 @@ namespace TestBeforeFieldInit
 
         static BeforeInit()
         {
-            
         }
     }
 

@@ -11,9 +11,9 @@ public sealed class Program
     public static void Main()
     {
         Marshalling();
-        FieldAccessTiming();
-        AppDomainResourceMonitoring();
-        UnloadTimeout.Go();
+        // FieldAccessTiming();
+        // AppDomainResourceMonitoring();
+        // UnloadTimeout.Go();
     }
 
     private static void Marshalling()
@@ -47,8 +47,14 @@ public sealed class Program
 
         Console.WriteLine("Type={0}", mbrt.GetType()); // The CLR lies about the type
 
+        foreach (var info in mbrt.GetType().GetMembers())
+        {
+            Console.WriteLine(info.Name);
+        }
+
         // Prove that we got a reference to a proxy object
-        Console.WriteLine("Is proxy={0}", RemotingServices.IsTransparentProxy(mbrt));
+        Console.WriteLine("Is proxy={0}",
+            RemotingServices.IsTransparentProxy(mbrt) + " " + Thread.CurrentThread.ManagedThreadId);
 
         // This looks like we're calling a method on MarshalByRefType but, we're not.
         // We're calling a method on the proxy type. The proxy transitions the thread
@@ -289,12 +295,13 @@ public sealed class MarshalByRefType : MarshalByRefObject
     public MarshalByRefType()
     {
         Console.WriteLine("{0} ctor running in {1}",
-            this.GetType().ToString(), Thread.GetDomain().FriendlyName);
+            GetType(), Thread.GetDomain().FriendlyName);
     }
 
     public void SomeMethod()
     {
-        Console.WriteLine("Executing in " + Thread.GetDomain().FriendlyName);
+        Console.WriteLine(
+            "Executing in " + Thread.GetDomain().FriendlyName + " " + Thread.CurrentThread.ManagedThreadId);
     }
 
     public MarshalByValType MethodWithReturn()
