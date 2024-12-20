@@ -95,7 +95,7 @@ public ref struct CustomRef
 /// <summary>
 /// Readonly
 /// </summary>
-ref struct TestStruct
+internal ref struct TestStruct
 {
     ref readonly int aConstant; // 值无法修改
     readonly ref int Storage; // 引用无法修改
@@ -107,13 +107,13 @@ ref struct TestStruct
 //
 // 只有在struct内存较大，且生命周期仅限当前callstack，才有意义
 
-public struct Coords<T>
+internal struct Coords<T>
 {
     public T X;
     public T Y;
 }
 
-public class UnmanagedTypes
+internal class UnmanagedTypes
 {
     public static void Go()
     {
@@ -132,7 +132,7 @@ public class UnmanagedTypes
 // Coords`1[System.Int32] is unmanaged and its size is 8 bytes
 // Coords`1[System.Double] is unmanaged and its size is 16 bytes
 
-class TestValueTuple
+internal class TestValueTuple
 {
     public static void Go()
     {
@@ -235,5 +235,21 @@ class TestValueTuple
         Console.WriteLine($"Distance to {destination} is {distance} kilometers.");
         // Output:
         // Distance to post office is 3.6 kilometers.
+    }
+}
+
+internal class TestValueTuple1
+{
+    private static ValueTuple<int, int> vt;
+
+    public static void Go()
+    {
+        var t = Test();
+        t.x = 1;
+    }
+
+    static ref (int x, int y) Test()
+    {
+        return ref vt;
     }
 }
