@@ -12,16 +12,16 @@ public sealed class Program
 {
     public static void Main()
     {
-        TestCreateInstance.Go();
-        TestConstructorInfo.Go();
-        TestObjectHandle.Go();
-        DynamicLoadFromResource.Go();
-        DiscoverTypes.Go();
-        ConstructingGenericType.Go();
-        MemberDiscover.Go();
-        InterfaceDiscover.Go();
-        Invoker.Go();
-        ExceptionTree.Go();
+        // TestCreateInstance.Go();
+        // TestConstructorInfo.Go();
+        // TestObjectHandle.Go();
+        // DynamicLoadFromResource.Go();
+        // DiscoverTypes.Go();
+        // ConstructingGenericType.Go();
+        // MemberDiscover.Go();
+        // InterfaceDiscover.Go();
+        // Invoker.Go();
+        // ExceptionTree.Go();
         TestRuntimeMethodHandle.Go();
     }
 }
@@ -65,7 +65,7 @@ internal static class TestRuntimeMethodHandle
 
         methodInfos = methodHandles.ConvertAll<MethodBase>(
             rmh => MethodBase.GetMethodFromHandle(rmh));
-        
+
         GC.Collect(2, GCCollectionMode.Forced, true, true);
         Show("Size of heap after re-creating MethodInfo objects");
         GC.KeepAlive(methodHandles); // 阻止缓存被过早垃圾回收

@@ -1,41 +1,19 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Contexts;
 
 namespace Test
 {
-    interface IInterface
-    {
-        void Test();
-    }
-
-    class TestClass : IInterface
-    {
-        public void Test()
-        {
-            Console.WriteLine("Test");
-        }
-    }
-
     internal class Program
     {
         public static void Main()
         {
-            try
-            {
-                Thread.CurrentThread.Abort();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            finally
-            {
-                int a = 10;
-                int b = 12;
-                Console.WriteLine(a + b);
-            }
+            var assembly = Assembly.ReflectionOnlyLoadFrom(
+                @"D:\Study\CLR_via_CSharp\resources\SourceCodes\CLR_via_CSharp\bin\Debug\Ch01-1-SomeLibrary.dll");
+            var type = assembly.GetType("SomeLibrary.SomeLibraryType");
+            var o = Activator.CreateInstance(type);
+            Console.WriteLine(o);
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Concurrent;
+using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace TestCoreRuntime
 {
@@ -33,8 +35,19 @@ namespace TestCoreRuntime
 
         public static void Main(string[] args)
         {
-            var s = $"asd{1}asd";
-            Console.WriteLine(s);
+            Console.WriteLine("Before CC");
+            try
+            {
+                Console.WriteLine("Press Ctrl+C to exit");
+                Console.ReadLine();
+            }
+            finally
+            {
+                Console.WriteLine("finally");
+            }
+
+            Console.WriteLine("After CC");
+
             // var threads = new List<Thread>();
             // for (var x = 0; x < 100; ++x)
             // {

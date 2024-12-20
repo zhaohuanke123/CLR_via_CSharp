@@ -12,9 +12,19 @@ const char* __cdecl getMessage1() {
 	return message.c_str();
 }
 
-int* testPtr(int* p)
+int* newPtr()
 {
-	printf("%p", p);
+	printf("Enter newPtr\n");
 	int* p = new int();
 	return p;
+}
+
+void releasePtr(int* p)
+{
+	printf("Enter releasePtr\n");
+	if (p != nullptr)
+	{
+		printf("Delete!!\n");
+		delete p;
+	}
 }

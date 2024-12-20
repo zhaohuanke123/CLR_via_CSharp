@@ -1,4 +1,4 @@
-﻿//#define GetSurrogateForCyclicalReference
+﻿#define GetSurrogateForCyclicalReference
 
 using System;
 using System.Collections.Generic;
@@ -503,7 +503,7 @@ internal static class SerializationSurrogates
             // 3. Tell the surrogate selector to use our surrogate for DateTime objects
             ISerializationSurrogate utcToLocalTimeSurrogate = new UniversalToLocalTimeSerializationSurrogate();
 #if GetSurrogateForCyclicalReference
-         utcToLocalTimeSurrogate = FormatterServices.GetSurrogateForCyclicalReference(utcToLocalTimeSurrogate);
+            utcToLocalTimeSurrogate = FormatterServices.GetSurrogateForCyclicalReference(utcToLocalTimeSurrogate);
 #endif
             ss.AddSurrogate(typeof(DateTime), formatter.Context, utcToLocalTimeSurrogate);
 
@@ -544,11 +544,11 @@ internal static class SerializationSurrogates
             DateTime dt = DateTime.ParseExact(info.GetString("Date"), "u", null)
                 .ToLocalTime(); // Convert the DateTime from UTC to local
 #if GetSurrogateForCyclicalReference
-         // When using GetSurrogateForCyclicalReference, you must modify 'obj' directly and return null or obj
-         // So, I modify the boxed DateTime that is passed into SetObjectData
-         FieldInfo fi = typeof(DateTime).GetField("dateData", BindingFlags.NonPublic | BindingFlags.Instance);
-         fi.SetValue(obj, fi.GetValue(dt));
-         return null;
+            // When using GetSurrogateForCyclicalReference, you must modify 'obj' directly and return null or obj
+            // So, I modify the boxed DateTime that is passed into SetObjectData
+            FieldInfo fi = typeof(DateTime).GetField("dateData", BindingFlags.NonPublic | BindingFlags.Instance);
+            fi.SetValue(obj, fi.GetValue(dt));
+            return null;
 #else
             return dt;
 #endif
