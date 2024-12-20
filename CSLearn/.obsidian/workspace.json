@@ -11,10 +11,14 @@
             "id": "80683aed28cb7e87",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "错题/CLR/Table/代码规范.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "代码规范"
             }
           }
         ]
@@ -165,6 +169,7 @@
   },
   "active": "80683aed28cb7e87",
   "lastOpenFiles": [
+    "错题/CLR/Temp.md",
     "错题/CLR/21-23 note.md",
     "错题/CLR/17-21 note.md",
     "错题/CLR/Table/代码规范.md",
@@ -193,7 +198,6 @@
     "Res",
     "错题/CLR/值类型为什么不可变.md",
     "错题/CLR/为什么不要在实例构造器中调用虚方法.md",
-    "错题/CLR/Temp.md",
     "TODO.md",
     "错题/CLR",
     "CLRviaCSharp/P4 Type Fundamentals.md",
