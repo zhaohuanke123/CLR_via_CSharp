@@ -1,4 +1,4 @@
-﻿#define GetSurrogateForCyclicalReference
+﻿// #define GetSurrogateForCyclicalReference
 
 using System;
 using System.Collections.Generic;
@@ -22,8 +22,8 @@ public static class RuntieSerialization
         // OptionalField.Go();
         // ISerializableVersioning.Go();
         // SerializingSingletons.Go();
-        // SerializationSurrogates.Go();
-        SerializationBinderDemo.Go();
+        SerializationSurrogates.Go();
+        // SerializationBinderDemo.Go();
     }
 }
 

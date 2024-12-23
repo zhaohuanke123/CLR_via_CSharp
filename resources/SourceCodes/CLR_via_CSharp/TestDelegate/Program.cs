@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Threading;
 
 namespace TestDelegate
 {
@@ -32,16 +33,37 @@ namespace TestDelegate
         {
             // AClass aClass = new AClass();
             // aClass.CallbackWithoutNewingADelegateObject();
-            Program obj = new Program();
-            var type = obj.GetType();
-            var methodInfo = type.GetMethod("Test", BindingFlags.Instance | BindingFlags.Public);
-            // methodInfo.Invoke(obj, null);
+            // Program obj = new Program();
+            // var type = obj.GetType();
+            // var methodInfo = type.GetMethod("Test", BindingFlags.Instance | BindingFlags.Public);
+            // // methodInfo.Invoke(obj, null);
+            //
+            // var delegateTest = methodInfo.CreateDelegate(typeof(Action), obj) as Action;
+            // if (delegateTest != null)
+            // {
+            //     delegateTest.Invoke();
+            // }
 
-            var delegateTest = methodInfo.CreateDelegate(typeof(Action), obj) as Action;
-            if (delegateTest != null)
+            Action<int> action = (i) =>
             {
-                delegateTest.Invoke();
-            }
+                Thread.Sleep(1000);
+                Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+                Console.WriteLine(i);
+                Console.ReadLine();
+            };
+            var beginInvoke = action.BeginInvoke(1, ar =>
+            {
+                Console.WriteLine("Callback");
+                Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+                Console.WriteLine(ar);
+                Console.ReadLine();
+            }, null);
+
+            Console.WriteLine("Begin");
+            beginInvoke.AsyncWaitHandle.WaitOne();
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("End");
+            Console.ReadLine();
         }
 
         public void Test()
