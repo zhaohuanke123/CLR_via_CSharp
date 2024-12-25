@@ -10,11 +10,11 @@ public static class PrimitveThreadSync
 {
     public static void Main()
     {
-        // OptimizedAway();
-        // StrangeBehavior.Go();
+        OptimizedAway();
+        StrangeBehavior.Go();
         AsyncCoordinatorDemo.Go();
-        // LockComparison.Go();
-        // RegisteredWaitHandleDemo.Go();
+        LockComparison.Go();
+        RegisteredWaitHandleDemo.Go();
     }
 
     private static void OptimizedAway()
@@ -69,7 +69,7 @@ internal static class StrangeBehavior
     private static void Worker(Object o)
     {
         Int32 x = 0;
-        while (!s_stopWorker) x++;
+        while (!Volatile.Read(ref s_stopWorker)) x++;
         Console.WriteLine("Worker: stopped when x={0}", x);
     }
 }
@@ -149,7 +149,7 @@ internal static class AsyncCoordinatorDemo
         const Int32 timeout = 50000; // Change to desired timeout
         MultiWebRequests act = new MultiWebRequests(timeout);
         Console.WriteLine("All operations initiated (Timeout={0}). Hit <Enter> to cancel.",
-            (timeout == Timeout.Infinite) ? "Infinite" : (timeout.ToString() + "ms"));
+            (timeout == Timeout.Infinite) ? "Infinite" : (timeout + "ms"));
         Console.ReadLine();
         act.Cancel();
 
@@ -370,7 +370,7 @@ internal static class LockComparison
 
         // How long does it take to increment x 10 million times 
         // adding the overhead of calling an uncontended SimpleWaitLock?
-        using (SimpleWaitLock swl = new SimpleWaitLock())
+        using (var swl = new SimpleWaitLock())
         {
             sw.Restart();
             for (Int32 i = 0; i < iterations; i++)
@@ -493,10 +493,10 @@ internal static class RegisteredWaitHandleDemo
     public static void Go()
     {
         // Construct an AutoResetEvent (initially false)
-        AutoResetEvent are = new AutoResetEvent(false);
+        var are = new AutoResetEvent(false);
 
         // Tell the thread pool to wait on the AutoResetEvent
-        RegisteredWaitHandle rwh = ThreadPool.RegisterWaitForSingleObject(
+        var rwh = ThreadPool.RegisterWaitForSingleObject(
             are, // Wait on this AutoResetEvent
             EventOperation, // When available, call the EventOperation method
             null, // Pass null to EventOperation

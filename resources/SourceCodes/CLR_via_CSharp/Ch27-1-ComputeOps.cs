@@ -19,8 +19,8 @@ public static class ComputeOps
     {
         // ThreadPoolDemo.Go();
         // ExecutionContexts.Go();
-        // CancellationDemo.Go();
-        TaskDemo.Go();
+        CancellationDemo.Go();
+        // TaskDemo.Go();
         // ParallelDemo.Go();
         // ParallelLinq.Go();
         // TimerDemo.Go();
@@ -149,8 +149,8 @@ internal static class CancellationDemo
 {
     public static void Go()
     {
-        // CancellingAWorkItem();
-        // Register();
+        CancellingAWorkItem();
+        Register();
         Linking();
     }
 
