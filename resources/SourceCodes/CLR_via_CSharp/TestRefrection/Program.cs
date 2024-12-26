@@ -2,19 +2,32 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace TestRefrection
 {
     public class C1
     {
+        public C1()
+        {
+            Console.WriteLine("C1");
+        }
     }
 
     public class C2
     {
+        public C2()
+        {
+            Console.WriteLine("C2");
+        }
     }
 
     public class C3
     {
+        public C3()
+        {
+            Console.WriteLine("C3");
+        }
     }
 
     internal class Program
@@ -24,11 +37,11 @@ namespace TestRefrection
             Console.WriteLine("Hello World!");
         }
 
-        public static void Main(string[] args)
+        public static void Main()
         {
             // TestAssembly.Go();
-            TestTypeCanBeGC.Go();
-            // TestCreateInstance.Go();
+            // TestTypeCanBeGC.Go();
+            TestCreateInstance.Go();
         }
     }
 
