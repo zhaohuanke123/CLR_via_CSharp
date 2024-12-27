@@ -10,9 +10,9 @@ public static class PrimitveThreadSync
 {
     public static void Main()
     {
-        OptimizedAway();
-        StrangeBehavior.Go();
-        AsyncCoordinatorDemo.Go();
+        // OptimizedAway();
+        // StrangeBehavior.Go();
+        // AsyncCoordinatorDemo.Go();
         LockComparison.Go();
         RegisteredWaitHandleDemo.Go();
     }
@@ -146,32 +146,21 @@ internal static class AsyncCoordinatorDemo
 {
     public static void Go()
     {
-        const Int32 timeout = 50000; // Change to desired timeout
+        const Int32 timeout = 50; // Change to desired timeout
         MultiWebRequests act = new MultiWebRequests(timeout);
         Console.WriteLine("All operations initiated (Timeout={0}). Hit <Enter> to cancel.",
             (timeout == Timeout.Infinite) ? "Infinite" : (timeout + "ms"));
+
         Console.ReadLine();
         act.Cancel();
 
         Console.WriteLine();
         Console.WriteLine("Hit enter to terminate.");
-        Console.ReadLine();
     }
 
     private sealed class MultiWebRequests
     {
-        // This helper class coordinates all the asynchronous operations
-        private AsyncCoordinator m_ac = new AsyncCoordinator();
-
-        // Set of Web servers we want to query & their responses (Exception or Int32)
-        private Dictionary<String, Object> m_servers = new Dictionary<String, Object>
-        {
-            { "http://Wintellect.com/", null },
-            { "http://Microsoft.com/", null },
-            { "http://1.1.1.1/", null }
-        };
-
-        public MultiWebRequests(Int32 timeout = Timeout.Infinite)
+        public MultiWebRequests(int timeout = Timeout.Infinite)
         {
             // Asynchronously initiate all the requests all at once
             var httpClient = new HttpClient();
@@ -186,9 +175,15 @@ internal static class AsyncCoordinatorDemo
             m_ac.AllBegun(AllDone, timeout);
         }
 
-        private void ComputeResult(String server, Task<Byte[]> task)
+        // Calling this method indicates that the results don't matter anymore
+        public void Cancel()
         {
-            Object result;
+            m_ac.Cancel();
+        }
+
+        private void ComputeResult(string server, Task<byte[]> task)
+        {
+            object result;
             if (task.Exception != null)
             {
                 result = task.Exception.InnerException;
@@ -205,11 +200,6 @@ internal static class AsyncCoordinatorDemo
             m_ac.JustEnded();
         }
 
-        // Calling this method indicates that the results don't matter anymore
-        public void Cancel()
-        {
-            m_ac.Cancel();
-        }
 
         // This method is called after all Web servers respond, 
         // Cancel is called, or the timeout occurs
@@ -244,6 +234,17 @@ internal static class AsyncCoordinatorDemo
                     break;
             }
         }
+
+        // This helper class coordinates all the asynchronous operations
+        private AsyncCoordinator m_ac = new AsyncCoordinator();
+
+        // Set of Web servers we want to query & their responses (Exception or Int32)
+        private Dictionary<string, object> m_servers = new Dictionary<string, object>
+        {
+            { "http://Wintellect.com/", null },
+            { "http://Microsoft.com/", null },
+            { "http://1.1.1.1/", null }
+        };
     }
 
     private enum CoordinationStatus

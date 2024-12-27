@@ -20,9 +20,9 @@ public static class RuntieSerialization
         // CycleRef.Go();
         // UsingNonSerializedFields.Go();
         // OptionalField.Go();
-        // ISerializableVersioning.Go();
+        ISerializableVersioning.Go();
         // SerializingSingletons.Go();
-        SerializationSurrogates.Go();
+        // SerializationSurrogates.Go();
         // SerializationBinderDemo.Go();
     }
 }
@@ -369,16 +369,16 @@ internal static class ISerializableVersioning
         private Derived(SerializationInfo info, StreamingContext context)
         {
             // Get the set of serializable members for our class and base classes
-            Type baseType = this.GetType().BaseType;
-            MemberInfo[] mi = FormatterServices.GetSerializableMembers(baseType, context);
-
-            // Deserialize the base class's fields from the info object
-            for (Int32 i = 0; i < mi.Length; i++)
-            {
-                // Get the field and set it to the deserialized value
-                FieldInfo fi = (FieldInfo)mi[i];
-                fi.SetValue(this, info.GetValue(baseType.FullName + "+" + fi.Name, fi.FieldType));
-            }
+            // Type baseType = this.GetType().BaseType;
+            // MemberInfo[] mi = FormatterServices.GetSerializableMembers(baseType, context);
+            //
+            // // Deserialize the base class's fields from the info object
+            // for (Int32 i = 0; i < mi.Length; i++)
+            // {
+            //     // Get the field and set it to the deserialized value
+            //     FieldInfo fi = (FieldInfo)mi[i];
+            //     fi.SetValue(this, info.GetValue(baseType.FullName + "+" + fi.Name, fi.FieldType));
+            // }
 
             // Deserialize the values that were serialized for this class
             m_name = info.GetString("Name");
@@ -391,15 +391,15 @@ internal static class ISerializableVersioning
             info.AddValue("Name", m_name);
 
             // Get the set of serializable members for our class and base classes
-            Type baseType = this.GetType().BaseType;
-            MemberInfo[] mi = FormatterServices.GetSerializableMembers(baseType, context);
-
-            // Serialize the base class's fields to the info object
-            for (Int32 i = 0; i < mi.Length; i++)
-            {
-                // Prefix the field name with the fullname of the base type
-                info.AddValue(baseType.FullName + "+" + mi[i].Name, ((FieldInfo)mi[i]).GetValue(this));
-            }
+            // Type baseType = this.GetType().BaseType;
+            // MemberInfo[] mi = FormatterServices.GetSerializableMembers(baseType, context);
+            //
+            // // Serialize the base class's fields to the info object
+            // for (Int32 i = 0; i < mi.Length; i++)
+            // {
+            //     // Prefix the field name with the fullname of the base type
+            //     info.AddValue(baseType.FullName + "+" + mi[i].Name, ((FieldInfo)mi[i]).GetValue(this));
+            // }
         }
 
         public override String ToString()

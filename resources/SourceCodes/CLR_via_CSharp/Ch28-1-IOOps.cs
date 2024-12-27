@@ -14,6 +14,7 @@ using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -25,15 +26,15 @@ public static class IOOps
     [STAThread]
     public static void Main()
     {
-        PipeDemo.Go().Wait();
-        AsyncFuncCodeTransformation.Go();
-        TaskLogger.Go().Wait();
-        EventAwaiterDemo.Go();
-        Features.Go();
-        GuiDeadlockWindow.Go();
+        // PipeDemo.Go().Wait();
+        // AsyncFuncCodeTransformation.Go();
+        // TaskLogger.Go().Wait();
+        // EventAwaiterDemo.Go();
+        // Features.Go();
+        // GuiDeadlockWindow.Go();
         Cancellation.Go().Wait();
-        ThreadIO.Go();
-        var s = AwaitWebClient(new Uri("http://Wintellect.com/")).Result;
+        // ThreadIO.Go();
+        // var s = AwaitWebClient(new Uri("http://Wintellect.com/")).Result;
     }
 
     private static async Task<String> AwaitWebClient(Uri uri)
@@ -782,9 +783,12 @@ internal static class Cancellation
     public static async Task WithCancellation(this Task task, CancellationToken ct)
     {
         var tcs = new TaskCompletionSource<Void>();
-        using (ct.Register(t => ((TaskCompletionSource<Void>)t).TrySetResult(default(Void)), tcs))
+        using (ct.Register(t => ((TaskCompletionSource<Void>)t).TrySetResult(default), tcs))
         {
-            if (await Task.WhenAny(task, tcs.Task) == tcs.Task) ct.ThrowIfCancellationRequested();
+            if (await Task.WhenAny(task, tcs.Task) == tcs.Task)
+            {
+                ct.ThrowIfCancellationRequested();
+            }
         }
 
         await task; // If failure, ensures 1st inner exception gets thrown instead of AggregateException

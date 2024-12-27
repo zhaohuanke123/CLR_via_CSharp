@@ -12,7 +12,7 @@ public sealed class Program
 {
     public static void Main()
     {
-        // TestCreateInstance.Go();
+        TestCreateInstance.Go();
         // TestConstructorInfo.Go();
         // TestObjectHandle.Go();
         // DynamicLoadFromResource.Go();
