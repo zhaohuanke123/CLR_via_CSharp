@@ -50,6 +50,10 @@ internal class Po
 
 internal class Program
 {
+    private static void Main()
+    {
+    }
+
     [DebuggerStepThrough, AsyncStateMachine(typeof(StateMachine))]
     private static Task<String> MyMethodAsync(Int32 argument)
     {
