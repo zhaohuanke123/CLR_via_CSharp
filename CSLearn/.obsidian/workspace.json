@@ -13,15 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "图形学/旋转矩阵.md",
+                "file": "图形学/抗锯齿.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "旋转矩阵"
+              "title": "抗锯齿"
+            }
+          },
+          {
+            "id": "60dc4bad9b89c4d1",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20250124141800.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250124141800"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -167,12 +180,20 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "eb3a120362e13f37",
+  "active": "20f95b69dab50747",
   "lastOpenFiles": [
+    "图形学/抗锯齿.md",
+    "Pasted image 20250124141800.png",
+    "图形学/屏幕映射.md",
+    "Pasted image 20250123181259.png",
+    "图形学/旋转矩阵.md",
+    "图形学/视图变换.md",
+    "Pasted image 20250123113606.png",
+    "Pasted image 20250123113412.png",
+    "Pasted image 20250123103035.png",
     "Pasted image 20250122174357.png",
     "图形学/res/Pasted image 20250122174317.png",
     "b25b6df1bd7692438794ec52dfc16d19.png",
-    "图形学/旋转矩阵.md",
     "图形学/res",
     "Pasted image 20250110151121.png",
     "Unity 问题/2025-1-15 客户端 问题.md",
@@ -204,17 +225,8 @@
     "错题/CLR/beforefieldinit 测试.md",
     "63d44901528987e88677ca28fb2dd5ac.png",
     "错题/CLR/同步块索引的作用.md",
-    "Res/Pasted image 20241127092335.png",
-    "Res/Pasted image 20241127092419.png",
-    "Res/Pasted image 20241127092701.png",
-    "Res/Pasted image 20241127092641.png",
-    "Pasted image 20241127092559.png",
-    "Pasted image 20241127092427.png",
     "错题/CLR/值类型为什么不可变.md",
     "错题/CLR/为什么不要在实例构造器中调用虚方法.md",
-    "TODO.md",
-    "CLRviaCSharp/P4 Type Fundamentals.md",
-    "CLRviaCSharp/P3.md",
     "未命名.canvas"
   ]
 }
