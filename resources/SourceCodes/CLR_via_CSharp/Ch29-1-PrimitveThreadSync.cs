@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -14,16 +15,47 @@ public static class PrimitveThreadSync
         // StrangeBehavior.Go();
         // AsyncCoordinatorDemo.Go();
         LockComparison.Go();
-        RegisteredWaitHandleDemo.Go();
+        // RegisteredWaitHandleDemo.Go();
+        // TestInterLock.Go();
     }
 
     private static void OptimizedAway()
     {
         // An expression of constants is computed at compile time then put into a local variable that is never used
         Int32 value = 1 * 100 + 0 / 1 % 2;
-        if (value >= 0) Console.WriteLine("Jeff");
+        if (value >= 0)
+        {
+            Console.WriteLine("Jeff");
+        }
 
         for (Int32 x = 0; x < 1000; x++) ; // A loop that does nothing
+    }
+}
+
+internal static class TestInterLock
+{
+    private const int num = 1000;
+    private static int a = num;
+
+    public static void Go()
+    {
+        List<Task> tss = new List<Task>();
+        for (int i = 0; i < num; i++)
+        {
+            tss.Add(Task.Run(Dec));
+        }
+
+        Task.WaitAll(tss.ToArray());
+    }
+
+    private static void Dec()
+    {
+        Thread.Sleep(10);
+        if (Interlocked.Decrement(ref a) == 0)
+            // if (--a == 0)
+        {
+            Console.WriteLine(a == 0);
+        }
     }
 }
 
@@ -69,7 +101,12 @@ internal static class StrangeBehavior
     private static void Worker(Object o)
     {
         Int32 x = 0;
-        while (!Volatile.Read(ref s_stopWorker)) x++;
+        while (!Volatile.Read(ref s_stopWorker))
+            // while (!s_stopWorker)
+        {
+            x++;
+        }
+
         Console.WriteLine("Worker: stopped when x={0}", x);
     }
 }
@@ -93,7 +130,10 @@ internal static class ThreadsSharingData
         public void Thread2()
         {
             // Note: m_value could be read before m_flag
-            if (m_flag == 1) Console.WriteLine(m_value);
+            if (m_flag == 1)
+            {
+                Console.WriteLine(m_value);
+            }
         }
     }
 
@@ -146,7 +186,7 @@ internal static class AsyncCoordinatorDemo
 {
     public static void Go()
     {
-        const Int32 timeout = 50; // Change to desired timeout
+        const Int32 timeout = 5000; // Change to desired timeout
         MultiWebRequests act = new MultiWebRequests(timeout);
         Console.WriteLine("All operations initiated (Timeout={0}). Hit <Enter> to cancel.",
             (timeout == Timeout.Infinite) ? "Infinite" : (timeout + "ms"));
@@ -271,7 +311,9 @@ internal static class AsyncCoordinatorDemo
         public void JustEnded()
         {
             if (Interlocked.Decrement(ref m_opCount) == 0)
+            {
                 ReportStatus(CoordinationStatus.AllDone);
+            }
         }
 
         // This method MUST be called AFTER initiating ALL operations
@@ -294,7 +336,10 @@ internal static class AsyncCoordinatorDemo
         public void Cancel()
         {
             if (m_callback == null)
+            {
                 throw new InvalidOperationException("Cancel cannot be called before AllBegun");
+            }
+
             ReportStatus(CoordinationStatus.Cancel);
         }
 
@@ -304,12 +349,14 @@ internal static class AsyncCoordinatorDemo
             {
                 // If timer is still in play, kill it
                 Timer timer = Interlocked.Exchange(ref m_timer, null);
-                if (timer != null) timer.Dispose();
+                timer?.Dispose();
             }
 
             // If status has never been reported, report it; else ignore it
             if (Interlocked.Exchange(ref m_statusReported, 1) == 0)
+            {
                 m_callback(status);
+            }
         }
     }
 }
@@ -398,12 +445,17 @@ internal static class LockComparison
 
         public void Enter()
         {
+            // SpinWait spinWait = new SpinWait();
             while (true)
             {
                 // Always set resource to in-use
                 // When this thread changes it from not in-use, return
-                if (Interlocked.Exchange(ref m_ResourceInUse, 1) == 0) return;
+                if (Interlocked.Exchange(ref m_ResourceInUse, 1) == 0)
+                {
+                    return;
+                }
                 // Black magic goes here...
+                // spinWait.SpinOnce();
             }
         }
 

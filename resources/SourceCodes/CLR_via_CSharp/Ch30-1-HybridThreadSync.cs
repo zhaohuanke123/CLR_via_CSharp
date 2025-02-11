@@ -12,8 +12,8 @@ public static class HybridThreadSync
     {
         // HybridLocks.Go();
         // Singletons.Go();
-        // AsyncSynchronization.Go();
-        BlockingCollectionDemo.Go();
+        AsyncSynchronization.Go();
+        // BlockingCollectionDemo.Go();
         // Console.ReadLine();
     }
 }
@@ -315,71 +315,71 @@ internal static class HybridLocks
             ReservedForWriter = 0x00000004,
         }
 
-        private const Int32 c_lsStateStartBit = 0;
-        private const Int32 c_lsReadersReadingStartBit = 3;
-        private const Int32 c_lsReadersWaitingStartBit = 12;
-        private const Int32 c_lsWritersWaitingStartBit = 21;
+        private const int c_lsStateStartBit = 0;
+        private const int c_lsReadersReadingStartBit = 3;
+        private const int c_lsReadersWaitingStartBit = 12;
+        private const int c_lsWritersWaitingStartBit = 21;
 
         // Mask = unchecked((Int32) ((1 << numBits) - 1) << startBit);
-        private const Int32 c_lsStateMask = unchecked((Int32)((1 << 3) - 1) << c_lsStateStartBit);
-        private const Int32 c_lsReadersReadingMask = unchecked((Int32)((1 << 9) - 1) << c_lsReadersReadingStartBit);
-        private const Int32 c_lsReadersWaitingMask = unchecked((Int32)((1 << 9) - 1) << c_lsReadersWaitingStartBit);
-        private const Int32 c_lsWritersWaitingMask = unchecked((Int32)((1 << 9) - 1) << c_lsWritersWaitingStartBit);
-        private const Int32 c_lsAnyWaitingMask = c_lsReadersWaitingMask | c_lsWritersWaitingMask;
+        private const int c_lsStateMask = unchecked((1 << 3) - 1 << c_lsStateStartBit);
+        private const int c_lsReadersReadingMask = unchecked((1 << 9) - 1 << c_lsReadersReadingStartBit);
+        private const int c_lsReadersWaitingMask = unchecked((1 << 9) - 1 << c_lsReadersWaitingStartBit);
+        private const int c_lsWritersWaitingMask = unchecked((1 << 9) - 1 << c_lsWritersWaitingStartBit);
+        private const int c_lsAnyWaitingMask = c_lsReadersWaitingMask | c_lsWritersWaitingMask;
 
         // FirstBit = unchecked((Int32) 1 << startBit);
-        private const Int32 c_ls1ReaderReading = unchecked((Int32)1 << c_lsReadersReadingStartBit);
-        private const Int32 c_ls1ReaderWaiting = unchecked((Int32)1 << c_lsReadersWaitingStartBit);
-        private const Int32 c_ls1WriterWaiting = unchecked((Int32)1 << c_lsWritersWaitingStartBit);
+        private const int c_ls1ReaderReading = 1 << c_lsReadersReadingStartBit;
+        private const int c_ls1ReaderWaiting = 1 << c_lsReadersWaitingStartBit;
+        private const int c_ls1WriterWaiting = 1 << c_lsWritersWaitingStartBit;
 
-        private static OneManyLockStates State(Int32 ls)
+        private static OneManyLockStates State(int ls)
         {
             return (OneManyLockStates)(ls & c_lsStateMask);
         }
 
-        private static void SetState(ref Int32 ls, OneManyLockStates newState)
+        private static void SetState(ref int ls, OneManyLockStates newState)
         {
-            ls = (ls & ~c_lsStateMask) | ((Int32)newState);
+            ls = (ls & ~c_lsStateMask) | ((int)newState);
         }
 
-        private static Int32 NumReadersReading(Int32 ls)
+        private static int NumReadersReading(int ls)
         {
             return (ls & c_lsReadersReadingMask) >> c_lsReadersReadingStartBit;
         }
 
-        private static void AddReadersReading(ref Int32 ls, Int32 amount)
+        private static void AddReadersReading(ref int ls, int amount)
         {
             ls += (c_ls1ReaderReading * amount);
         }
 
-        private static Int32 NumReadersWaiting(Int32 ls)
+        private static int NumReadersWaiting(int ls)
         {
             return (ls & c_lsReadersWaitingMask) >> c_lsReadersWaitingStartBit;
         }
 
-        private static void AddReadersWaiting(ref Int32 ls, Int32 amount)
+        private static void AddReadersWaiting(ref int ls, int amount)
         {
             ls += (c_ls1ReaderWaiting * amount);
         }
 
-        private static Int32 NumWritersWaiting(Int32 ls)
+        private static int NumWritersWaiting(int ls)
         {
             return (ls & c_lsWritersWaitingMask) >> c_lsWritersWaitingStartBit;
         }
 
-        private static void AddWritersWaiting(ref Int32 ls, Int32 amount)
+        private static void AddWritersWaiting(ref int ls, int amount)
         {
             ls += (c_ls1WriterWaiting * amount);
         }
 
-        private static Boolean AnyWaiters(Int32 ls)
+        private static bool AnyWaiters(int ls)
         {
             return (ls & c_lsAnyWaitingMask) != 0;
         }
 
-        private static String DebugState(Int32 ls)
+        private static string DebugState(int ls)
         {
-            return String.Format(CultureInfo.InvariantCulture,
+            return string.Format(CultureInfo.InvariantCulture,
                 "State={0}, RR={1}, RW={2}, WW={3}", State(ls),
                 NumReadersReading(ls), NumReadersWaiting(ls), NumWritersWaiting(ls));
         }
@@ -388,7 +388,7 @@ internal static class HybridLocks
         /// Returns a string representing the state of the object.
         /// </summary>
         /// <returns>The string representing the state of the object.</returns>
-        public override String ToString()
+        public override string ToString()
         {
             return DebugState(m_LockState);
         }
@@ -397,13 +397,13 @@ internal static class HybridLocks
 
         #region State Fields
 
-        private Int32 m_LockState = (Int32)OneManyLockStates.Free;
+        private int m_LockState = (int)OneManyLockStates.Free;
 
         // Readers wait on this if a writer owns the lock
-        private Semaphore m_ReadersLock = new Semaphore(0, Int32.MaxValue);
+        private Semaphore m_ReadersLock = new Semaphore(0, int.MaxValue);
 
         // Writers wait on this if a reader owns the lock
-        private Semaphore m_WritersLock = new Semaphore(0, Int32.MaxValue);
+        private Semaphore m_WritersLock = new Semaphore(0, int.MaxValue);
 
         #endregion
 
@@ -416,9 +416,9 @@ internal static class HybridLocks
 
         public void Dispose()
         {
-            m_WritersLock.Close();
+            m_WritersLock.Dispose();
             m_WritersLock = null;
-            m_ReadersLock.Close();
+            m_ReadersLock.Dispose();
             m_ReadersLock = null;
         }
 
@@ -426,31 +426,37 @@ internal static class HybridLocks
 
         #region Writer members
 
-        private Boolean m_exclusive;
+        private bool m_exclusive;
 
         /// <summary>Acquires the lock.</summary>
-        public void Enter(Boolean exclusive)
+        public void Enter(bool exclusive)
         {
             if (exclusive)
             {
-                while (WaitToWrite(ref m_LockState)) m_WritersLock.WaitOne();
+                while (WaitToWrite(ref m_LockState))
+                {
+                    m_WritersLock.WaitOne();
+                }
             }
             else
             {
-                while (WaitToRead(ref m_LockState)) m_ReadersLock.WaitOne();
+                while (WaitToRead(ref m_LockState))
+                {
+                    m_ReadersLock.WaitOne();
+                }
             }
 
             m_exclusive = exclusive;
         }
 
-        private static Boolean WaitToWrite(ref Int32 target)
+        private static bool WaitToWrite(ref int target)
         {
-            Int32 start, current = target;
-            Boolean wait;
+            int start, current = target;
+            bool wait;
             do
             {
                 start = current;
-                Int32 desired = start;
+                int desired = start;
                 wait = false;
 
                 switch (State(desired))
@@ -485,7 +491,7 @@ internal static class HybridLocks
         /// <summary>Releases the lock.</summary>
         public void Leave()
         {
-            Int32 wakeup;
+            int wakeup;
             if (m_exclusive)
             {
                 Debug.Assert((State(m_LockState) == OneManyLockStates.OwnedByWriter) &&
@@ -509,18 +515,24 @@ internal static class HybridLocks
             }
 
             // Phase 2: Possibly wake waiters
-            if (wakeup == -1) m_WritersLock.Release();
-            else if (wakeup > 0) m_ReadersLock.Release(wakeup);
+            if (wakeup == -1)
+            {
+                m_WritersLock.Release();
+            }
+            else if (wakeup > 0)
+            {
+                m_ReadersLock.Release(wakeup);
+            }
         }
 
         // Returns -1 to wake a writer, +# to wake # readers, or 0 to wake no one
-        private static Int32 DoneWriting(ref Int32 target)
+        private static int DoneWriting(ref int target)
         {
-            Int32 start, current = target;
-            Int32 wakeup = 0;
+            int start, current = target;
+            int wakeup = 0;
             do
             {
-                Int32 desired = (start = current);
+                int desired = (start = current);
 
                 // We do this test first because it is commonly true & 
                 // we avoid the other tests improving performance
@@ -554,13 +566,13 @@ internal static class HybridLocks
 
         #region Reader members
 
-        private static Boolean WaitToRead(ref Int32 target)
+        private static bool WaitToRead(ref int target)
         {
-            Int32 start, current = target;
-            Boolean wait;
+            int start, current = target;
+            bool wait;
             do
             {
-                Int32 desired = (start = current);
+                int desired = (start = current);
                 wait = false;
 
                 switch (State(desired))
@@ -593,13 +605,13 @@ internal static class HybridLocks
         }
 
         // Returns -1 to wake a writer, +# to wake # readers, or 0 to wake no one
-        private static Int32 DoneReading(ref Int32 target)
+        private static int DoneReading(ref int target)
         {
-            Int32 start, current = target;
-            Int32 wakeup;
+            int start, current = target;
+            int wakeup;
             do
             {
-                Int32 desired = (start = current);
+                int desired = (start = current);
                 AddReadersReading(ref desired, -1); // RR--
                 if (NumReadersReading(desired) > 0)
                 {
@@ -809,8 +821,8 @@ internal static class AsyncSynchronization
 {
     public static void Go()
     {
-        SemaphoreSlimDemo();
-        ConcurrentExclusiveSchedulerDemo();
+        // SemaphoreSlimDemo();
+        // ConcurrentExclusiveSchedulerDemo();
         OneManyDemo();
     }
 
@@ -916,13 +928,18 @@ internal static class AsyncSynchronization
             tasks.Add(Task.Run(async () =>
             {
                 var mode = (y < 3) ? OneManyMode.Shared : OneManyMode.Exclusive;
+
                 Console.WriteLine("ThreadID={0}, OpID={1}, await for {2} access",
                     Environment.CurrentManagedThreadId, y, mode);
+
                 var t = asyncLock.WaitAsync(mode);
                 await t;
+
                 Console.WriteLine("ThreadID={0}, OpID={1}, got access at {2}",
                     Environment.CurrentManagedThreadId, y, DateTime.Now.ToLongTimeString());
+
                 Thread.Sleep(5000);
+
                 asyncLock.Release();
             }));
             Thread.Sleep(200);
@@ -979,22 +996,13 @@ internal static class AsyncSynchronization
 
         #region Lock state and helper methods
 
-        private Int32 m_state = 0;
+        private Int32 m_state;
 
-        private Boolean IsFree
-        {
-            get { return m_state == 0; }
-        }
+        private Boolean IsFree => m_state == 0;
 
-        private Boolean IsOwnedByWriter
-        {
-            get { return m_state == -1; }
-        }
+        private Boolean IsOwnedByWriter => m_state == -1;
 
-        private Boolean IsOwnedByReaders
-        {
-            get { return m_state > 0; }
-        }
+        private Boolean IsOwnedByReaders => m_state > 0;
 
         private Int32 AddReaders(Int32 count)
         {
@@ -1026,10 +1034,9 @@ internal static class AsyncSynchronization
             new Queue<TaskCompletionSource<Object>>();
 
         // All waiting readers wake up by signaling a single TaskCompletionSource
-        private TaskCompletionSource<Object> m_waitingReadersSignal =
-            new TaskCompletionSource<Object>();
+        private TaskCompletionSource<Object> m_waitingReadersSignal = new TaskCompletionSource<Object>();
 
-        private Int32 m_numWaitingReaders = 0;
+        private Int32 m_numWaitingReaders;
 
         /// <summary>Constructs an AsyncOneManyLock object.</summary>
         public AsyncOneManyLock()

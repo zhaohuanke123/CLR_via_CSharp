@@ -32,8 +32,8 @@ public static class IOOps
         // EventAwaiterDemo.Go();
         // Features.Go();
         // GuiDeadlockWindow.Go();
-        Cancellation.Go().Wait();
-        // ThreadIO.Go();
+        // Cancellation.Go().Wait();
+        ThreadIO.Go();
         // var s = AwaitWebClient(new Uri("http://Wintellect.com/")).Result;
     }
 
@@ -533,12 +533,14 @@ public static class TaskLogger
         return (Task<TResult>)Log((Task)task, tag, callerMemberName, callerFilePath, callerLineNumber);
     }
 
-    public static Task Log(this Task task, String tag = null,
-        [CallerMemberName] String callerMemberName = null,
-        [CallerFilePath] String callerFilePath = null,
-        [CallerLineNumber] Int32 callerLineNumber = -1)
+    public static Task Log(this Task task, String tag = null, [CallerMemberName] String callerMemberName = null,
+        [CallerFilePath] String callerFilePath = null, [CallerLineNumber] Int32 callerLineNumber = -1)
     {
-        if (LogLevel == TaskLogLevel.None) return task;
+        if (LogLevel == TaskLogLevel.None)
+        {
+            return task;
+        }
+
         var logEntry = new TaskLogEntry
         {
             Task = task,
@@ -548,13 +550,13 @@ public static class TaskLogger
             CallerFilePath = callerFilePath,
             CallerLineNumber = callerLineNumber
         };
+
         s_log[task] = logEntry;
         task.ContinueWith(t =>
-            {
-                TaskLogEntry entry;
-                s_log.TryRemove(t, out entry);
-            },
-            TaskContinuationOptions.ExecuteSynchronously);
+        {
+            TaskLogEntry entry;
+            s_log.TryRemove(t, out entry);
+        }, TaskContinuationOptions.ExecuteSynchronously);
         return task;
     }
 }
@@ -588,8 +590,7 @@ internal static class EventAwaiterDemo
         AppDomain.CurrentDomain.FirstChanceException += eventAwaiter.EventRaised;
         while (true)
         {
-            Console.WriteLine("AppDomain exception: {0}",
-                (await eventAwaiter).Exception.GetType());
+            Console.WriteLine("AppDomain exception: {0}", (await eventAwaiter).Exception.GetType());
         }
     }
 
@@ -607,10 +608,7 @@ internal static class EventAwaiterDemo
         }
 
         // Tell state machine if any events have happened yet
-        public Boolean IsCompleted
-        {
-            get { return m_events.Count > 0; }
-        }
+        public Boolean IsCompleted => m_events.Count > 0;
 
         // The state machine tells us what method to invoke later; we save it
         public void OnCompleted(Action continuation)
@@ -635,7 +633,10 @@ internal static class EventAwaiterDemo
 
             // If there is a pending continuation, this thread takes it
             Action continuation = Interlocked.Exchange(ref m_continuation, null);
-            if (continuation != null) continuation(); // Resume the state machine
+            if (continuation != null)
+            {
+                continuation(); // Resume the state machine
+            }
         }
     }
 }
@@ -823,7 +824,11 @@ internal static class ThreadIO
                 start ? ProcessBackgroundMode.Start : ProcessBackgroundMode.End)
             : SetThreadPriority(GetCurrentWin32ThreadHandle(),
                 start ? ThreadBackgroundgMode.Start : ThreadBackgroundgMode.End);
-        if (!ok) throw new Win32Exception();
+
+        if (!ok)
+        {
+            throw new Win32Exception();
+        }
     }
 
     // This struct lets C#'s using statement end the background processing mode
@@ -841,7 +846,6 @@ internal static class ThreadIO
             EndBackgroundProcessing(m_process);
         }
     }
-
 
     // See Win32’s THREAD_MODE_BACKGROUND_BEGIN and THREAD_MODE_BACKGROUND_END
     private enum ThreadBackgroundgMode
