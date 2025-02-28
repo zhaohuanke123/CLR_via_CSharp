@@ -29,11 +29,11 @@ public static class IOOps
         // PipeDemo.Go().Wait();
         // AsyncFuncCodeTransformation.Go();
         // TaskLogger.Go().Wait();
-        // EventAwaiterDemo.Go();
+        EventAwaiterDemo.Go();
         // Features.Go();
         // GuiDeadlockWindow.Go();
         // Cancellation.Go().Wait();
-        ThreadIO.Go();
+        // ThreadIO.Go();
         // var s = AwaitWebClient(new Uri("http://Wintellect.com/")).Result;
     }
 

@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"e7f8e5976edc249f","type":"text","text":"- 微平面理论\n- 能量守恒定律\n- 菲涅尔效应","x":-580,"y":-300,"width":465,"height":170},
+		{"id":"04e64335864cde84","type":"file","file":"图形学/res/Pasted image 20250214153639.png","x":-20,"y":-475,"width":787,"height":345},
+		{"id":"a6df7364b8fe2d69","type":"file","file":"图形学/res/Pasted image 20250214153714.png","x":-20,"y":-60,"width":660,"height":340},
+		{"id":"791b22008229ea82","type":"file","file":"图形学/res/Pasted image 20250214154136.png","x":140,"y":40,"width":660,"height":356},
+		{"id":"8d7ae4aeed41ef32","type":"file","file":"图形学/res/Pasted image 20250214154003.png","x":360,"y":160,"width":679,"height":351}
+	],
+	"edges":[]
+}

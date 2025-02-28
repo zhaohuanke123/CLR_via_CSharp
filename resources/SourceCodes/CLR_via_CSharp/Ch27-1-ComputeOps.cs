@@ -228,11 +228,11 @@ internal static class TaskDemo
     {
         // UsingTaskInsteadOfQueueUserWorkItem();
         // WaitForResult();
-        Cancel();
+        // Cancel();
         // ContinueWith();
         // MultipleContinueWith();
         // ParentChild();
-        // TaskFactory();
+        TaskFactory();
         // UnobservedException();
         // SynchronizationContextTaskScheduler();
     }
@@ -344,9 +344,14 @@ internal static class TaskDemo
     {
         Task parent = new Task(() =>
         {
+            TaskScheduler scheduler = TaskScheduler.Default;
+            // SynchronizationContext.SetSynchronizationContext(new SynchronizationContext());
+            // scheduler = TaskScheduler.FromCurrentSynchronizationContext();
+            // 创建一个TaskFactory，并将它的ContinuationOptions属性设置为ExecuteSynchronously，作用是将子任务的回调同步执行
             var cts = new CancellationTokenSource();
+
             var tf = new TaskFactory<Int32>(cts.Token, TaskCreationOptions.AttachedToParent,
-                TaskContinuationOptions.ExecuteSynchronously, TaskScheduler.Default);
+                TaskContinuationOptions.ExecuteSynchronously, scheduler);
 
             // This tasks creates and starts 3 child tasks
             var childTasks = new[]
@@ -358,12 +363,13 @@ internal static class TaskDemo
 
             // If any of the child tasks throw, cancel the rest of them
             for (Int32 task = 0; task < childTasks.Length; task++)
+            {
                 childTasks[task].ContinueWith(t => cts.Cancel(), TaskContinuationOptions.OnlyOnFaulted);
+            }
 
             // When all children are done, get the maximum value returned from the non-faulting/canceled tasks
             // Then pass the maximum value to another task which displays the maximum result
-            tf.ContinueWhenAll(
-                    childTasks,
+            tf.ContinueWhenAll(childTasks,
                     completedTasks =>
                         completedTasks.Where(t => t.Status == TaskStatus.RanToCompletion).Max(t => t.Result),
                     CancellationToken.None)

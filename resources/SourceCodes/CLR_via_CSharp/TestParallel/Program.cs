@@ -8,22 +8,16 @@ namespace TestParallel
     {
         public static void Main(string[] args)
         {
-            Parallel.Invoke(
-                Test,
-                Test,
-                Test,
-                Test
-            );
+            Parallel.Invoke(Test, Test);
 
+            Console.WriteLine("Press any key to continue...");
             Console.ReadLine();
         }
 
-        static async void Test()
+        private static async void Test()
         {
-            Console.WriteLine(123);
-            Console.WriteLine();
-            await Task.Delay(1000);
-            Console.WriteLine(123);
+            Console.WriteLine("Starting Test...");
+            Console.WriteLine("End Test");
         }
     }
 }

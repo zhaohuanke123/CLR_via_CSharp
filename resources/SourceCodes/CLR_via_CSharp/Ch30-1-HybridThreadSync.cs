@@ -12,8 +12,8 @@ public static class HybridThreadSync
     {
         // HybridLocks.Go();
         // Singletons.Go();
-        AsyncSynchronization.Go();
-        // BlockingCollectionDemo.Go();
+        // AsyncSynchronization.Go();
+        BlockingCollectionDemo.Go();
         // Console.ReadLine();
     }
 }
@@ -1156,7 +1156,7 @@ internal static class BlockingCollectionDemo
     private static void ConsumeItems(Object o)
     {
         var bl = (BlockingCollection<Int32>)o;
-
+        
         // Block until an item shows up, then process it
         foreach (var item in bl.GetConsumingEnumerable())
         {

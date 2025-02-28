@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"83f718555ea1f194","type":"text","text":"### . **辐射通量（Radiant Flux）**\n\n- **定义**：光源在单位时间内发射的总辐射能量（功率），单位为瓦特（W）。\n- ![[Pasted image 20250214103259.png]]","x":-320,"y":-300,"width":385,"height":220},
+		{"id":"7480ab06d87a865b","type":"text","text":"### **辐射强度（Radiant Intensity）**\n\n- **定义**：光源在某一方向上的单位立体角内发出的辐射通量，单位为 **瓦特每球面度（W/sr）**。\n- ![[Pasted image 20250214103313.png]]\n    \n    - **球面度（sr）**：立体角的单位，类似于二维角度在三维空间的扩展。\n    - 立体角\n    - ![[Pasted image 20250214100332.png]]\n    - ![[Pasted image 20250214100547.png]]\n    - ![[Pasted image 20250214101103.png]]","x":-330,"y":120,"width":405,"height":760},
+		{"id":"2a7b02fdd7159579","type":"text","text":"### **辐照度（Irradiance）**\n\n- **定义**：单位面积接收到的辐射通量，单位为 **瓦特每平方米（W/m²）**。\n- ![[Pasted image 20250214103330.png]]\n- 这里的面积必须是平面垂直于光（或者投影过去的）的面积。\n- 传播过程中 irradiance 会衰减","x":140,"y":120,"width":405,"height":500},
+		{"id":"3054060fa583943e","type":"text","text":"### **辐射率（Radiance）**\n\n- ![[Pasted image 20250214104033.png]]\n- **定义**：单位立体角、单位投影面积上的辐射通量，单位为 **瓦特每球面度每平方米（W/(sr·m²)）**。","x":640,"y":120,"width":340,"height":500},
+		{"id":"39ebc462037826af","type":"file","file":"图形学/res/Pasted image 20250214105121.png","x":1080,"y":-600,"width":804,"height":558},
+		{"id":"798f97d19d77145e","type":"file","file":"图形学/res/Pasted image 20250214112355.png","x":1282,"y":146,"width":1026,"height":574}
+	],
+	"edges":[
+		{"id":"aa54f97a0c2356cb","fromNode":"83f718555ea1f194","fromSide":"bottom","toNode":"7480ab06d87a865b","toSide":"top"},
+		{"id":"095182a23df01ee2","fromNode":"83f718555ea1f194","fromSide":"bottom","toNode":"2a7b02fdd7159579","toSide":"top"},
+		{"id":"f46ee563af0aba4c","fromNode":"83f718555ea1f194","fromSide":"bottom","toNode":"3054060fa583943e","toSide":"top"},
+		{"id":"f1c66478d48a827b","fromNode":"2a7b02fdd7159579","fromSide":"bottom","toNode":"3054060fa583943e","toSide":"bottom","label":"单位立体角的Irradiance"},
+		{"id":"e90d6a81d0d5c262","fromNode":"7480ab06d87a865b","fromSide":"bottom","toNode":"3054060fa583943e","toSide":"bottom","label":"单位面积的Intensity"},
+		{"id":"b07bd013b8aff907","fromNode":"2a7b02fdd7159579","fromSide":"right","toNode":"39ebc462037826af","toSide":"left"},
+		{"id":"27314ecf7b107821","fromNode":"3054060fa583943e","fromSide":"right","toNode":"39ebc462037826af","toSide":"left"}
+	]
+}
