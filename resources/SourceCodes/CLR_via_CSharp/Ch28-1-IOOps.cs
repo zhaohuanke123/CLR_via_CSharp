@@ -28,8 +28,8 @@ public static class IOOps
     {
         // PipeDemo.Go().Wait();
         // AsyncFuncCodeTransformation.Go();
-        // TaskLogger.Go().Wait();
-        EventAwaiterDemo.Go();
+        TaskLogger.Go().Wait();
+        // EventAwaiterDemo.Go();
         // Features.Go();
         // GuiDeadlockWindow.Go();
         // Cancellation.Go().Wait();

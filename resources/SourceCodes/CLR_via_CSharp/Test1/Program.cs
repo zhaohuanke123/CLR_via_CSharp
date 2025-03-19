@@ -1,109 +1,162 @@
-﻿namespace Test1
+﻿
+public class FooMonitor
 {
-    internal class Program
+    private static readonly object m_lock = new object();
+    private static int m_counter = 0;
+
+    public FooMonitor()
     {
-        public static readonly object o = new object();
-        public static int i = 0;
+    }
 
-        private static void Main(string[] args)
+    public void First(Action printFirst)
+    {
+        Monitor.Enter(m_lock);
+
+        // printFirst() outputs "first". Do not change or remove this line.
+        printFirst();
+
+        m_counter = 1;
+        Monitor.PulseAll(m_lock);
+        Monitor.Exit(m_lock);
+    }
+
+    public void Second(Action printSecond)
+    {
+        Monitor.Enter(m_lock);
+
+        while (m_counter != 1)
         {
-            // new Thread(Third).Start(() =>
-            // {
-            //     Monitor.Enter(o);
-            //
-            //     while (i != 2)
-            //     {
-            //         Monitor.Wait(o);
-            //     }
-            //     Console.WriteLine("third");
-            //
-            //     i = 3;
-            //     Monitor.PulseAll(o);
-            //     Monitor.Exit(o);
-            // });
-            // new Thread(Second).Start(() =>
-            // {
-            //     Monitor.Enter(o);
-            //
-            //     while (i != 1)
-            //     {
-            //         Monitor.Wait(o);
-            //     }
-            //
-            //     Console.WriteLine("second");
-            //
-            //     i = 2;
-            //     Monitor.PulseAll(o);
-            //     Monitor.Exit(o);
-            // });
-            // new Thread(First).Start(() =>
-            // {
-            //     Monitor.Enter(o);
-            //     Console.WriteLine("first");
-            //     i = 1;
-            //     Monitor.PulseAll(o);
-            //     Monitor.Exit(o);
-            // });
-
-            // ManualResetEvent mre1 = new ManualResetEvent(false);
-            // ManualResetEvent mre2 = new ManualResetEvent(false);
-            // new Thread(Third).Start(() =>
-            // {
-            //     mre2.WaitOne(); 
-            //     Console.WriteLine("third");   
-            // });
-            // new Thread(Second).Start(() =>
-            // {
-            //     mre1.WaitOne();
-            //     Console.WriteLine("second");
-            //     mre2.Set();
-            // });
-            // new Thread(First).Start(() =>
-            // {
-            //     Console.WriteLine("first");
-            //     mre1.Set();
-            // });
-
-            new Thread(Third).Start(() =>
-            {
-                while (Interlocked.CompareExchange(ref i, 5, 4) != 4)
-                {
-                }
-                Console.WriteLine("third");
-            });
-            new Thread(Second).Start(() =>
-            {
-                while (Interlocked.CompareExchange(ref i, 3, 2) != 2)
-                {
-                    
-                }
-                Console.WriteLine("second");
-                Volatile.Write(ref i, 4);
-            });
-            new Thread(First).Start(() =>
-            {
-                while (Interlocked.CompareExchange(ref i, 1, 0) != 0)
-                {
-                    
-                }
-                Console.WriteLine("first");
-                Volatile.Write(ref i, 2);
-            });
+            Monitor.Wait(m_lock);
         }
 
-        public static void First(object? first)
+        // printSecond() outputs "second". Do not change or remove this line.
+        printSecond();
+
+        m_counter = 2;
+        Monitor.PulseAll(m_lock);
+        Monitor.Exit(m_lock);
+    }
+
+    public void Third(Action printThird)
+    {
+        Monitor.Enter(m_lock);
+
+        while (m_counter != 2)
         {
-            ((Action)first)();
+            Monitor.Wait(m_lock);
         }
 
-        public static void Second(object? second)
+        // printThird() outputs "third". Do not change or remove this line.
+        printThird();
+
+        m_counter = 3;
+        Monitor.PulseAll(m_lock);
+        Monitor.Exit(m_lock);
+    }
+}
+
+public class FooManualResetEvent
+{
+    ManualResetEvent mre1 = new ManualResetEvent(false);
+    ManualResetEvent mre2 = new ManualResetEvent(false);
+
+    public FooManualResetEvent()
+    {
+    }
+
+    public void First(Action printFirst)
+    {
+        // printFirst() outputs "first". Do not change or remove this line.
+        printFirst();
+        mre1.Set();
+    }
+
+    public void Second(Action printSecond)
+    {
+        mre1.WaitOne();
+
+        // printSecond() outputs "second". Do not change or remove this line.
+        printSecond();
+
+        mre2.Set();
+    }
+
+    public void Third(Action printThird)
+    {
+        mre2.WaitOne();
+        // printThird() outputs "third". Do not change or remove this line.
+        printThird();
+    }
+}
+
+public class FooInterLock
+{
+    private int m_counter = 0;
+
+    public FooInterLock()
+    {
+    }
+
+    public void First(Action printFirst)
+    {
+        while (Interlocked.CompareExchange(ref m_counter, 1, 0) != 0)
         {
-            ((Action)second)();
         }
 
-        public static void Third(object? third)
+        // printFirst() outputs "first". Do not change or remove this line.
+        printFirst();
+        Volatile.Write(ref m_counter, 2);
+    }
+
+    public void Second(Action printSecond)
+    {
+        while (Interlocked.CompareExchange(ref m_counter, 3, 2) != 2)
         {
-            ((Action)third)();
         }
+
+        // printSecond() outputs "second". Do not change or remove this line.
+        printSecond();
+
+        Volatile.Write(ref m_counter, 4);
+    }
+
+    public void Third(Action printThird)
+    {
+        while (Interlocked.CompareExchange(ref m_counter, 5, 4) != 4)
+        {
+        }
+
+        // printThird() outputs "third". Do not change or remove this line.
+        printThird();
+    }
+}
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Foo Monitor");
+        FooMonitor fooMonitor = new FooMonitor();
+        Parallel.Invoke(
+            () => { fooMonitor.Second(() => Console.WriteLine("Second")); },
+            () => { fooMonitor.First(() => Console.WriteLine("First")); },
+            () => { fooMonitor.Third(() => Console.WriteLine("Third")); }
+        );
+
+        Console.WriteLine("FooManualResetEvent");
+        FooManualResetEvent fooManualResetEvent = new FooManualResetEvent();
+        Parallel.Invoke(
+            () => { fooManualResetEvent.First(() => Console.WriteLine("First")); },
+            () => { fooManualResetEvent.Third(() => Console.WriteLine("Third")); },
+            () => { fooManualResetEvent.Second(() => Console.WriteLine("Second")); }
+        );
+
+        Console.WriteLine("FooInterLock");
+        var fooInterlock = new FooInterLock();
+        Parallel.Invoke(
+            () => { fooInterlock.First(() => Console.WriteLine("First")); },
+            () => { fooInterlock.Third(() => Console.WriteLine("Third")); },
+            () => { fooInterlock.Second(() => Console.WriteLine("Second")); }
+        );
     }
 }
