@@ -8,31 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d1ca58c5916a53af",
+            "id": "a2827701d3b5adeb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "错题/框架错题.md",
+                "file": "错题/框架错题3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "框架错题"
+              "title": "框架错题3"
             }
           },
           {
-            "id": "21c6ed9dba5af658",
+            "id": "d3eabebf293e0c60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "错题/框架错题.md",
+                "file": "错题/框架错题3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "框架错题"
+              "title": "框架错题3"
             }
           }
         ],
@@ -183,10 +183,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "21c6ed9dba5af658",
+  "active": "d3eabebf293e0c60",
   "lastOpenFiles": [
-    "游戏引擎/ECS.canvas",
     "错题/框架错题.md",
+    "错题/框架错题2.md",
+    "错题/框架错题3.md",
+    "游戏引擎/ECS.canvas",
     "图形学/hlsl.md",
     "图形学/辐射度量学 Radiometry.canvas",
     "图形学/res/Pasted image 20250214153714.png",
@@ -233,7 +235,6 @@
     "错题/CLR/1-4 note.md",
     "错题/CLR/8-12.md",
     "错题/CLR/13-17.md",
-    "错题/CLR/改 ConcurrentQueue 测试 BeforefiledInit.md",
     "未命名.canvas"
   ]
 }
